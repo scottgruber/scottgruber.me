@@ -1,0 +1,159 @@
+// 300px     18.75em at 16px base font
+// 480px     30em
+// 600px     37.5em
+// 768px     48em
+// 992px 	   62em
+// 1024px    64em
+// 1220px    76.250em
+// 1382px	   86.375em
+// 1400px    87.5em
+
+/* CSS Custom Properties */
+
+:root {
+  // Typography 
+  --font-family: "Decimal A", "Decimal B", sans-serif;
+  --font-family-heading: "Gotham XNarrow SSm A", "Gotham XNarrow SSm B", sans-serif;
+  --font-family-system: -apple-system, BlinkMacSystemFont, "helvetica neue",
+    helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
+  --font-weight-thin: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+  --text-base-size: 1rem;
+  --text-scale-ratio: 1.125;
+  --line-height-text: 1.5;
+  --line-height-heading: 1;
+
+  --grid-compound-6-4: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+  --grid-compound-4-3: 3fr 1fr 2fr 2fr 3fr 1fr;
+  --grid-compound-5-4: 6fr 1fr 4fr 3fr 3fr 4fr 1fr 6fr;
+  --grid-column-gap: 2vw;
+  --grid-row-gap: 4vh;
+
+  /* Type scale 8:9 major second scale 1.125 */
+
+  // --font-size-xx-display: 3.653rem;
+  // --font-size-xx-display: 3.247rem;
+  // --font-size-x-display: 2.887rem;
+  // --font-size-display: 2.566rem;
+  // --font-size-xxxx-large: 2.281rem;
+  // --font-size-xxx-large: 2.027rem;
+  // --font-size-xx-large: 1.802rem;
+  // --font-size-x-large: 1.602rem;
+  // --font-size-large: 1.424rem;
+  // --font-size-medium: 1.125rem;
+  // --font-size: 1rem;
+  // --font-size-small: 0.889rem;
+  // --font-size-x-small: 0.79rem;
+
+  /* Type scale 4:5 major third scale 1.25 */
+  --font-size-xx-display: 11.642rem;
+  --font-size-xx-display: 9.313rem;
+  --font-size-x-display: 5.96rem;
+  --font-size-display: 4.768rem;
+  --font-size-xxxx-large: 3.815rem;
+  --font-size-xxx-large: 3.052rem;
+  --font-size-xx-large: 2.441rem;
+  --font-size-x-large: 1.953rem;
+  --font-size-large: 1.563rem;
+  --font-size-medium: 1.25rem;
+  --font-size: 1rem;
+  --font-size-small: 0.8rem;
+  --font-size-x-small: 0.64rem;
+  
+
+  --color-primary-lighter: hsla(186, 100%, 83%); // #a8f6ff Celeste
+  --color-primary-light: hsla(193, 98%, 74%); //#7be2fd Spray
+  --color-primary: hsla(201, 75%, 56%); // #3aa8e3 Summer Sky
+  --color-primary-dark: hsla(207, 100%, 39%); // #006dc7 Navy Blue
+  --color-primary-darker: hsla(216, 100%, 34%); // #0045ae Cobalt
+
+  --color-secondary-lighter: hsla(99, 41%, 64%); //  $pistachio: #98c87d;
+  --color-secondary-light: hsla(100, 28%, 50%); // $asparagus: #72a35b;
+  --color-secondary: hsla(104, 35%, 30%); //  $green-house: #406732;
+  --color-secondary-dark: hsla(111, 70%, 9%); //   $palm-green: #0c2907;
+  --color-secondary-darker: hsla(113, 90%, 3%); //  $midnight-moss: #031001;
+
+  --color-accent-lighter: hsl(340, 100%, 79%); // #ff92b7 Flamingo Pink
+  --color-accent-light: hsl(343, 83%, 68%); //#f16c91 Light Crimson
+  --color-accent: hsl(346, 52%, 47%); // #b73957 Night Shadz
+  --color-accent-dark: hsl(347, 100%, 24%); // #7b001b Burgundy
+  --color-accent-darker: hsl(355, 100%, 16%); // #0F0047 Mahogany
+
+  --color-neutral-lighter: hsla(35, 36%, 94%); // $hint-of-red: #f5f0e9;
+  --color-neutral-light: hsla(32, 27%, 85%); // $albescent-white: #e3d9ce;
+  --color-neutral: hsla(30, 14%, 62%); // $zorba: #aa9d8f;
+  --color-neutral-dark: hsla(29, 17%, 38%); // $kabul: #716050;
+  --color-neutral-darker: hsla(29, 26%, 23%); //   $mondo: #4a3b2c;
+
+  --color-black: #1c1c21;
+  --color-white: #fff;
+
+  --color-text: var(--color-black);
+  --color-text-alt: var(--color-neutral-lighter);
+
+  /* Background colours
+// ========================================== */
+
+  --color-background: var(--color-neutral-lighter);
+
+  /* Border colours
+// ========================================== */
+
+  --color-border: var(--color-secondary-light);
+  --color-border-separator: var(--color-accent-lighter);
+
+  /* Borders
+// ========================================== */
+
+  --border-radius-x-small: 0.25rem;
+  --border-radius-small: 0.5rem;
+  --border-radius-medium: 0.75rem;
+  --border-radius-large: 1rem;
+  --border-radius-circle: 50%;
+  --border-width-hairline: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-thick: var(--border-radius-medium);
+  --border-style-thin: var(--border-width-thin) solid var(--color-border);
+  --border-style-thick: var(--border-width-thick) solid var(--color-border);
+
+  /* Spacing
+// ========================================== */
+  --max-width: 72rem;
+  --spacing-xx-small: 0.25rem;
+  --spacing-x-small: 0.5rem;
+  --spacing-small: 0.75rem;
+  --spacing: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 2rem;
+  --spacing-x-large: 4rem;
+  --spacing-xx-large: 8rem;
+
+  /* Timing
+// ========================================== */
+
+  --duration-instantly: 0;
+  --duration-immediately: 0.05s;
+  --duration-quickly: 0.1s;
+  --duration-promptly: 0.2s;
+  --duration-slowly: 0.4s;
+  --timing: ease;
+
+  /* =viewport */
+  
+}
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+// 

@@ -1,0 +1,60 @@
+{% extends "_layouts/base.twig" %}
+{% set title = entry.title %}
+{% set bodyClass = "l-chinese-horoscope" %}
+
+{# Get entry's previous and next links #}
+{% set criteria = {section: '生肖', orderBy: 'postDate'} %}
+{% set prev = entry.getPrev(criteria) %}
+{% set next = entry.getNext(criteria) %}
+
+{% block bodyContent %}
+
+	
+<article class="h-entry c-shengxiao">
+
+{% set asset = entry.svg.one() %}
+
+{% if asset %}
+	<figure>
+	{{ svg(asset) }}   
+	{% if asset.imageCaption|length %}
+	<figcaption>
+		{{ asset.imageCaption }}
+	</figcaption>	
+	{% endif %}
+	</figure>
+{% endif %}
+
+	<header>
+		<h1 class="p-name">{{ entry.title }}</h1>
+		{% if entry.lede %}
+		<p class="p-summary standfirst">{{ entry.lede }}</p>
+	{% endif %}
+	</header>
+    
+	<div class="e-content">
+	{% if entry.body %}
+		{{ entry.body|markdown }}
+	{% endif %}
+	<p><a href="https://cottonbureau.com/people/scott-gruber">T-shirts available for sale</a></p>
+
+	</div>	
+
+	
+</article>
+
+
+{% if criteria %}
+
+<small>
+{% if prev %}
+	<span><a href="{{ prev.url }}">← Previous {{ prev.title }}</a></span>
+{% endif %}
+
+{% if next %}
+   <span><a href="{{ next.url }}">{{ next.title }} Next → </a></span>
+{% endif %}
+</small>
+{% endif %}
+
+{% endblock bodyContent %}

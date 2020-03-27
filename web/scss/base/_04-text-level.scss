@@ -1,0 +1,77 @@
+//  =====================================================
+//  HTML Living Standard
+//  Text-level semantics elements
+//  https://html.spec.whatwg.org/multipage/text-level-semantics.html
+//  a, em, strong, small, s, cite, q, dfn, abbr, ruby, rb, rt, rtc, rp, data, time, code, var, samp, kdb, sub, sup, i, b, u, mark, bdi, bdo, span, br, wbr
+//   =====================================================
+
+a:link {
+  color: var(--color-primary-darker);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--color-primary-light);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary);
+  background-color: var(--color-neutral-lighter);
+  outline: thin dotted;
+}
+
+a:visited {
+  color: var(--color-primary-dark);
+}
+
+time {
+  font-size: var(--font-size-small);
+  margin: 0;
+}
+time + p {
+  font-size: var(--font-size-small);
+  margin: 0;
+}
+
+
+.logotype a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.quote p,
+.quote h2 {
+  quotes: '“' '”' '‘' '‘';
+}
+
+.quote p::before,
+.quote h2::before {
+  margin-inline-start: -0.83ch;
+  font-size: var(--font-size-display);
+  content: open-quote;
+}
+
+.quote p::after,
+.quote h2::after {
+  font-size: var(--font-size-display);
+  content: close-quote;
+}
+
+code,
+pre {
+  font-family: var(--font-family-mono);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden; 
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

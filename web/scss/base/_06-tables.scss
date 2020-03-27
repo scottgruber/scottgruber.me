@@ -1,0 +1,31 @@
+// =====================================================
+//   HTML Living Standard
+//   Tablular data elements
+//   https://html.spec.whatwg.org/multipage/tables.html
+//   table, caption, colgroup, col, tbody, tfoot, tr, td, th
+// =====================================================
+
+table {
+  width: 100%;
+  margin: var(--spacing) 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th {
+  padding: var(--spacing) 0;
+  font-weight: 600;
+  text-align: inline-start;
+  border-bottom: var(--border-style-thin);
+}
+
+td {
+  border-bottom: var(--border-style-thin);
+  padding: var(--spacing) 0;
+}
+
+td,
+th,
+tr {
+  vertical-align: middle;
+}

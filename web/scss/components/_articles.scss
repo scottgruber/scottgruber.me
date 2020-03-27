@@ -1,0 +1,20 @@
+article header h1 {
+  margin-top: 0;
+}
+
+.c-articles article,
+.c-article {
+  max-width: 75ch;
+}
+.c-articles h2 {
+  margin-bottom: var(--spacing-x-small);
+}
+
+.c-articles .lede {
+  margin-top: 0;
+}
+
+.c-articles article {
+  border-bottom: 1px dotted silver;
+}
+

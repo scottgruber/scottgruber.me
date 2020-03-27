@@ -1,0 +1,63 @@
+{% extends "_layouts/base.twig" %}
+
+
+
+{% set title = "Hi, I'm Scott Gruber" %}
+
+{% block bodyContent %}
+
+{% set single = craft.entries.section('home').one() %}
+
+{% if single %}
+	{% set asset = single.heroImage.one() %}
+
+		{% if asset %}
+				<figure>
+				<img src="{{ asset.url }}" alt="{{ asset.imageAlt }}" >
+				{% if asset.imageCaption|length %}
+				<figcaption>
+					{{ asset.imageCaption }}
+				</figcaption>	
+				{% endif %}
+				</figure>
+		{% endif %}
+
+<h1>{{ single.heading }}</h1>
+<p class="lede">{{ single.lede }}</p>
+{{ single.summary|markdown }}
+
+{{ single.body|markdown }}
+{% endif %}
+
+{# {% set latestArticles = craft.entries.section('articles').limit(1) %} #}
+
+{# {% if latestArticles|length %}
+
+    {% for article in latestArticles %}
+    <article class="h-entry">
+        <h2 class="p-name"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+        <p class="p-summary lede">{{ article.lede }}</p>
+        
+    </article>    
+    {% endfor %}
+
+{% endif %} #}
+
+{% set latestNotes = craft.entries.section('notes').limit(3) %}
+
+{% if latestNotes|length %}
+
+    {% for note in latestNotes.all() %}
+    <article class="h-entry">
+        
+        <h2 class="p-name"><a href="{{ note.url }}">{{ note.title }}</a></h2>
+        <p class="p-summary lede">{{ note.lede }}</p>
+        <p class="small"><time class="dt-published" datetime="{{ note.postDate|atom }}">Now for {{ note.postDate | date("M jS, Y") }} at {{ note.postDate | date("g:i A") }}</time></p>
+    </article>    
+    {% endfor %}
+
+{% endif %}
+
+
+
+{% endblock bodyContent %}

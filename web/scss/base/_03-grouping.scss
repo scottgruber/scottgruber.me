@@ -1,0 +1,82 @@
+//  =====================================================
+//  HTML Living Standard
+//  Grouping content elements
+//  https://html.spec.whatwg.org/multipage/grouping-content.html
+//  p, hr, pre, blockquote, ol, ul, menu, li, dl, dt, dd,
+//  figure, figcaption, main, div
+//  =====================================================
+
+
+p {
+  font-size: var(--font-size);
+}
+
+hr {
+  margin: var(--spacing) 0;
+  border-block-end: var(--border-style-thin);
+}
+
+pre {
+  max-width: 40em;
+}
+
+blockquote {
+  border-left: var(--border-style-thick);
+  padding-inline-start: var(--spacing-large);
+}
+
+ol,
+ul {
+  // list-style: none;
+  padding: 0;
+}
+
+ul > li {
+  margin: 0 0 var(--spacing-small);
+}
+
+
+ul.breadcrumbs li {
+  display: inline-block;
+
+  a {
+    padding: var(--spacing-medium) / 2;
+    border-radius: 10px;
+    transition-duration: 3s;
+    transition-property: all;
+
+    &:focus,
+    &:hover, {
+      border-radius: 4px;
+    }
+  }
+}
+
+ul.comments {
+  font-size: 80%;
+  list-style-type: none;
+}
+
+ul.comments li {
+  margin-block-start: 0.5em;
+}
+
+
+dl {
+  margin: 0;
+}
+
+dt {
+  margin: 0;
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+}
+
+figure {
+  padding: 0;
+  margin: 1em 0;
+}
+

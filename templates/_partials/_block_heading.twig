@@ -1,0 +1,5 @@
+{# Heading Block Twig Template Partial #}
+{% if block.heading |length %}
+<h2><a id="{{ block.heading }}" href="#{{ block.heading }}"> </a>
+{{ block.heading |typogrify }}</h2>
+{% endif %}

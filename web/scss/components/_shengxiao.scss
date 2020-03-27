@@ -1,0 +1,26 @@
+
+.l-chinese-horoscope article {
+  margin-bottom: var(--spacing-medium);
+  border-bottom: 1px dotted silver;
+}
+
+.l-chinese-horoscope article h1 {
+  margin-bottom: var(--spacing-small);
+}
+
+.l-chinese-horoscope .h-feed .standfirst {
+  margin-top: 0;
+  font-size: var(--font-size-xx-large);
+}
+
+@media (min-width: 48em) {
+.l-chinese-horoscope .svg-container .svg {
+  width: 30vw;
+}
+
+.l-chinese-horoscope article svg {
+  width: 30vw;
+}
+}
+
+
