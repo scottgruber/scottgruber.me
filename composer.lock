@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae3624002c8696daedf42e585d160cff",
+    "content-hash": "70967f66a3f4eb011a24671e484c1477",
     "packages": [
         {
             "name": "acoustep/craft-easymde",
@@ -520,65 +520,6 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
             "time": "2020-03-26T23:22:31+00:00"
-        },
-        {
-            "name": "craftcms/feed-me",
-            "version": "4.2.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/0a86a4746facbf3750bd260f83eb8d8dfe990dd9",
-                "reference": "0a86a4746facbf3750bd260f83eb8d8dfe990dd9",
-                "shasum": ""
-            },
-            "require": {
-                "cakephp/utility": "^3.3.12",
-                "craftcms/cms": "^3.4.0",
-                "jakeasmith/http_build_url": "^1.0",
-                "league/csv": "^8.2 || ^9.0",
-                "nesbot/carbon": "^1.22 || ^2.10",
-                "ralouphie/mimey": "^1.0",
-                "seld/jsonlint": "^1.7"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Feed Me",
-                "handle": "feed-me",
-                "documentationUrl": "https://docs.craftcms.com/feed-me/v4/"
-            },
-            "autoload": {
-                "psr-4": {
-                    "craft\\feedme\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Pixel & Tonic",
-                    "homepage": "https://pixelandtonic.com/"
-                },
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "Import content from XML, RSS, CSV or JSON feeds into entries, categories, Craft Commerce products, and more.",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "feed me"
-            ],
-            "support": {
-                "email": "support@craftcms.com",
-                "issues": "https://github.com/craftcms/feed-me/issues?state=open",
-                "source": "https://github.com/craftcms/feed-me",
-                "docs": "https://docs.craftcms.com/feed-me/v4/",
-                "rss": "https://github.com/craftcms/feed-me/commits/master.atom"
-            },
-            "time": "2020-03-26T22:46:40+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -2441,61 +2382,6 @@
                 "php"
             ],
             "time": "2019-11-08T13:50:10+00:00"
-        },
-        {
-            "name": "nystudio107/craft-typogrify",
-            "version": "1.1.18",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/28896d37f184cef87d2bbd84833565d0d732e331",
-                "reference": "28896d37f184cef87d2bbd84833565d0d732e331",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0",
-                "michelf/php-smartypants": "^1.8",
-                "mundschenk-at/php-typography": "^6.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Typogrify",
-                "handle": "typogrify",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-typogrify/v1/CHANGELOG.md",
-                "components": {
-                    "typogrify": "nystudio107\\typogrify\\services\\TypogrifyService"
-                },
-                "class": "nystudio107\\typogrify\\Typogrify"
-            },
-            "autoload": {
-                "psr-4": {
-                    "nystudio107\\typogrify\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "nystudio107",
-                    "homepage": "https://nystudio107.com/"
-                }
-            ],
-            "description": "Typogrify prettifies your web typography by preventing ugly quotes and 'widows' and more",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "typogrify"
-            ],
-            "support": {
-                "docs": "https://github.com/nystudio107/craft-typogrify/blob/v1/README.md",
-                "issues": "https://github.com/nystudio107/craft-typogrify/issues"
-            },
-            "time": "2019-04-30T21:24:04+00:00"
         },
         {
             "name": "opis/closure",
