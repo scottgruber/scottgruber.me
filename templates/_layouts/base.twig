@@ -3,7 +3,7 @@
 <html lang="en-us">
 <head>
   <meta charset="utf-8">
-  <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+  <title>{% if title is defined %}{{ title }} | {% endif %}{{ siteName }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="{{ siteUrl }}css/style.css">
@@ -14,7 +14,7 @@
 
   {# -- Feeds -- #}
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ siteUrl("/rss") }}" />
-  <link rel="alternate" type="application/json" title="JSON Feed" href="{{ siteUrl("/feed.json") }}" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ siteUrl("/atom") }}" />
   
   {# -- IndieWeb -- #}
   <link rel="webmention" href="https://webmention.io/scottgruber.me/webmention" />
