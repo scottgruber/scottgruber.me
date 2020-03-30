@@ -29,11 +29,11 @@
 {{ single.body|markdown }}
 {% endif %}
 
-{# {% set latestArticles = craft.entries.section('articles').limit(1) %} #}
+{% set latestArticles = craft.entries.section('articles').featuredEntry('1') %}
 
-{# {% if latestArticles|length %}
+{% if latestArticles|length %}
 
-    {% for article in latestArticles %}
+    {% for article in latestArticles.all() %}
     <article class="h-entry">
         <h2 class="p-name"><a href="{{ article.url }}">{{ article.title }}</a></h2>
         <p class="p-summary lede">{{ article.lede }}</p>
@@ -41,9 +41,9 @@
     </article>    
     {% endfor %}
 
-{% endif %} #}
+{% endif %}
 
-{% set latestNotes = craft.entries.section('notes').limit(3) %}
+{% set latestNotes = craft.entries.section('notes').featuredEntry('1') %}
 
 {% if latestNotes|length %}
 
