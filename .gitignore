@@ -1,0 +1,15 @@
+.DS_Store
+.config.codekit3
+craft.bat
+craft
+.env
+
+config
+cpresources
+modules
+fonts
+js
+print-to-web
+storage
+vendor
+web/resources/
