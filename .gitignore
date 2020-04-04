@@ -1,12 +1,17 @@
 .DS_Store
 .config.codekit3
+
+# Craft CMS files
+
 .env
 config
 cpresources
 modules
+vendor
+storage
+web/resources/
+
+# My files
 fonts
 js
 print-to-web
-storage
-vendors
-web/resources/
