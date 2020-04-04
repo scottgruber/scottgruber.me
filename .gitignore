@@ -4,8 +4,9 @@
 config
 cpresources
 modules
+fonts
 js
 print-to-web
 storage
-vendor
+vendors
 web/resources/
