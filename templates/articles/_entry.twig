@@ -32,7 +32,7 @@
 <div class="e-content">
 
 {% if entry.body %}
-	{{ entry.body|markdown }}
+	{{ entry.body|md('gfm') }}
 {% endif %}
 
 {% set blocks = entry.articleBody.all() %}
