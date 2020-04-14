@@ -4,7 +4,7 @@
 
 
 {# Create a category query with the 'group' parameter #}
-{% set myCategoryQuery = craft.categories().limit(null).group('tags') %}
+{% set myCategoryQuery = craft.categories().limit(null).group('tags').orderBy('title') %}
 
 {# Fetch the categories #}
 {% set categories = myCategoryQuery.all() %}
