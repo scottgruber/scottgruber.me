@@ -32,7 +32,7 @@
 {% set latestArticles = craft.entries.section('articles').featuredEntry('1') %}
 
 {% if latestArticles|length %}
-
+<section class="h-feed c-articles">
     {% for article in latestArticles.all() %}
     <article class="h-entry">
         <h2 class="p-name"><a href="{{ article.url }}">{{ article.title }}</a></h2>
@@ -40,24 +40,37 @@
         
     </article>    
     {% endfor %}
-
+</section>
 {% endif %}
 
-{% set latestNotes = craft.entries.section('notes').featuredEntry('1') %}
 
-{% if latestNotes|length %}
+{% set featuredNotes = craft.entries.section('notes').featuredEntry('1') %}
 
-    {% for note in latestNotes.all() %}
+{% if featuredNotes|length %}
+<section class="h-feed c-notes">
+    {% for note in featuredNotes.all() %}
     <article class="h-entry">
         
         <h2 class="p-name"><a href="{{ note.url }}">{{ note.title }}</a></h2>
         <p class="p-summary lede">{{ note.lede }}</p>
-        <p class="small"><time class="dt-published" datetime="{{ note.postDate|atom }}">Now for {{ note.postDate | date("M jS, Y") }} at {{ note.postDate | date("g:i A") }}</time></p>
+        <p class="small"><time class="dt-published" datetime="{{ note.postDate|atom }}">Note posted {{ note.postDate | date("M jS, Y") }} at {{ note.postDate | date("g:i A") }}</time></p>
     </article>    
     {% endfor %}
-
+</section>
 {% endif %}
 
+{% set featuredLinks = craft.entries.section('links').featuredEntry('1') %}
 
+{% if featuredLinks|length %}
+<section class="h-feed c-links">
+    {% for entry in featuredLinks.all() %}
+    <article class="h-entry"> 
+        <h2 class="p-name"><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
+        <p class="p-summary lede">{{ entry.lede }}</p>
+        <time class="dt-published" datetime="{{ entry.postDate|atom }}">Link posted at {{ entry.postDate | date("M jS, Y") }} at {{ entry.postDate | date("g:i A") }}</time>
+    </article>    
+    {% endfor %}
+</section>
+{% endif %}
 
 {% endblock bodyContent %}
