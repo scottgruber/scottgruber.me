@@ -2,7 +2,7 @@
 
 
 
-{% set title = "Hi, I'm Scott Gruber" %}
+{% set title = "Home" %}
 
 {% block bodyContent %}
 
@@ -66,7 +66,7 @@
     {% for entry in featuredLinks.all() %}
     <article class="h-entry"> 
         <h2 class="p-name"><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
-        <p class="p-summary lede">{{ entry.lede }}</p>
+        <p class="p-summary">{{ entry.lede }}</p>
         <time class="dt-published" datetime="{{ entry.postDate|atom }}">Link posted at {{ entry.postDate | date("M jS, Y") }} at {{ entry.postDate | date("g:i A") }}</time>
     </article>    
     {% endfor %}
