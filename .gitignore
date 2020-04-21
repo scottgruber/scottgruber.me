@@ -9,9 +9,11 @@ cpresources
 modules
 vendor
 storage
-web/resources/
+web/assets/
+
 
 # My files
 fonts
 js
 print-to-web
+web/100-layouts/

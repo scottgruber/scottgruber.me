@@ -1,0 +1,32 @@
+{
+  "name": "scottgruber.me",
+  "version": "1.0.0",
+  "description": "Online presence for Scott Gruber",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottgruber/scottgruber.me.git"
+  },
+  "keywords": [
+    "IndieWeb",
+    "CraftCMS",
+    "Handcrafted",
+    "Los",
+    "Angeles"
+  ],
+  "author": "Scott Gruber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottgruber/scottgruber.me/issues"
+  },
+  "homepage": "https://github.com/scottgruber/scottgruber.me#readme",
+  "devDependencies": {
+    "stylelint": "^13.3.3",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-order": "^4.0.0"
+  }
+}

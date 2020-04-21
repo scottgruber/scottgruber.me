@@ -26,12 +26,13 @@ a:visited {
 }
 
 time {
-  font-size: var(--font-size-small);
   margin: 0;
+  font-size: var(--font-size-small);
 }
+
 time + p {
-  font-size: var(--font-size-small);
   margin: 0;
+  font-size: var(--font-size-small);
 }
 
 
@@ -43,7 +44,7 @@ time + p {
 
 .quote p,
 .quote h2 {
-  quotes: '“' '”' '‘' '‘';
+  quotes: "“" "”" "‘" "‘";
 }
 
 .quote p::before,
