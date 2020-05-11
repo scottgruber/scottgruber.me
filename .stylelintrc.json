@@ -20,6 +20,13 @@
       }
     ],
     "number-leading-zero": null,
+    "selector-no-qualifying-type": null,
+    "string-quotes": "double",
+    "font-family-name-quotes": "always-unless-keyword",
+    "order/order": [
+			"custom-properties",
+			"declarations"
+    ],
     "order/properties-alphabetical-order": null,
     "order/properties-order": [
       "position",
@@ -262,12 +269,6 @@
       "animation-fill-mode",
       "fill",
       "stroke"
-    ],
-    "order/order": [
-			"custom-properties",
-			"declarations"
-    ],
-    "selector-no-qualifying-type": null,
-    "string-quotes": "double"
+    ]
   }
 }
