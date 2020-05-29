@@ -11,6 +11,8 @@ vendor
 storage
 web/assets/
 
+node_modules
+
 
 # My files
 fonts
