@@ -1,5 +1,8 @@
 {% extends "_layouts/base.twig" %}
 {% set title = entry.title %}
+{% if entry.lede %}
+	{% set metaDescription = entry.lede %}{# Get entry's previous and next links #}
+{% endif %}
 {% set bodyClass = "l-chinese-horoscope" %}
 
 {# Get entry's previous and next links #}

@@ -1,7 +1,8 @@
 {% extends "_layouts/base.twig" %}
 {% set title = entry.title %}
-{# Get entry's previous and next links #}
-
+{% if entry.lede %}
+	{% set metaDescription = entry.lede %}{# Get entry's previous and next links #}
+{% endif %}
 {% set criteria = {section: 'Articles', orderBy: 'postDate'} %}
 {% set prev = entry.getPrev(criteria) %}
 {% set next = entry.getNext(criteria) %}

@@ -1,6 +1,6 @@
 {% extends "_layouts/base.twig" %}
 {% set title = entry.title %}
-
+{% set metaDescription = entry.metaDescription %}
 {% block bodyContent %}
 
 {% set single = craft.entries.section('now').one() %}
