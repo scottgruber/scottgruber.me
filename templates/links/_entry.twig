@@ -1,5 +1,11 @@
 {% extends "_layouts/base.twig" %}
 {% set title = entry.title %}
+{% if entry.lede %}
+	{% set metaDescription = entry.lede %}{# Get entry's previous and next links #}
+{% else %}
+		{% set metaDescription = entry.title %}{# Get entry's previous and next links #}	
+{% endif %}
+
 {# Get entry's previous and next links #}
 
 {% set criteria = {section: 'Links', orderBy: 'postDate'} %}
