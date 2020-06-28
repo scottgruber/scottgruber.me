@@ -16,6 +16,7 @@ node_modules
 
 # My files
 fonts
-js
+web/js/**
+!web/js/webmention.min.js
 print-to-web
 web/100-layouts/
