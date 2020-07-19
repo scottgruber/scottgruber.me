@@ -4,13 +4,15 @@
   ],
   "plugins": [
     "stylelint-a11y",
-    "stylelint-order"
+    "stylelint-order",
+    "stylelint-use-logical"
   ],
   "rules": {
     "a11y/media-prefers-reduced-motion": null,
     "a11y/no-outline-none": true,
     "a11y/selector-pseudo-class-focus": true,
     "at-rule-no-unknown": null,
+    "csstools/use-logical": true,
     "custom-property-empty-line-before": null,
     "indentation": [
       2,
