@@ -64,25 +64,44 @@
   --font-size: 1rem;
   --font-size-small: 0.8rem;
   --font-size-x-small: 0.64rem;
+
+
+
+  --color-primary-lighter: #7a859d; // #a8f6ff Celeste
+  --color-primary-light: #6c7791; //#586b89 Spray
+  --color-primary: #5d6a85; // 41506d Summer Sky
+  --color-primary-dark: #4f5d79; // #006dc7 Navy Blue
+  --color-primary-darker: #41506d; // #0045ae Cobalt
+
+  --color-secondary-lighter: #aacca9; //  $pistachio: #98c87d;
+  --color-secondary-light: #8aad8a; // $asparagus: #72a35b;
+  --color-secondary: #6c8f6b; //  $green-house: #406732;
+  --color-secondary-dark: #4e734e; //   $palm-green: #0c2907;
+  --color-secondary-darker: #315733; //  $midnight-moss: #031001;
+
+  --color-accent-lighter: #bf8fad; // #ff92b7 Flamingo Pink
+  --color-accent-light: #bc82a6; //#f16c91 Light Crimson
+  --color-accent: #b875a0; // #b73957 Night Shadz
+  --color-accent-dark: #b36899; // #7b001b Burgundy
+  --color-accent-darker: #af5b93; // #0F0047 Mahogany
   
+  // --color-primary-lighter: hsla(186, 100%, 83%); // #a8f6ff Celeste
+  // --color-primary-light: hsla(193, 98%, 74%); //#7be2fd Spray
+  // --color-primary: hsla(201, 75%, 56%); // #3aa8e3 Summer Sky
+  // --color-primary-dark: hsla(207, 100%, 39%); // #006dc7 Navy Blue
+  // --color-primary-darker: hsla(216, 100%, 34%); // #0045ae Cobalt
 
-  --color-primary-lighter: hsla(186, 100%, 83%); // #a8f6ff Celeste
-  --color-primary-light: hsla(193, 98%, 74%); //#7be2fd Spray
-  --color-primary: hsla(201, 75%, 56%); // #3aa8e3 Summer Sky
-  --color-primary-dark: hsla(207, 100%, 39%); // #006dc7 Navy Blue
-  --color-primary-darker: hsla(216, 100%, 34%); // #0045ae Cobalt
+  // --color-secondary-lighter: hsla(99, 41%, 64%); //  $pistachio: #98c87d;
+  // --color-secondary-light: hsla(100, 28%, 50%); // $asparagus: #72a35b;
+  // --color-secondary: hsla(104, 35%, 30%); //  $green-house: #406732;
+  // --color-secondary-dark: hsla(111, 70%, 9%); //   $palm-green: #0c2907;
+  // --color-secondary-darker: hsla(113, 90%, 3%); //  $midnight-moss: #031001;
 
-  --color-secondary-lighter: hsla(99, 41%, 64%); //  $pistachio: #98c87d;
-  --color-secondary-light: hsla(100, 28%, 50%); // $asparagus: #72a35b;
-  --color-secondary: hsla(104, 35%, 30%); //  $green-house: #406732;
-  --color-secondary-dark: hsla(111, 70%, 9%); //   $palm-green: #0c2907;
-  --color-secondary-darker: hsla(113, 90%, 3%); //  $midnight-moss: #031001;
-
-  --color-accent-lighter: hsl(340, 100%, 79%); // #ff92b7 Flamingo Pink
-  --color-accent-light: hsl(343, 83%, 68%); //#f16c91 Light Crimson
-  --color-accent: hsl(346, 52%, 47%); // #b73957 Night Shadz
-  --color-accent-dark: hsl(347, 100%, 24%); // #7b001b Burgundy
-  --color-accent-darker: hsl(355, 100%, 16%); // #0F0047 Mahogany
+  // --color-accent-lighter: hsl(340, 100%, 79%); // #ff92b7 Flamingo Pink
+  // --color-accent-light: hsl(343, 83%, 68%); //#f16c91 Light Crimson
+  // --color-accent: hsl(346, 52%, 47%); // #b73957 Night Shadz
+  // --color-accent-dark: hsl(347, 100%, 24%); // #7b001b Burgundy
+  // --color-accent-darker: hsl(355, 100%, 16%); // #0F0047 Mahogany
 
   --color-neutral-lighter: hsla(35, 36%, 94%); // $hint-of-red: #f5f0e9;
   --color-neutral-light: hsla(32, 27%, 85%); // $albescent-white: #e3d9ce;
@@ -90,8 +109,8 @@
   --color-neutral-dark: hsla(29, 17%, 38%); // $kabul: #716050;
   --color-neutral-darker: hsla(29, 26%, 23%); //   $mondo: #4a3b2c;
 
-  --color-black: #1c1c21;
-  --color-white: #fff;
+  --color-black: #29292b;
+  --color-white: #f1f1f1;
 
   --color-text: var(--color-black);
   --color-text-alt: var(--color-neutral-lighter);
