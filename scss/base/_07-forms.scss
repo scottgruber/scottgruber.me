@@ -32,10 +32,11 @@ label {
 }
 
 input,
+button,
 select,
 textarea {
   padding: var(--spacing-small);
-  font-size: var(--font-size);
+  font: inherit;
 }
 
 select[multiple] {
@@ -98,4 +99,3 @@ button {
   border: 0;
   appearance: none;
 }
-

@@ -3,15 +3,15 @@
 //  Heading elements (part of section elements)
 //  https://html.spec.whatwg.org/multipage/sections.html
 //  h1, h2, h3, h4, h5, h6
-//  ===================================================== 
-
+//  =====================================================
 
 h1,
 h2,
-h3
- {
+h3,
+h4 {
   font-family: var(--font-family-heading);
   line-height: var(--line-height-heading);
+  margin: 0;
 }
 
 h1 {
@@ -35,7 +35,6 @@ header h1 span {
 }
 
 h2 {
-  
   color: var(--color-text);
 }
 
