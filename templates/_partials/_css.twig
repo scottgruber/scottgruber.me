@@ -119,8 +119,8 @@ body {
   display: grid;
   gap: var(--gap);
   min-height: 100vh;
-  margin: 0;
   padding: 1rem;
+  margin: 0;
   font-family: var(--font-family);
   line-height: 1.5;
   color: var(--color-text);
@@ -130,6 +130,7 @@ body {
 @media (min-width: 48em) {
   body {
     grid-template-columns: var(--grid-compound-6-4);
+    align-content: start;
   }
 
   header[role=banner] {
