@@ -20,6 +20,7 @@
   --grid-compound-5-4: 6fr 1fr 4fr 3fr 3fr 4fr 1fr 6fr;
   --grid-column-gap: 2vw;
   --grid-row-gap: 4vh;
+  --gap: 1vw;
   --font-size-xxx-display: 11.642rem;
   --font-size-xx-display: 9.313rem;
   --font-size-x-display: 5.96rem;
@@ -79,6 +80,8 @@
   --spacing-large: 2rem;
   --spacing-x-large: 4rem;
   --spacing-xx-large: 8rem;
+  --split-pair-space: 1rem;
+  --flow-space: 1rem;
   --duration-instantly: 0;
   --duration-immediately: 0.05s;
   --duration-quickly: 0.1s;
@@ -96,6 +99,12 @@
 @viewport {
   width: device-width;
 }
+/* Utilities */
+/* Flow utility: https://piccalil.li/quick-tip/flow-css-utility/ */
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
 *,
 *::before,
 *::after {
@@ -108,27 +117,27 @@ html {
 
 body {
   display: grid;
-  margin: 0 2vw;
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-text);
-  color: var(--color-text);
+  gap: var(--gap);
   min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  color: var(--color-text);
   text-rendering: optimizeSpeed;
 }
 
 @media (min-width: 48em) {
   body {
-    grid-template-columns: var(--grid-compound-4-3);
-    grid-gap: 2vw;
+    grid-template-columns: var(--grid-compound-6-4);
   }
 
   header[role=banner] {
-    grid-column: 2/-1;
+    grid-column: 2/6;
   }
 
   nav[role=navigation] {
-    grid-column: 1;
+    grid-column: 2/6;
   }
 
   main[role=main] {
@@ -140,7 +149,7 @@ body {
   }
 
   footer[role=contentinfo] {
-    grid-column: 2/-1;
+    grid-column: 2/6;
     padding: var(--spacing) 0;
     margin-block-start: var(--spacing-large);
     border-top: var(--border-style-thin);
@@ -149,6 +158,7 @@ body {
 nav[role=navigation] ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0;
   margin: var(--spacing) 0;
   font-size: var(--font-size-small);
@@ -158,17 +168,11 @@ nav[role=navigation] ul {
 
 @media (min-width: 48em) {
   nav[role=navigation] ul {
-    flex-direction: column;
-    padding: 0;
     font-size: var(--font-size-small);
   }
 }
 nav[role=navigation] li {
   padding-inline: var(--spacing-x-small);
-}
-
-main > h1:first-of-type {
-  margin-top: 0;
 }
 
 aside h2 {
@@ -187,18 +191,14 @@ h3,
 h4 {
   font-family: var(--font-family-heading);
   line-height: var(--line-height-heading);
-  margin: 0;
 }
 
 h1 {
   font-size: var(--font-size-xxx-large);
 }
 
-article > h1 {
-  margin-block-start: 0;
-}
-
 header[role=banner] h1 {
+  margin-block-start: 1em;
   font-family: var(--font-family);
   font-size: var(--font-size-x-large);
   font-weight: var(--font-weight-extra-bold);
@@ -230,9 +230,20 @@ h6 {
   font-size: var(--font-size);
 }
 
-p {
-  font-size: var(--font-size);
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
+}
+
+p {
+  max-width: 70ch;
+  font-size: var(--font-size);
+}
+
+.e-content > * + * {
+  margin-block-start: var(--flow-space, 1em);
 }
 
 hr {
@@ -247,11 +258,11 @@ pre {
 blockquote {
   border-left: var(--border-style-thick);
   padding-inline-start: var(--spacing-large);
-  margin: 0;
 }
 
-ol,
-ul {
+/* Remove default padding */
+ul[class],
+ol[class] {
   padding: 0;
 }
 
@@ -294,6 +305,10 @@ dd {
 
 figure {
   margin: 0;
+}
+
+a {
+  color: currentColor;
 }
 
 a:not([class]) {
@@ -358,10 +373,17 @@ pre {
   font-family: var(--font-family-mono);
 }
 
+/* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
 }
 
 table {
@@ -389,6 +411,14 @@ tr {
   vertical-align: middle;
 }
 
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 form {
   padding: var(--spacing-medium);
   margin: var(--spacing) 0;
@@ -413,14 +443,6 @@ label {
   margin-block-end: var(--spacing-small);
   font-weight: 700;
   text-transform: uppercase;
-}
-
-input,
-button,
-select,
-textarea {
-  padding: var(--spacing-small);
-  font: inherit;
 }
 
 select[multiple] {
@@ -501,16 +523,16 @@ article header h1 {
 }
 
 .l-chinese-horoscope article {
-  margin-bottom: var(--spacing-medium);
+  margin-block-end: var(--spacing-medium);
   border-bottom: 1px dotted silver;
 }
 
 .l-chinese-horoscope article h1 {
-  margin-bottom: var(--spacing-small);
+  margin-block-end: var(--spacing-small);
 }
 
 .l-chinese-horoscope .h-feed .standfirst {
-  margin-top: 0;
+  margin-block-start: 0;
   font-size: var(--font-size-xx-large);
 }
 
@@ -524,15 +546,14 @@ article header h1 {
   }
 }
 .anime-tiger {
-  float: right;
   margin: 2em 0 3em 2em;
   shape-margin: 1em;
   shape-outside: url(/assets/vectors/tiger.svg);
 }
 
-.anime-tiger svg {
-  width: 125px;
-  transform: rotate(16deg);
+.anime-tiger svg[data-name=tiger] {
+  width: 150px;
+  height: initial;
   animation: tiger-head 3s ease;
 }
 

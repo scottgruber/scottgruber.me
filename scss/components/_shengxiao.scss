@@ -1,15 +1,15 @@
 
 .l-chinese-horoscope article {
-  margin-bottom: var(--spacing-medium);
+  margin-block-end: var(--spacing-medium);
   border-bottom: 1px dotted silver;
 }
 
 .l-chinese-horoscope article h1 {
-  margin-bottom: var(--spacing-small);
+  margin-block-end: var(--spacing-small);
 }
 
 .l-chinese-horoscope .h-feed .standfirst {
-  margin-top: 0;
+  margin-block-start: 0;
   font-size: var(--font-size-xx-large);
 }
 
@@ -25,16 +25,15 @@
 
 
 .anime-tiger {
-  float: right;
   margin: 2em 0 3em 2em;
   shape-margin: 1em;
   shape-outside: url(/assets/vectors/tiger.svg);
 }
 
 
-.anime-tiger svg {
-  width: 125px;
-  transform: rotate(16deg);
+.anime-tiger svg[data-name="tiger"] {
+  width: 150px;
+  height: initial;
   animation: tiger-head 3s ease;
 }
 

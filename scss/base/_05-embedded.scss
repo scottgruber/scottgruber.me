@@ -5,8 +5,15 @@
 //  picture, source, img, iframe, embed, object, param, video, audio, track, map, area, svg
 //  =====================================================
 
+/* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
 }

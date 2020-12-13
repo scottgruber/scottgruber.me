@@ -21,6 +21,7 @@
   --grid-compound-5-4: 6fr 1fr 4fr 3fr 3fr 4fr 1fr 6fr;
   --grid-column-gap: 2vw;
   --grid-row-gap: 4vh;
+  --gap: 1vw;
 
   --font-size-xxx-display: 11.642rem;
   --font-size-xx-display: 9.313rem;
@@ -89,6 +90,10 @@
   --spacing-large: 2rem;
   --spacing-x-large: 4rem;
   --spacing-xx-large: 8rem;
+
+  --split-pair-space: 1rem;
+  --flow-space: 1rem;
+
 
   --duration-instantly: 0;
   --duration-immediately: 0.05s;

@@ -6,9 +6,20 @@
 //  figure, figcaption, main, div
 //  =====================================================
 
-p {
-  font-size: var(--font-size);
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
+}
+
+p {
+  max-width: 70ch;
+  font-size: var(--font-size);
+}
+
+.e-content > * + * {
+  margin-block-start: var(--flow-space, 1em);
 }
 
 hr {
@@ -23,12 +34,11 @@ pre {
 blockquote {
   border-left: var(--border-style-thick);
   padding-inline-start: var(--spacing-large);
-  margin: 0;
 }
 
-ol,
-ul {
-  // list-style: none;
+/* Remove default padding */
+ul[class],
+ol[class] {
   padding: 0;
 }
 

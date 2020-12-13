@@ -11,18 +11,14 @@ h3,
 h4 {
   font-family: var(--font-family-heading);
   line-height: var(--line-height-heading);
-  margin: 0;
 }
 
 h1 {
   font-size: var(--font-size-xxx-large);
 }
 
-article > h1 {
-  margin-block-start: 0;
-}
-
 header[role="banner"] h1 {
+  margin-block-start: 1em;
   font-family: var(--font-family);
   font-size: var(--font-size-x-large);
   font-weight: var(--font-weight-extra-bold);
