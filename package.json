@@ -1,7 +1,7 @@
 {
   "name": "scottgruber.me",
   "version": "1.0.0",
-  "description": "Online presence for Scott Gruber",
+  "description": "Online platform aka website of Scott Gruber",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,8 +14,7 @@
     "IndieWeb",
     "CraftCMS",
     "Handcrafted",
-    "Los",
-    "Angeles"
+    "California"
   ],
   "author": "Scott Gruber",
   "license": "ISC",
@@ -24,7 +23,7 @@
   },
   "homepage": "https://github.com/scottgruber/scottgruber.me#readme",
   "devDependencies": {
-    "stylelint": "^13.7.2",
+    "stylelint": "^13.8.0",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-order": "^4.1.0",
