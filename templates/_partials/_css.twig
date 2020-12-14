@@ -1,8 +1,7 @@
 @charset "UTF-8";
 :root {
   --font-family: "Decimal A", "Decimal B", sans-serif;
-  --font-family-heading: "Gotham XNarrow SSm A", "Gotham XNarrow SSm B",
-    sans-serif;
+  --font-family-heading: "Sentinel SSm A", "Sentinel SSm B", serif;
   --font-family-system: -apple-system, BlinkMacSystemFont, "helvetica neue",
     helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
@@ -34,6 +33,17 @@
   --font-size: 1rem;
   --font-size-small: 0.8rem;
   --font-size-x-small: 0.64rem;
+  --pantone-illuminating-yellow: #F5DF4D;
+  --pantone-ultimate-gray: #939597;
+  --pantone-dark-gray: #3C3E40;
+  --pantone-light-gray: #E7E9E7;
+  --pantone-iris-bloom: #5C609F;
+  --pantone-prism-pink: #F0A1BF;
+  --pantone-fruit-dove: #CF5C78;
+  --pantone-lead-crystal: #C2BFB5;
+  --pantone-cloud-dancer: #F0EEE9;
+  --pantone-spice-route: #BA5B3F;
+  --pantone-willowherb: #8F4584;
   --color-primary-lighter: #7a859d;
   --color-primary-light: #6c7791;
   --color-primary: #5d6a85;
@@ -88,8 +98,22 @@
   --duration-promptly: 0.2s;
   --duration-slowly: 0.4s;
   --timing: ease;
+  --color-background: #ffffff;
+  --color-border: #d687ba;
+  --color-text: #3c3e40;
+  --color-base: #e7e9e7;
+  --color-accent: #5085c3;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #3c3e40;
+    --color-border: #d687ba;
+    --color-text: #f0f2f3;
+    --color-base: #e7e9e7;
+    --color-accent: #f5df4d;
+  }
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -124,6 +148,7 @@ body {
   font-family: var(--font-family);
   line-height: 1.5;
   color: var(--color-text);
+  background-color: var(--color-background);
   text-rendering: optimizeSpeed;
 }
 
@@ -196,6 +221,7 @@ h4 {
 
 h1 {
   font-size: var(--font-size-xxx-large);
+  font-weight: var(--font-weight-extra-bold);
 }
 
 header[role=banner] h1 {
@@ -317,7 +343,7 @@ a:not([class]) {
 }
 
 a:link {
-  color: var(--color-primary-darker);
+  color: var(--color-accent);
   text-decoration: underline;
 }
 
@@ -327,13 +353,13 @@ a:active {
 
 a:hover,
 a:focus {
-  color: var(--color-primary);
-  background-color: var(--color-neutral-lighter);
-  outline: thin dotted;
+  color: var(--color-text);
+  outline: 1px solid var(--color-base);
+  outline-offset: 3px;
 }
 
 a:visited {
-  color: var(--color-primary-dark);
+  color: var(--color-border);
 }
 
 time {

@@ -1,7 +1,7 @@
 :root {
   --font-family: "Decimal A", "Decimal B", sans-serif;
-  --font-family-heading: "Gotham XNarrow SSm A", "Gotham XNarrow SSm B",
-    sans-serif;
+  //--font-family-heading: "Gotham XNarrow SSm A", "Gotham XNarrow SSm B", sans-serif;
+  --font-family-heading: "Sentinel SSm A", "Sentinel SSm B", serif;
   --font-family-system: -apple-system, BlinkMacSystemFont, "helvetica neue",
     helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
@@ -36,6 +36,21 @@
   --font-size: 1rem;
   --font-size-small: 0.8rem;
   --font-size-x-small: 0.64rem;
+
+  --pantone-illuminating-yellow: #F5DF4D;
+  --pantone-ultimate-gray: #939597;
+
+  --pantone-dark-gray: #3C3E40;
+  --pantone-light-gray: #E7E9E7;
+  
+  --pantone-iris-bloom: #5C609F;
+  --pantone-prism-pink: #F0A1BF;
+  --pantone-fruit-dove: #CF5C78;
+  --pantone-lead-crystal: #C2BFB5;
+  --pantone-cloud-dancer: #F0EEE9;
+  --pantone-spice-route: #BA5B3F;
+  --pantone-willowherb: #8F4584;
+
 
   --color-primary-lighter: #7a859d; // #a8f6ff Celeste
   --color-primary-light: #6c7791; //#586b89 Spray
@@ -101,7 +116,22 @@
   --duration-promptly: 0.2s;
   --duration-slowly: 0.4s;
   --timing: ease;
+
+  --color-background: #ffffff;
+  --color-border: #d687ba;
+  --color-text: #3c3e40;
+  --color-base: #e7e9e7;
+  --color-accent: #5085c3; 
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #3c3e40;
+    --color-border: #d687ba;
+    --color-text: #f0f2f3;
+    --color-base: #e7e9e7;
+    --color-accent: #f5df4d; }
+  }
 
 @-ms-viewport {
   width: device-width;
