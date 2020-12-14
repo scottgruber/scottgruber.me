@@ -1,13 +1,14 @@
 :root {
   --font-family: "Decimal A", "Decimal B", sans-serif;
-  //--font-family-heading: "Gotham XNarrow SSm A", "Gotham XNarrow SSm B", sans-serif;
   --font-family-heading: "Sentinel SSm A", "Sentinel SSm B", serif;
-  --font-family-system: -apple-system, BlinkMacSystemFont, "helvetica neue",
-    helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  --font-family-alt: "Surveyor SSm A", "Surveyor SSm B", serif;
   --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
+  --font-family-decorative-light: "Sentinel Ornaments Bright A", "Sentinel Ornaments Bright B";
+  --font-family-decorative-dark: "Sentinel Ornaments Dark A", "Sentinel Ornaments Dark B";
   --font-weight-thin: 200;
   --font-weight-light: 300;
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
   --font-weight-black: 900;
