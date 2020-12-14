@@ -9,8 +9,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-family-alt);
-  font-weight: var(--font-weight-extra-bold);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-black);
   line-height: var(--line-height-heading);
   
 }
@@ -46,6 +46,6 @@ h4 {
 
 h5,
 h6 {
-  font-family: var(--font-family-alt);
+  font-family: var(--font-family-heading);
   font-size: var(--font-size);
 }

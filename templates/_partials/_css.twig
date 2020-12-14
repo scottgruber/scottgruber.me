@@ -2,7 +2,6 @@
 :root {
   --font-family: "Decimal A", "Decimal B", sans-serif;
   --font-family-heading: "Sentinel SSm A", "Sentinel SSm B", serif;
-  --font-family-alt: "Surveyor SSm A", "Surveyor SSm B", serif;
   --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
   --font-family-decorative-light: "Sentinel Ornaments Bright A", "Sentinel Ornaments Bright B";
   --font-family-decorative-dark: "Sentinel Ornaments Dark A", "Sentinel Ornaments Dark B";
@@ -12,7 +11,7 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
-  --font-weight-black: 900;
+  --font-weight-black: 800;
   --text-scale-ratio: 1.125;
   --line-height-text: 1.5;
   --line-height-heading: 1;
@@ -217,8 +216,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-family-alt);
-  font-weight: var(--font-weight-extra-bold);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-black);
   line-height: var(--line-height-heading);
 }
 
@@ -253,7 +252,7 @@ h4 {
 
 h5,
 h6 {
-  font-family: var(--font-family-alt);
+  font-family: var(--font-family-heading);
   font-size: var(--font-size);
 }
 
@@ -398,6 +397,7 @@ time + p {
 code,
 pre {
   font-family: var(--font-family-mono);
+  font-weight: 500;
 }
 
 /* Make images easier to work with */
