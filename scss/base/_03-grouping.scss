@@ -18,9 +18,6 @@ p {
   font-size: var(--font-size);
 }
 
-.e-content > * + * {
-  margin-block-start: var(--flow-space, 1em);
-}
 
 hr {
   margin: var(--spacing) 0;
@@ -32,8 +29,36 @@ pre {
 }
 
 blockquote {
-  border-left: var(--border-style-thick);
-  padding-inline-start: var(--spacing-large);
+  display: flex;
+  margin-block-start: var(--spacing);
+  margin-inline-start: -16ch;
+  gap: 2vw;
+}
+
+blockquote > * {
+  font-size: var(--font-size-medium);
+  font-style: italic;
+
+}
+
+blockquote:before {
+  align-self: flex-start;
+  font-size: var(--font-size-xxx-display);
+  line-height: 1.1;
+  color: var(--color-border);
+  content: "“";
+}
+
+blockquote:after {
+  align-self: flex-end;
+  font-size: var(--font-size-xxx-display);
+  line-height: 0;
+  color: var(--color-accent);
+  content: "”";
+}
+
+.e-content > * + * {
+  margin-block-start: var(--flow-space, 1em);
 }
 
 /* Remove default padding */

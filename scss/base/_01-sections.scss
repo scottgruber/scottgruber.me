@@ -36,7 +36,7 @@ body {
   }
 
   header[role="banner"] {
-    grid-column: 2 / 6;
+    grid-column: 2 / -1;
   }
 
   nav[role="navigation"] {

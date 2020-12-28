@@ -9,7 +9,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family);
   font-weight: var(--font-weight-black);
   line-height: var(--line-height-heading);
   
@@ -20,15 +20,20 @@ h1 {
 }
 
 header[role="banner"] h1 {
-  margin-block-start: 1em;
-  font-family: var(--font-family);
-  font-size: var(--font-size-x-large);
-  text-transform: uppercase;
+  margin-block-start: .5em;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-x-display);
+  font-style: italic;
+  font-weight: var(--font-weight-extra-bold);
 }
 
 header h1 span {
   display: block;
   font-size: 75%;
+}
+
+main > h1:first-of-type {
+  font-family: var(--font-family-display);
 }
 
 h2 {
@@ -46,6 +51,6 @@ h4 {
 
 h5,
 h6 {
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-display);
   font-size: var(--font-size);
 }

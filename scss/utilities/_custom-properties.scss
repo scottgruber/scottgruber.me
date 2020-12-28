@@ -1,6 +1,8 @@
 :root {
-  --font-family: "Decimal A", "Decimal B", sans-serif;
-  --font-family-heading: "Sentinel SSm A", "Sentinel SSm B", serif;
+  //--font-family: "Decimal A", "Decimal B", sans-serif;
+  //--font-family-display: "Sentinel SSm A", "Sentinel SSm B", serif;
+  --font-family: "Ringside Condensed SSm A", "Ringside Condensed SSm B";
+  --font-family-display: "Forza SSm A", "Forza SSm B";
   --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
   --font-family-decorative-light: "Sentinel Ornaments Bright A", "Sentinel Ornaments Bright B";
   --font-family-decorative-dark: "Sentinel Ornaments Dark A", "Sentinel Ornaments Dark B";
@@ -10,9 +12,8 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
-  //--font-weight-black: 900;
-  --font-weight-black: 800;
-
+  --font-weight-black: 900;
+  
   --text-scale-ratio: 1.125;
   --line-height-text: 1.5;
   --line-height-heading: 1;
@@ -132,7 +133,7 @@
     --color-text: #f0f2f3;
     --color-base: #e7e9e7;
     --color-accent: #f5df4d; }
-  }
+}
 
 @-ms-viewport {
   width: device-width;
