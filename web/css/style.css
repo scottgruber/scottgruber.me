@@ -1,10 +1,8 @@
 @charset "UTF-8";
 :root {
-  --font-family: "Ringside Condensed SSm A", "Ringside Condensed SSm B";
-  --font-family-display: "Forza SSm A", "Forza SSm B";
+  --font-family: soleto, sans-serif;
+  --font-family-display: prometo, sans-serif;
   --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
-  --font-family-decorative-light: "Sentinel Ornaments Bright A", "Sentinel Ornaments Bright B";
-  --font-family-decorative-dark: "Sentinel Ornaments Dark A", "Sentinel Ornaments Dark B";
   --font-weight-thin: 200;
   --font-weight-light: 300;
   --font-weight-regular: 400;
