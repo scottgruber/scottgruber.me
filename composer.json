@@ -7,9 +7,9 @@
     "email": "scott@scottgruber.me"
   }],
   "require": {
-    "craftcms/cms": "3.5.18",
-    "craftcms/feed-me": "4.3.4",
-    "craftcms/postmark": "2.0.2",
+    "craftcms/cms": "3.6.11.1",
+    "craftcms/feed-me": "4.3.6",
+    "craftcms/postmark": "2.1.0",
     "craftcms/redactor": "2.8.5",
     "craftcms/webhooks": "2.3.2",
     "vlucas/phpdotenv": "^3.4.0",
@@ -24,7 +24,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.2.5"
     }
   },
   "scripts": {
