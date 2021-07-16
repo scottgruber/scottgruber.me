@@ -1,22 +1,8 @@
+/.env
+/.idea
+/vendor
 .DS_Store
 .config.codekit3
-
-# Craft CMS files
-
-.env
-config
-cpresources
-modules
-vendor
-storage
-web/assets/
-
-node_modules
-
-
-# My files
-fonts
-web/js/**
-!web/js/webmention.min.js
-print-to-web
+web/print-to-web/
 web/100-layouts/
+config
