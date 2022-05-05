@@ -1,0 +1,9 @@
+format: null
+handle: square
+height: 300
+interlace: none
+mode: crop
+name: '300 Square'
+position: center-center
+quality: 82
+width: 300

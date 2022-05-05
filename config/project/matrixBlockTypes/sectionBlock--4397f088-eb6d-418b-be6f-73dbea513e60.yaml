@@ -1,0 +1,122 @@
+field: 2c12c66f-f886-4632-942c-5b4bcf3dee30 # Article Body
+fieldLayouts:
+  35033d33-2975-4a13-b77a-4771dbf75225:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 0a731147-6b21-43a1-98e6-b4a023ee0465 # Section Heading
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 79e741cf-5272-4f48-b3ed-84e4360b5fd2 # Section Summary
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 014896df-c8f7-47c3-abea-03dbec440413 # Section Image
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0a731147-6b21-43a1-98e6-b4a023ee0465: # Section Heading
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionHeading
+    instructions: ''
+    name: 'Section Heading'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  79e741cf-5272-4f48-b3ed-84e4360b5fd2: # Section Summary
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionSummary
+    instructions: ''
+    name: 'Section Summary'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  014896df-c8f7-47c3-abea-03dbec440413: # Section Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: sectionImage
+    instructions: ''
+    name: 'Section Image'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: sectionBlock
+name: 'Section Block'
+sortOrder: 8

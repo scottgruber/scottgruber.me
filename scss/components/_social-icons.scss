@@ -1,0 +1,29 @@
+// social icons svg
+
+.social-icons > a:link {
+  text-decoration: none;
+}
+
+.social-icons > a:hover,
+.social-icons > a:focus {
+  background-color: initial;
+  outline: initial;
+}
+
+.social-icons a > .icon {
+  fill: var(--color-supporting-lighter);
+}
+
+.social-icons a > .icon:focus,
+.social-icons a > .icon:hover {
+  fill: var(--color-accent-light);
+}
+
+.icon.microblog {
+  transform: translateY(-7px);
+}
+
+.icon.glitch {
+  transform: translateY(-7px);
+  margin-left: .5em;
+}

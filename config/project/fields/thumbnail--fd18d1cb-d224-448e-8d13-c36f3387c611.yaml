@@ -1,0 +1,33 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 80392b7c-eb61-48f1-a844-52382d42d4d0 # Article
+handle: thumbnail
+instructions: 'Small image for use on home page or archives.'
+name: Thumbnail
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
+  defaultUploadLocationSubpath: ''
+  limit: ''
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

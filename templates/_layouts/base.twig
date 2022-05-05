@@ -1,0 +1,63 @@
+{%- block htmlPage -%}
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>{% if title is defined %}{{ title }} — {% endif %}{{ siteName }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crafted with care by Scott Gruber">
+  <link rel="stylesheet" href="https://use.typekit.net/veh3pcn.css">
+  <style>
+  {% include "_partials/_css.twig" %}
+  </style>
+
+  <link rel="dns-prefetch" href="{{ siteUrl }}">
+  <link rel="preconnect" href="{{ siteUrl }}" crossorigin>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  {# -- Feeds -- #}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ siteUrl("/rss") }}" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ siteUrl("/atom") }}" />
+  
+  {# -- IndieWeb -- #}
+  <link rel="webmention" href="https://webmention.io/scottgruber.me/webmention" />
+  <link rel="pingback" href="https://webmention.io/scottgruber.me/xmlrpc" />
+  <link rel="pingback" href="https://webmention.io/webmention?forward={{ siteUrl }}" />
+  
+
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+  <link rel="microsub" href="https://aperture.p3k.io/microsub/107">
+  <link rel="micropub" href="https://scottgruber.me/micropub">
+  <link rel="me" href="https://micro.blog/scottgruber" />
+
+  <script src="/js/webmention.min.js" data-id="webmention-container" async></script>
+  
+</head>
+
+
+<body {% if bodyClass is defined %}class="{{ bodyClass }}"{% endif %}>
+
+{% include "_partials/_header.twig" %}
+{% include "_partials/_nav.twig" %}
+
+<main id="main" role="main">
+
+{% block bodyContent %}
+
+{% endblock bodyContent %}
+
+</main>
+
+{% block footer %}
+{% include "_partials/_footer.twig" %}
+{% endblock footer %}      
+
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+{% endblock bodyJs %}
+<script rel="preconnect" src="/js/gauges.js"></script>
+
+</body>
+</html>
+{%- endblock htmlPage -%}

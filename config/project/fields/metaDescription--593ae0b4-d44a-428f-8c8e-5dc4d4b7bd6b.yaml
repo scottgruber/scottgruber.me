@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: string(640)
+fieldGroup: 4cacf4e4-44a6-4fb2-8afb-805e1aed82a6 # Meta
+handle: metaDescription
+instructions: ''
+name: 'Meta Description'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 160
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Need help to make your site accessible, fast and look good? Ask Scott.'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

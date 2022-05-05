@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: false
+handle: shengxiao
+name: 生肖
+propagationMethod: all
+siteSettings:
+  840ad40c-34ac-4597-8c5f-747198813889: # Scott Gruber
+    enabledByDefault: true
+    hasUrls: true
+    template: shengxiao/_entry
+    uriFormat: 'shengxiao/{slug}'
+structure:
+  maxLevels: null
+  uid: b5c58f0f-4b49-4702-9ed5-936577c846ed
+type: structure

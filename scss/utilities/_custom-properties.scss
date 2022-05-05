@@ -1,0 +1,150 @@
+:root {
+  //--font-family: "Decimal A", "Decimal B", sans-serif;
+  //--font-family-display: "Sentinel SSm A", "Sentinel SSm B", serif;
+  //--font-family: "Ringside Condensed SSm A", "Ringside Condensed SSm B";
+  --font-family: soleto, sans-serif;
+  //--font-family-display: "Forza SSm A", "Forza SSm B";
+  --font-family-display: prometo, sans-serif; 
+  --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
+  //--font-family-decorative-light: "Sentinel Ornaments Bright A", "Sentinel Ornaments Bright B";
+  //--font-family-decorative-dark: "Sentinel Ornaments Dark A", "Sentinel Ornaments Dark B";
+  --font-weight-thin: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+  
+  --text-scale-ratio: 1.125;
+  --line-height-text: 1.5;
+  --line-height-heading: 1;
+
+  --grid-compound-6-4: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+  --grid-compound-4-3: 3fr 1fr 2fr 2fr 3fr 1fr;
+  --grid-compound-5-4: 6fr 1fr 4fr 3fr 3fr 4fr 1fr 6fr;
+  --grid-column-gap: 2vw;
+  --grid-row-gap: 4vh;
+  --gap: 1vw;
+
+  --font-size-xxx-display: 11.642rem;
+  --font-size-xx-display: 9.313rem;
+  --font-size-x-display: 5.96rem;
+  --font-size-display: 4.768rem;
+  --font-size-xxxx-large: 3.815rem;
+  --font-size-xxx-large: 3.052rem;
+  --font-size-xx-large: 2.441rem;
+  --font-size-x-large: 1.953rem;
+  --font-size-large: 1.563rem;
+  --font-size-medium: 1.25rem;
+  --font-size: 1rem;
+  --font-size-small: 0.8rem;
+  --font-size-x-small: 0.64rem;
+
+  --pantone-illuminating-yellow: #F5DF4D;
+  --pantone-ultimate-gray: #939597;
+
+  --pantone-dark-gray: #3C3E40;
+  --pantone-light-gray: #E7E9E7;
+  
+  --pantone-iris-bloom: #5C609F;
+  --pantone-prism-pink: #F0A1BF;
+  --pantone-fruit-dove: #CF5C78;
+  --pantone-lead-crystal: #C2BFB5;
+  --pantone-cloud-dancer: #F0EEE9;
+  --pantone-spice-route: #BA5B3F;
+  --pantone-willowherb: #8F4584;
+
+
+  --color-primary-lighter: #7a859d; // #a8f6ff Celeste
+  --color-primary-light: #6c7791; //#586b89 Spray
+  --color-primary: #5d6a85; // 41506d Summer Sky
+  --color-primary-dark: #4f5d79; // #006dc7 Navy Blue
+  --color-primary-darker: #41506d; // #0045ae Cobalt
+
+  --color-secondary-lighter: #aacca9; //  $pistachio: #98c87d;
+  --color-secondary-light: #8aad8a; // $asparagus: #72a35b;
+  --color-secondary: #6c8f6b; //  $green-house: #406732;
+  --color-secondary-dark: #4e734e; //   $palm-green: #0c2907;
+  --color-secondary-darker: #315733; //  $midnight-moss: #031001;
+
+  --color-accent-lighter: #bf8fad; // #ff92b7 Flamingo Pink
+  --color-accent-light: #bc82a6; //#f16c91 Light Crimson
+  --color-accent: #b875a0; // #b73957 Night Shadz
+  --color-accent-dark: #b36899; // #7b001b Burgundy
+  --color-accent-darker: #af5b93; // #0F0047 Mahogany
+
+  --color-neutral-lighter: hsla(35, 36%, 94%); // $hint-of-red: #f5f0e9;
+  --color-neutral-light: hsla(32, 27%, 85%); // $albescent-white: #e3d9ce;
+  --color-neutral: hsla(30, 14%, 62%); // $zorba: #aa9d8f;
+  --color-neutral-dark: hsla(29, 17%, 38%); // $kabul: #716050;
+  --color-neutral-darker: hsla(29, 26%, 23%); //   $mondo: #4a3b2c;
+
+  --color-black: #29292b;
+  --color-white: #f1f1f1;
+
+  --color-text: var(--color-black);
+  --color-text-alt: var(--color-neutral-lighter);
+  --color-background: var(--color-neutral-lighter);
+  --color-border: var(--color-primary-dark);
+  --color-border-separator: var(--color-accent-lighter);
+
+  --border-radius-x-small: 0.25rem;
+  --border-radius-small: 0.5rem;
+  --border-radius-medium: 0.75rem;
+  --border-radius-large: 1rem;
+  --border-radius-circle: 50%;
+  --border-width-hairline: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-thick: var(--border-radius-medium);
+  --border-style-thin: var(--border-width-thin) solid var(--color-border);
+  --border-style-thick: var(--border-width-thick) solid var(--color-border);
+
+  --max-width: 72rem;
+  --spacing-xx-small: 0.25rem;
+  --spacing-x-small: 0.5rem;
+  --spacing-small: 0.75rem;
+  --spacing: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 2rem;
+  --spacing-x-large: 4rem;
+  --spacing-xx-large: 8rem;
+
+  --split-pair-space: 1rem;
+  --flow-space: 1rem;
+
+
+  --duration-instantly: 0;
+  --duration-immediately: 0.05s;
+  --duration-quickly: 0.1s;
+  --duration-promptly: 0.2s;
+  --duration-slowly: 0.4s;
+  --timing: ease;
+
+  --color-background: #ffffff;
+  --color-border: #d687ba;
+  --color-text: #3c3e40;
+  --color-base: #e7e9e7;
+  --color-accent: #5085c3; 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #3c3e40;
+    --color-border: #d687ba;
+    --color-text: #f0f2f3;
+    --color-base: #e7e9e7;
+    --color-accent: #f5df4d; }
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}

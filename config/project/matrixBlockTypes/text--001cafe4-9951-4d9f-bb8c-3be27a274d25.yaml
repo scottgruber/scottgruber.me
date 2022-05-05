@@ -1,0 +1,41 @@
+field: 2c12c66f-f886-4632-942c-5b4bcf3dee30 # Article Body
+fieldLayouts:
+  ee79c7cc-c26f-4fe2-8459-7dd5941d9f95:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5aea0788-becb-46c2-96c8-75768b9f40ea # Text
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  5aea0788-becb-46c2-96c8-75768b9f40ea: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: text
+name: 'Markdown Editor'
+sortOrder: 3

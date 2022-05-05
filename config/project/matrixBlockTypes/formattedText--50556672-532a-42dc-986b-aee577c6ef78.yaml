@@ -1,0 +1,51 @@
+field: 2c12c66f-f886-4632-942c-5b4bcf3dee30 # Article Body
+fieldLayouts:
+  7b5bc71d-34bc-4966-8806-1cc3a8517df6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 88e56014-9326-428a-b6b1-4852e93186dd # Text
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  88e56014-9326-428a-b6b1-4852e93186dd: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: formatedText
+    instructions: ''
+    name: Text
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes:
+        - c2e619ef-2739-46b9-b26c-78d421566532 # Images
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: formattedText
+name: 'Redactor Editor'
+sortOrder: 7

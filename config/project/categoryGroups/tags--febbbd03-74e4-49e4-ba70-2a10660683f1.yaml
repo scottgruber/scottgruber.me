@@ -1,0 +1,50 @@
+defaultPlacement: end
+fieldLayouts:
+  e89b9215-dc74-404b-8d79-229d3b462a4a:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9ba8a3f3-9fcd-4f7f-9820-6763cbf76c50 # Icon
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Tags
+        sortOrder: 1
+handle: tags
+name: Tags
+siteSettings:
+  840ad40c-34ac-4597-8c5f-747198813889: # Scott Gruber
+    hasUrls: true
+    template: tags/_entry
+    uriFormat: 'tags/{slug}'
+structure:
+  maxLevels: 2
+  uid: 9b9756b6-1fe1-4edc-9fea-698010f3a734

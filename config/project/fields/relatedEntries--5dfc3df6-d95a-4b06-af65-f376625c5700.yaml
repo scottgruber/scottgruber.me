@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 4cacf4e4-44a6-4fb2-8afb-805e1aed82a6 # Meta
+handle: relatedEntries
+instructions: ''
+name: 'Related Entries'
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: '5'
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:530c73e4-c186-4ba2-bd9f-9e301383b88e' # Articles
+    - 'section:b00f9752-ea7e-435b-990d-61505b8e35bc' # Notes
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

@@ -1,0 +1,93 @@
+{% extends "_layouts/base.twig" %}
+
+{% set title = "Home" %}
+{% set metaDescription = "Need your site to work for everyone, load fast and look good? Ask Scott for help." %}
+
+{% block bodyContent %}
+
+{% set single = craft.entries.section('home').one() %}
+
+{% if single %}
+	{% set asset = single.heroImage.one() %}
+
+		{% if asset %}
+				<figure>
+				<img src="{{ asset.url }}" alt="{{ asset.imageAlt }}" >
+				{% if asset.imageCaption|length %}
+				<figcaption>
+					{{ asset.imageCaption }}
+				</figcaption>	
+				{% endif %}
+				</figure>
+		{% endif %}
+
+<h1>{{ single.heading }}</h1>
+
+<p class="lede">{{ single.lede }}</p>
+
+{{ single.summary|markdown }}
+{% set artwork = single.svg.one() %}
+
+		{% if artwork %}
+				<figure class="anime-tiger">
+                {{ svg(artwork) }}   
+				</figure>
+		{% endif %}
+{{ single.body|markdown }}
+{% endif %}
+
+{% set latestArticles = craft.entries.section('articles').featuredEntry('1') %}
+
+{% if latestArticles|length %}
+<section class="h-feed c-articles">
+    <header>
+        <h1>Articles</h1>
+    </header>
+
+    {% for article in latestArticles.all() %}
+    <article class="h-entry">
+        <h2 class="p-name"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+        <p class="p-summary lede">{{ article.lede }}</p>
+        
+    </article>    
+    {% endfor %}
+</section>
+{% endif %}
+
+
+{% set featuredNotes = craft.entries.section('notes').featuredEntry('1') %}
+
+{% if featuredNotes|length %}
+<section class="h-feed c-notes">
+ <header>
+        <h1>Notes</h1>
+    </header>
+    {% for note in featuredNotes.all() %}
+    <article class="h-entry">
+        
+        <h2 class="p-name"><a href="{{ note.url }}">{{ note.title }}</a></h2>
+        <p class="p-summary lede">{{ note.lede }}</p>
+        <p class="small"><time class="dt-published" datetime="{{ note.postDate|atom }}">Note posted {{ note.postDate | date("M jS, Y") }} at {{ note.postDate | date("g:i A") }}</time></p>
+    </article>    
+    {% endfor %}
+</section>
+{% endif %}
+
+{% set featuredLinks = craft.entries.section('links').featuredEntry('1') %}
+
+{% if featuredLinks|length %}
+<section class="h-feed c-links">
+ <header>
+        <h1>Links</h1>
+    </header>
+    {% for entry in featuredLinks.all() %}
+    <article class="h-entry"> 
+        <h2 class="p-name"><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
+        <p class="p-summary">{{ entry.lede }}</p>
+        <time class="dt-published" datetime="{{ entry.postDate|atom }}">Link posted at {{ entry.postDate | date("M jS, Y") }} at {{ entry.postDate | date("g:i A") }}</time>
+    </article>    
+    {% endfor %}
+</section>
+{% endif %}
+
+{% endblock bodyContent %}

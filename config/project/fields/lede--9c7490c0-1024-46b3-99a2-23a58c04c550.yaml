@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: 80392b7c-eb61-48f1-a844-52382d42d4d0 # Article
+handle: lede
+instructions: 'A lede paragraph should emphasize grabbing the attention of the reader i.e. "don''t bury the lede".'
+name: Lede
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '2'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

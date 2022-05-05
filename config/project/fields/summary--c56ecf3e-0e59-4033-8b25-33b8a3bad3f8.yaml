@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: string(1120)
+fieldGroup: 80392b7c-eb61-48f1-a844-52382d42d4d0 # Article
+handle: summary
+instructions: 'Provide a short summary or description to use when entry is a featured story or on a list page.'
+name: Summary
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 280
+  code: ''
+  columnType: null
+  initialRows: '2'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

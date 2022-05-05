@@ -1,0 +1,258 @@
+field: 2c12c66f-f886-4632-942c-5b4bcf3dee30 # Article Body
+fieldLayouts:
+  edabdc8a-57e8-41cb-9b9a-d8361f9d0bee:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 40cbbde4-37f6-4ee7-b533-e2bb9db0b1f1 # Image
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 178afcda-33ec-4f50-8f65-0135132f98a4 # Image Type
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 99a4c10e-65c3-4e9d-9750-3cc9901141ed # imagePosition
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: edbdd24e-9d2d-4df8-a8ca-2e2002dc15a7 # Caption
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e7488985-ca55-4f73-84c2-a6f182cdb2f4 # Caption Position
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  40cbbde4-37f6-4ee7-b533-e2bb9db0b1f1: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  99a4c10e-65c3-4e9d-9750-3cc9901141ed: # imagePosition
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: imagePosition
+    instructions: 'Use to float image left or right'
+    name: imagePosition
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Inline Start'
+            -
+              - value
+              - left
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Inline End'
+            -
+              - value
+              - right
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  178afcda-33ec-4f50-8f65-0135132f98a4: # Image Type
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: imageType
+    instructions: ''
+    name: 'Image Type'
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Full Width'
+            -
+              - value
+              - fullWidth
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Infographic
+            -
+              - value
+              - infographic
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  e7488985-ca55-4f73-84c2-a6f182cdb2f4: # Caption Position
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: captionPosition
+    instructions: ''
+    name: 'Caption Position'
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Block Start'
+            -
+              - value
+              - blockStart
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Block End'
+            -
+              - value
+              - blockEnd
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Inset Start'
+            -
+              - value
+              - insetStart
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Inset End'
+            -
+              - value
+              - insetEnd
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  edbdd24e-9d2d-4df8-a8ca-2e2002dc15a7: # Caption
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: imageCaption
+    instructions: ''
+    name: Caption
+    searchable: true
+    settings:
+      errorMessage: 'Unable to find component class ''Acoustep\CraftEasyMDE\Fields\CraftEasyMDEField''.'
+      expectedType: Acoustep\CraftEasyMDE\Fields\CraftEasyMDEField
+      settings: '{"byteLimit":null,"charLimit":null,"code":"","columnType":null,"initialRows":"4","mode":"plain","modeOverride":null,"multiline":"","placeholder":""}'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\MissingField
+handle: image
+name: Image
+sortOrder: 2

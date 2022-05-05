@@ -1,0 +1,228 @@
+field: 2c12c66f-f886-4632-942c-5b4bcf3dee30 # Article Body
+fieldLayouts:
+  4ada5c7c-59f2-400a-8791-bc7a8e09a57a:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f6b8de39-72e6-457f-acf4-734b91e52182 # Code
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ca134d3b-9a07-4a31-a00f-f3c2d1db702e # Languages
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7ec485c5-0df8-49c9-93b2-2a9658d6edd4 # Caption
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 89eba528-c391-494e-8ee0-67787274f255 # Link
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  7ec485c5-0df8-49c9-93b2-2a9658d6edd4: # Caption
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: codeCaption
+    instructions: ''
+    name: Caption
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  89eba528-c391-494e-8ee0-67787274f255: # Link
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: codeLink
+    instructions: ''
+    name: Link
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  ca134d3b-9a07-4a31-a00f-f3c2d1db702e: # Languages
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: codeLanguage
+    instructions: 'What code language are you using?'
+    name: Languages
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - CSS
+            -
+              - value
+              - css
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - HTML
+            -
+              - value
+              - markup
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - JavaScript
+            -
+              - value
+              - javascript
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - JSON
+            -
+              - value
+              - json
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - PHP
+            -
+              - value
+              - php
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Python
+            -
+              - value
+              - python
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Bash + Shell'
+            -
+              - value
+              - bash
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - GraphQL
+            -
+              - value
+              - graphql
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Git
+            -
+              - value
+              - git
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Twig
+            -
+              - value
+              - twig
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  f6b8de39-72e6-457f-acf4-734b91e52182: # Code
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: code
+    instructions: 'Paste in HTML Snippets'
+    name: Code
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: code
+name: Code
+sortOrder: 1

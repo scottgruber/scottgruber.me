@@ -1,0 +1,70 @@
+field: 2c12c66f-f886-4632-942c-5b4bcf3dee30 # Article Body
+fieldLayouts:
+  db4dec98-02ab-4c37-9682-0faa4739f23b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 230b8c18-409b-4c42-93d8-be7c54f3adc0 # Quote
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 048a11fd-1d26-4b42-b9a0-f37553779e58 # Attribution
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  048a11fd-1d26-4b42-b9a0-f37553779e58: # Attribution
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: attribution
+    instructions: ''
+    name: Attribution
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  230b8c18-409b-4c42-93d8-be7c54f3adc0: # Quote
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote
+    instructions: ''
+    name: Quote
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: quote
+name: Quote
+sortOrder: 6

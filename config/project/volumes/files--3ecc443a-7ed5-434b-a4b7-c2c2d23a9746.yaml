@@ -1,0 +1,38 @@
+fieldLayouts:
+  20d7ea6a-3c9b-48b0-bc46-8c3023bdb13f:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fs: files
+handle: files
+hasUrls: true
+name: Files
+sortOrder: 7
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+url: '@assetUrl/files'

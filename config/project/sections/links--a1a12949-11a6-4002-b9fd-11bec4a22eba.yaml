@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: links
+name: Links
+propagationMethod: all
+siteSettings:
+  840ad40c-34ac-4597-8c5f-747198813889: # Scott Gruber
+    enabledByDefault: true
+    hasUrls: true
+    template: links/_entry
+    uriFormat: '{postDate|date(''Y'')}/{postDate|date(''m'')}/{postDate|date(''j'')}/{slug}'
+type: channel

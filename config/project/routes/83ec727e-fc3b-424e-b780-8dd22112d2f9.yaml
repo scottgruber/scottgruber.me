@@ -1,0 +1,9 @@
+siteUid: null
+sortOrder: 1
+template: articles/_entry
+uriParts:
+  - articles/
+  -
+    - slug
+    - '[^\/]+'
+uriPattern: 'articles/<slug:[^\/]+>'

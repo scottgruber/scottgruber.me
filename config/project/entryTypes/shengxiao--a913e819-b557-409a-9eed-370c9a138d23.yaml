@@ -1,0 +1,92 @@
+fieldLayouts:
+  28afc0d2-b5fd-438f-9aac-df9a27a2ac6b:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 959dff9f-9403-4943-8efc-69c8db5fa65c # SVG
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b642035e-5f77-4f22-bb9f-060720ddae95 # Chinese
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fcdccecf-de72-4e6f-ab6b-df87f08f7622 # English
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4484103a-3c36-4f70-94d2-e8c97abba2ed # Pinyin
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9c7490c0-1024-46b3-99a2-23a58c04c550 # Lede
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7299e97d-1b84-46a5-96be-de9062d0dd4e # Body
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Chinese Zodiac'
+        sortOrder: 1
+handle: shengxiao
+hasTitleField: false
+name: 生肖
+section: 8bf050bc-0e15-47bc-9f8c-af669c632ed5 # 生肖
+sortOrder: 1
+titleFormat: '{english}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

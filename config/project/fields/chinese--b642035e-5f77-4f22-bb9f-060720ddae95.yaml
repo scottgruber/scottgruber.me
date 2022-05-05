@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: string(1020)
+fieldGroup: 22c9420c-33b2-4619-93ac-0e1870c65fe3 # Language
+handle: chinese
+instructions: 中文
+name: Chinese
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 255
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

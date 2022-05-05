@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: articles
+name: Articles
+propagationMethod: all
+siteSettings:
+  840ad40c-34ac-4597-8c5f-747198813889: # Scott Gruber
+    enabledByDefault: true
+    hasUrls: true
+    template: articles/_entry
+    uriFormat: 'articles/{slug}'
+type: channel

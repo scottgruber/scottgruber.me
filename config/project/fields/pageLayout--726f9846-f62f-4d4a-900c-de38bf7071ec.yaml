@@ -1,0 +1,46 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 4cacf4e4-44a6-4fb2-8afb-805e1aed82a6 # Meta
+handle: pageLayout
+instructions: 'CSS class selector on the body element can be used to target a custom page layout.'
+name: 'Page Layout'
+searchable: true
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Style 1'
+        -
+          - value
+          - style1
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Style 2'
+        -
+          - value
+          - style2
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Style 3'
+        -
+          - value
+          - style3
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

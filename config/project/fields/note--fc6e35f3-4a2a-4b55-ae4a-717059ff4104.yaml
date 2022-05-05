@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: string(3200)
+fieldGroup: 0b0b084d-d2d9-430c-a3fe-88c9449e57c8 # Common
+handle: note
+instructions: ''
+name: Note
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 800
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

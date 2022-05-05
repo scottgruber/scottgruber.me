@@ -1,0 +1,24 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 4cacf4e4-44a6-4fb2-8afb-805e1aed82a6 # Meta
+handle: tags
+instructions: ''
+name: Tags
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'group:febbbd03-74e4-49e4-ba70-2a10660683f1' # Tags
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories
