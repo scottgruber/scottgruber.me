@@ -3,6 +3,7 @@ fieldLayouts:
   e89b9215-dc74-404b-8d79-229d3b462a4a:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -10,6 +11,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,19 +27,25 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            uid: 12b1a439-2f32-4adb-8d32-5c03e3bd1438
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 9ba8a3f3-9fcd-4f7f-9820-6763cbf76c50 # Icon
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2cb7f8ff-bdb6-4b91-b806-e920699f48dd
+            userCondition: null
             warning: null
             width: 100
         name: Tags
-        sortOrder: 1
+        uid: 9d05a064-f3fe-4c96-9d2e-8c27229e1317
+        userCondition: null
 handle: tags
 name: Tags
 siteSettings:

@@ -3,61 +3,75 @@ fieldLayouts:
   4ada5c7c-59f2-400a-8791-bc7a8e09a57a:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: f6b8de39-72e6-457f-acf4-734b91e52182 # Code
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: a02d97d0-8313-4b3d-acb4-e14f1eaac2ad
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: ca134d3b-9a07-4a31-a00f-f3c2d1db702e # Languages
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f0ac74e3-1bef-4dac-a784-29038fa50705
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 7ec485c5-0df8-49c9-93b2-2a9658d6edd4 # Caption
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9deadcc8-e19f-4852-a69a-4ad10594f510
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 89eba528-c391-494e-8ee0-67787274f255 # Link
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 29b47f8f-18ce-49ca-b575-f3cc5ecb3116
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: abed0708-a478-43fe-8e20-afe552d53fc1
+        userCondition: null
 fields:
   7ec485c5-0df8-49c9-93b2-2a9658d6edd4: # Caption
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: codeCaption
-    instructions: ''
+    instructions: null
     name: Caption
     searchable: true
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: ''
+      initialRows: 4
+      multiline: false
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -68,12 +82,11 @@ fields:
     contentColumnType: string(255)
     fieldGroup: null
     handle: codeLink
-    instructions: ''
+    instructions: null
     name: Link
     searchable: true
     settings:
-      maxLength: '255'
-      placeholder: ''
+      maxLength: 255
       types:
         - url
     translationKeyFormat: null
@@ -88,7 +101,6 @@ fields:
     name: Languages
     searchable: true
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -214,10 +226,10 @@ fields:
     settings:
       byteLimit: null
       charLimit: null
-      code: ''
+      code: false
       columnType: null
-      initialRows: '4'
-      multiline: '1'
+      initialRows: 4
+      multiline: true
       placeholder: null
       uiMode: normal
     translationKeyFormat: null

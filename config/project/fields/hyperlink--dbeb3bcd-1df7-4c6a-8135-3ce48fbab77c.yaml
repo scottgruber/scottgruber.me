@@ -2,12 +2,11 @@ columnSuffix: null
 contentColumnType: string(255)
 fieldGroup: 0b0b084d-d2d9-430c-a3fe-88c9449e57c8 # Common
 handle: hyperlink
-instructions: ''
+instructions: null
 name: Hyperlink
 searchable: true
 settings:
-  maxLength: '255'
-  placeholder: ''
+  maxLength: 255
   types:
     - url
 translationKeyFormat: null

@@ -2,14 +2,15 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 4cacf4e4-44a6-4fb2-8afb-805e1aed82a6 # Meta
 handle: relatedEntries
-instructions: ''
+instructions: null
 name: 'Related Entries'
 searchable: true
 settings:
   allowSelfRelations: false
-  limit: '5'
   localizeRelations: false
-  selectionLabel: ''
+  maxRelations: 5
+  minRelations: null
+  selectionLabel: null
   showSiteMenu: true
   source: null
   sources:

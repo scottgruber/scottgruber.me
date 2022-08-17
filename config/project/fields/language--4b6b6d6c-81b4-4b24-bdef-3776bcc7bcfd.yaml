@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 22c9420c-33b2-4619-93ac-0e1870c65fe3 # Language
 handle: language
-instructions: ''
+instructions: null
 name: Language
 searchable: false
 settings:

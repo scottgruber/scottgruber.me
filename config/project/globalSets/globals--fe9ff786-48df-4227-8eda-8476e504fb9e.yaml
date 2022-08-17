@@ -2,36 +2,47 @@ fieldLayouts:
   a04b684a-df13-4f54-8b15-deae811f314f:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 90e1e15c-f3ec-4522-999d-401ffa0bcfbb # Site Author
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 1aa1da30-5d57-4bca-8d0f-cabb3d414082
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 69ae30b5-6749-4f94-9283-63027e64b000 # Site Author Email
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b48a7fa6-c772-485e-b624-d78d001f5ee4
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e6a58602-4fcb-4319-a14c-053d4b9fd671 # Site Description
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: eeb2a757-428d-41e5-96d0-3cb888dae2a7
+            userCondition: null
             warning: null
             width: 100
         name: Globals
-        sortOrder: 1
+        uid: 90762ff3-7090-4ae5-b870-9c8788b2c1c0
+        userCondition: null
 handle: globals
 name: Globals
 sortOrder: 2

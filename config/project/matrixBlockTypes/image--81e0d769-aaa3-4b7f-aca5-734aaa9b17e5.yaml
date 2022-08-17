@@ -3,84 +3,104 @@ fieldLayouts:
   edabdc8a-57e8-41cb-9b9a-d8361f9d0bee:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 40cbbde4-37f6-4ee7-b533-e2bb9db0b1f1 # Image
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: fe815f3d-a3a6-42b3-9d34-5de9055110b9
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 178afcda-33ec-4f50-8f65-0135132f98a4 # Image Type
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: fe651867-c744-4a79-b930-8897d3cf2a16
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 99a4c10e-65c3-4e9d-9750-3cc9901141ed # imagePosition
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e1e14d9b-8cf0-421d-aedf-13a8f549c735
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: edbdd24e-9d2d-4df8-a8ca-2e2002dc15a7 # Caption
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 559ed6d2-1ac4-4e64-a4a3-15074f360d2f
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e7488985-ca55-4f73-84c2-a6f182cdb2f4 # Caption Position
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 3dbb8d0e-b46d-4600-b965-fb24357c9fba
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 3a19da49-8001-43cb-9449-df42465380c7
+        userCondition: null
 fields:
   40cbbde4-37f6-4ee7-b533-e2bb9db0b1f1: # Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image
-    instructions: ''
+    instructions: null
     name: Image
     searchable: true
     settings:
       allowSelfRelations: false
+      allowSubfolders: false
       allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
-      defaultUploadLocationSubpath: ''
-      limit: '1'
+      defaultUploadLocationSubpath: null
       localizeRelations: false
+      maxRelations: 1
+      minRelations: null
       previewMode: full
-      restrictFiles: '1'
-      selectionLabel: ''
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: null
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
-      singleUploadLocationSubpath: ''
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: false
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
@@ -95,7 +115,6 @@ fields:
     name: imagePosition
     searchable: true
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -138,11 +157,10 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: imageType
-    instructions: ''
+    instructions: null
     name: 'Image Type'
     searchable: true
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -185,11 +203,10 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: captionPosition
-    instructions: ''
+    instructions: null
     name: 'Caption Position'
     searchable: true
     settings:
-      optgroups: true
       options:
         -
           __assoc__:
@@ -243,13 +260,29 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: imageCaption
-    instructions: ''
+    instructions: null
     name: Caption
     searchable: true
     settings:
       errorMessage: 'Unable to find component class ''Acoustep\CraftEasyMDE\Fields\CraftEasyMDEField''.'
       expectedType: Acoustep\CraftEasyMDE\Fields\CraftEasyMDEField
-      settings: '{"byteLimit":null,"charLimit":null,"code":"","columnType":null,"initialRows":"4","mode":"plain","modeOverride":null,"multiline":"","placeholder":""}'
+      settings:
+        __assoc__:
+          2:
+            - code
+            - ''
+          4:
+            - initialRows
+            - '4'
+          5:
+            - mode
+            - plain
+          7:
+            - multiline
+            - ''
+          8:
+            - placeholder
+            - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\MissingField

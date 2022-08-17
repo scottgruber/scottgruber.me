@@ -2,6 +2,7 @@ fieldLayouts:
   1aa3226d-2557-4588-8f14-75cd8bada136:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -24,33 +26,42 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 6928cdea-4b20-48ae-9059-c7dc5c7254cb
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 25c53ff5-01c2-4622-af2a-55a82fc8236f # Image Alt
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9203dec2-522e-4e41-97ab-76b794235831
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 787a38f7-dc31-4bf9-88d0-ddca37022b49 # Image Caption
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b89a95f5-c128-43d4-9b9b-e0a67177828f
+            userCondition: null
             warning: null
             width: 100
         name: Images
-        sortOrder: 1
+        uid: 1ac32d30-1367-4904-ac1d-8785fb25b9a8
+        userCondition: null
 fs: images
 handle: images
-hasUrls: true
 name: Images
 sortOrder: 3
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-url: '@assetUrl/images'
+transformFs: null
+transformSubpath: ''

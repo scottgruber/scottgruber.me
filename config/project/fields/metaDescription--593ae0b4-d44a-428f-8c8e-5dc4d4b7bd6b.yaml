@@ -2,16 +2,16 @@ columnSuffix: null
 contentColumnType: string(640)
 fieldGroup: 4cacf4e4-44a6-4fb2-8afb-805e1aed82a6 # Meta
 handle: metaDescription
-instructions: ''
+instructions: null
 name: 'Meta Description'
 searchable: true
 settings:
   byteLimit: null
   charLimit: 160
-  code: ''
+  code: false
   columnType: null
-  initialRows: '4'
-  multiline: ''
+  initialRows: 4
+  multiline: false
   placeholder: 'Need help to make your site accessible, fast and look good? Ask Scott.'
   uiMode: normal
 translationKeyFormat: null

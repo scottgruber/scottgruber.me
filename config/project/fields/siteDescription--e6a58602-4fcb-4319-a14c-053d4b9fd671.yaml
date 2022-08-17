@@ -2,16 +2,16 @@ columnSuffix: null
 contentColumnType: string(1020)
 fieldGroup: bb54b5cc-a6f1-4445-97ab-422838895d39 # Globals
 handle: siteDescription
-instructions: ''
+instructions: null
 name: 'Site Description'
 searchable: true
 settings:
   byteLimit: null
   charLimit: 255
-  code: ''
+  code: false
   columnType: null
-  initialRows: '4'
-  multiline: ''
+  initialRows: 4
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null

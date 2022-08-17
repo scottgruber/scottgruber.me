@@ -2,16 +2,16 @@ columnSuffix: null
 contentColumnType: string(1020)
 fieldGroup: 22c9420c-33b2-4619-93ac-0e1870c65fe3 # Language
 handle: english
-instructions: ''
+instructions: null
 name: English
 searchable: true
 settings:
   byteLimit: null
   charLimit: 255
-  code: ''
+  code: false
   columnType: null
-  initialRows: '4'
-  multiline: ''
+  initialRows: 4
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null

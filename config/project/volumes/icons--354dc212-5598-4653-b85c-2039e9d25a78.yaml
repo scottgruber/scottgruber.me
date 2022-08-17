@@ -2,6 +2,7 @@ fieldLayouts:
   668cc435-eebf-4d25-8b76-c3a6bbd96a58:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -24,15 +26,18 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 40569be1-aeb8-4a4d-aef6-47132aa90858
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 9f81a782-b076-48d8-a3b7-76ac02f1554b
+        userCondition: null
 fs: icons
 handle: icons
-hasUrls: true
 name: Icons
 sortOrder: 4
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-url: '@assetUrl/icons'
+transformFs: null
+transformSubpath: ''

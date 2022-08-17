@@ -2,16 +2,16 @@ columnSuffix: null
 contentColumnType: text
 fieldGroup: 80392b7c-eb61-48f1-a844-52382d42d4d0 # Article
 handle: body
-instructions: ''
+instructions: null
 name: Body
 searchable: true
 settings:
   byteLimit: null
   charLimit: null
-  code: ''
+  code: false
   columnType: null
-  initialRows: '8'
-  multiline: '1'
+  initialRows: 8
+  multiline: true
   placeholder: null
   uiMode: normal
 translationKeyFormat: null

@@ -2,6 +2,7 @@ fieldLayouts:
   2ae7f7d4-8dea-45d7-ba28-25b2d1a2377a:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -24,55 +26,73 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: bbfc394e-873e-42fb-8e8a-414cd8028a59
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: cd333917-1208-4c9a-a96b-3ff2bdfbaed9 # Heading
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2d4fcc14-54b0-4921-ba83-278ba30f3b1c
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: ed999e25-ff72-4caf-95c7-dc3821d2642f # Image
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f88b2b65-2cac-4571-8104-9fab68e5f043
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 9c7490c0-1024-46b3-99a2-23a58c04c550 # Lede
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5e6b2078-11f8-44aa-8037-3304e3746431
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: c56ecf3e-0e59-4033-8b25-33b8a3bad3f8 # Summary
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 70d4e24f-0b36-4e66-8722-dd53e4e150f6
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 593ae0b4-d44a-428f-8c8e-5dc4d4b7bd6b # Meta Description
             instructions: null
             label: null
-            required: '0'
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 751e93c5-d673-4d6e-8e8c-42155eaf89fb
+            userCondition: null
             warning: null
             width: 100
         name: 'Tab 1'
-        sortOrder: 1
+        uid: 12957054-3f90-4b2e-aeb7-b4b86e251172
+        userCondition: null
 handle: now
 hasTitleField: false
 name: Now

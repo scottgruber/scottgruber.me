@@ -2,16 +2,16 @@ columnSuffix: null
 contentColumnType: text
 fieldGroup: c78e89ad-d2df-43dc-8129-05abe236e92b # Media
 handle: imageCaption
-instructions: ''
+instructions: null
 name: 'Image Caption'
 searchable: true
 settings:
   byteLimit: null
   charLimit: null
-  code: ''
+  code: false
   columnType: null
-  initialRows: '4'
-  multiline: ''
+  initialRows: 4
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
