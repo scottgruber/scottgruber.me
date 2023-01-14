@@ -1,9 +1,10 @@
 {
   "require": {
-    "craftcms/cms": "4.2.5",
+    "craftcms/cms": "4.3.6.1",
     "craftcms/postmark": "3.0.0",
-    "craftcms/redactor": "3.0.2",
-    "vlucas/phpdotenv": "^5.4.0"
+    "craftcms/redactor": "3.0.3",
+    "vlucas/phpdotenv": "^5.4.0",
+    "wrav/oembed": "^2.2"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
