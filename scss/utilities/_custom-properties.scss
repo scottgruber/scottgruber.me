@@ -2,8 +2,6 @@
   --font-family: mr-eaves-xl-modern-narrow, sans-serif;
   --font-family-display: mr-eaves-xl-sans-narrow, sans-serif;
   --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
-  //--font-family-decorative-light: "Sentinel Ornaments Bright A", "Sentinel Ornaments Bright B";
-  //--font-family-decorative-dark: "Sentinel Ornaments Dark A", "Sentinel Ornaments Dark B";
   //--font-weight-thin: 200;
   //--font-weight-light: 300;
   --font-weight-regular: 400;
@@ -11,7 +9,7 @@
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
   //--font-weight-black: 900;
-  
+
   --text-scale-ratio: 1.125;
   --line-height-text: 1.5;
   --line-height-heading: 1;
@@ -37,26 +35,22 @@
   --font-size-small: 0.8rem;
   --font-size-x-small: 0.64rem;
 
-  --pantone-illuminating-yellow: #F5DF4D;
-  --pantone-ultimate-gray: #939597;
-
-  --pantone-dark-gray: #3C3E40;
-  --pantone-light-gray: #E7E9E7;
-  
-  --pantone-iris-bloom: #5C609F;
-  --pantone-prism-pink: #F0A1BF;
-  --pantone-fruit-dove: #CF5C78;
-  --pantone-lead-crystal: #C2BFB5;
-  --pantone-cloud-dancer: #F0EEE9;
-  --pantone-spice-route: #BA5B3F;
-  --pantone-willowherb: #8F4584;
+  // 2023 Colours
+  --viva-magenta: #bb2649; //187, 38, 73  hsl(345.91, 66.22%, 44.12%)
+  --pale-dogwood: #edcdc2; //237, 205, 194
+  --gray-sand: #e5ccaf; //229, 204, 175
+  --gray-lilac: #d4cacd; //212, 202, 205
+  --pale-khaki: #bfaf92; //191, 175, 146
+  --fields-of-rye: #b7a990; //183, 169, 144
+  --agate-gray: #b3b1a1; //179, 177, 161
+  --plein-air: #bfcad6; //191, 202, 214
 
 
-  --color-primary-lighter: #7a859d; // #a8f6ff Celeste
-  --color-primary-light: #6c7791; //#586b89 Spray
-  --color-primary: #5d6a85; // 41506d Summer Sky
-  --color-primary-dark: #4f5d79; // #006dc7 Navy Blue
-  --color-primary-darker: #41506d; // #0045ae Cobalt
+  --color-primary-lighter: #e7899f; //hsl(345.96, 66.2%, 72.16%)
+  --color-primary-light: #dd5978; //hsl(345.91, 66%, 60.78%)
+  --color-primary: #BB2649; // hsl(345.91, 66.22%, 44.12%)
+  --color-primary-dark: #5e1325; // hsl(345.6, 66.37%, 22.16%)
+  --color-primary-darker: #25080f; // hsl(345.52, 64.44%, 8.82%)
 
   --color-secondary-lighter: #aacca9; //  $pistachio: #98c87d;
   --color-secondary-light: #8aad8a; // $asparagus: #72a35b;
@@ -76,12 +70,21 @@
   --color-neutral-dark: hsla(29, 17%, 38%); // $kabul: #716050;
   --color-neutral-darker: hsla(29, 26%, 23%); //   $mondo: #4a3b2c;
 
-  --color-black: #29292b;
+  --color-black: #130407; //hsl(348, 65.22%, 4.51%)
   --color-white: #f1f1f1;
+
+  --dark-gray: #130407; //hsl(348, 65.22%, 4.51%)
+  --light-gray: #87767a; //hsl(345.88, 6.72%, 49.61%)
+
+  --color-background: #f7f5dd;
+  --color-border: #8d6c74;
+  --color-text: #130407;
+  --color-base: #f7f5dd;
+  --color-accent: #f7f5dd;
 
   --color-text: var(--color-black);
   --color-text-alt: var(--color-neutral-lighter);
-  --color-background: var(--color-neutral-lighter);
+  --color-background: var(--viva-magenta);
   --color-border: var(--color-primary-dark);
   --color-border-separator: var(--color-accent-lighter);
 
@@ -109,7 +112,6 @@
   --split-pair-space: 1rem;
   --flow-space: 1rem;
 
-
   --duration-instantly: 0;
   --duration-immediately: 0.05s;
   --duration-quickly: 0.1s;
@@ -117,20 +119,16 @@
   --duration-slowly: 0.4s;
   --timing: ease;
 
-  --color-background: #ffffff;
-  --color-border: #d687ba;
-  --color-text: #3c3e40;
-  --color-base: #e7e9e7;
-  --color-accent: #5085c3; 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #3c3e40;
-    --color-border: #d687ba;
-    --color-text: #f0f2f3;
-    --color-base: #e7e9e7;
-    --color-accent: #f5df4d; }
+    --color-background: var(--viva-magenta);
+    --color-border: #25080f;
+    --color-text: #f7f5dd;
+    --color-base: #87767a;
+    --color-accent: #bb9826;
+  }
 }
 
 @-ms-viewport {

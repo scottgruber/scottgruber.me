@@ -1,7 +1,19 @@
+@media (min-width: 48em) {
+  .l-chinese-horoscope main {
+    grid-column: 2 / 8;
+  }
+}
+.l-chinese-horoscope .h-feed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--spacing);
+}
 
 .l-chinese-horoscope article {
   margin-block-end: var(--spacing-medium);
-  border-bottom: 1px dotted silver;
+  
 }
 
 .l-chinese-horoscope article h1 {
@@ -19,7 +31,13 @@
   }
 
   .l-chinese-horoscope article svg {
-    width: 30vw;
+    width: 15vw;
+    filter: drop-shadow(4px 4px 4px black);
+  }
+
+  .l-chinese-horoscope article a {
+    outline: none;
+    outline-offset: 3px;
   }
 }
 
