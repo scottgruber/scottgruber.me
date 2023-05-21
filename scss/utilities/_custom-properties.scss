@@ -1,7 +1,7 @@
 :root {
-  --font-family: mr-eaves-xl-modern-narrow, sans-serif;
-  --font-family-display: mr-eaves-xl-sans-narrow, sans-serif;
-  --font-family-mono: "Operator Mono SSm A", "Operator Mono SSm B", monospace;
+  --font-family: "darkmode-off-cc", sans-serif;
+  --font-family-display:  "darkmode-off-cc", sans-serif;
+  --font-family-mono: "darkmode-mono-off", monospace;
   //--font-weight-thin: 200;
   //--font-weight-light: 300;
   --font-weight-regular: 400;
@@ -35,59 +35,40 @@
   --font-size-small: 0.8rem;
   --font-size-x-small: 0.64rem;
 
-  // 2023 Colours
-  --viva-magenta: #bb2649; //187, 38, 73  hsl(345.91, 66.22%, 44.12%)
-  --pale-dogwood: #edcdc2; //237, 205, 194
-  --gray-sand: #e5ccaf; //229, 204, 175
-  --gray-lilac: #d4cacd; //212, 202, 205
-  --pale-khaki: #bfaf92; //191, 175, 146
-  --fields-of-rye: #b7a990; //183, 169, 144
-  --agate-gray: #b3b1a1; //179, 177, 161
-  --plein-air: #bfcad6; //191, 202, 214
+  --aqua:  #7FDBFF;
+  --blue:  #0074D9;
+  --navy:  #001F3F;
+  --teal:  #39CCCC;
+  --green: #2ECC40;
+  --olive: #3D9970;
+  --lime:  #01FF70;
+  
+  --yellow:  #FFDC00;
+  --orange:  #FF851B;
+  --red:     #FF4136;
+  --fuchsia: #F012BE;
+  --purple:  #B10DC9;
+  --maroon:  #85144B;
+  
+  --white:  #FFFFFF;
+  --silver: #DDDDDD;
+  --gray:   #AAAAAA;
+  --black:  #111111;
 
 
-  --color-primary-lighter: #e7899f; //hsl(345.96, 66.2%, 72.16%)
-  --color-primary-light: #dd5978; //hsl(345.91, 66%, 60.78%)
-  --color-primary: #BB2649; // hsl(345.91, 66.22%, 44.12%)
-  --color-primary-dark: #5e1325; // hsl(345.6, 66.37%, 22.16%)
-  --color-primary-darker: #25080f; // hsl(345.52, 64.44%, 8.82%)
+  --color-primary: var(--blue); 
+  --color-secondary: var(--green); 
+  --color-accent: var(--yellow);
 
-  --color-secondary-lighter: #aacca9; //  $pistachio: #98c87d;
-  --color-secondary-light: #8aad8a; // $asparagus: #72a35b;
-  --color-secondary: #6c8f6b; //  $green-house: #406732;
-  --color-secondary-dark: #4e734e; //   $palm-green: #0c2907;
-  --color-secondary-darker: #315733; //  $midnight-moss: #031001;
+  --color-neutral: var(--gray);
+  --color-black: var(--black); 
+  --color-white: var(--white);
 
-  --color-accent-lighter: #bf8fad; // #ff92b7 Flamingo Pink
-  --color-accent-light: #bc82a6; //#f16c91 Light Crimson
-  --color-accent: #b875a0; // #b73957 Night Shadz
-  --color-accent-dark: #b36899; // #7b001b Burgundy
-  --color-accent-darker: #af5b93; // #0F0047 Mahogany
-
-  --color-neutral-lighter: hsla(35, 36%, 94%); // $hint-of-red: #f5f0e9;
-  --color-neutral-light: hsla(32, 27%, 85%); // $albescent-white: #e3d9ce;
-  --color-neutral: hsla(30, 14%, 62%); // $zorba: #aa9d8f;
-  --color-neutral-dark: hsla(29, 17%, 38%); // $kabul: #716050;
-  --color-neutral-darker: hsla(29, 26%, 23%); //   $mondo: #4a3b2c;
-
-  --color-black: #130407; //hsl(348, 65.22%, 4.51%)
-  --color-white: #f1f1f1;
-
-  --dark-gray: #130407; //hsl(348, 65.22%, 4.51%)
-  --light-gray: #87767a; //hsl(345.88, 6.72%, 49.61%)
-
-  --color-background: #f7f5dd;
-  --color-border: #8d6c74;
-  --color-text: #130407;
-  --color-base: #f7f5dd;
-  --color-accent: #f7f5dd;
-
-  --color-text: var(--color-black);
-  --color-text-alt: var(--color-neutral-lighter);
-  --color-background: var(--viva-magenta);
-  --color-border: var(--color-primary-dark);
-  --color-border-separator: var(--color-accent-lighter);
-
+  --color-text: var(--color-black);  
+  --color-background: var(--color-white);
+  --color-base: var(--color-black);
+  --color-border: var(--color-primary);
+    
   --border-radius-x-small: 0.25rem;
   --border-radius-small: 0.5rem;
   --border-radius-medium: 0.75rem;
@@ -123,11 +104,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--viva-magenta);
-    --color-border: #25080f;
-    --color-text: #f7f5dd;
-    --color-base: #87767a;
-    --color-accent: #bb9826;
+    --color-background: var(--navy);
+    --color-border: var(--teal);
+    --color-text: var(--color-white);
+    --color-base: var(--blue);
+    --color-accent: var(--yellow);
+    --font-family: "darkmode-on-cc", sans-serif;
+    --font-family-display: "darkmode-on-cc", sans-serif; 
+    --font-family-mono: var("darkmode-mono-on", monospace)
   }
 }
 

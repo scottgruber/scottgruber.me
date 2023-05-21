@@ -49,9 +49,9 @@ select[multiple] {
 
   &:hover,
   &:focus {
-    border-color: var(--color-supporting);
+    border-color: var(--color-border);
     outline: none;
-    box-shadow: var(--color-base);
+    box-shadow: var(--color-black);
   }
 
   &:disabled {
