@@ -1,0 +1,109 @@
+field: 2c12c66f-f886-4632-942c-5b4bcf3dee30 # Article Body
+fieldLayouts:
+  82e5d2c4-7eab-4b8e-8538-fa8864770475:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6d08def2-e449-4afb-a69f-7721aec3e6d9 # oEmbed Media
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05f54939-80c5-4f62-92c6-7032d9f06d2d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 832efb09-f00b-4129-a3cc-2b8315b2b1ec # oEmbed Media Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb72cb83-e638-4ec5-8f39-779c2bf71a5e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 98ea29a1-74bd-46fc-a285-e93fce47c2c7 # oEmbed Media Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0513cb51-6fbd-4d26-a4e2-cab2b09ca487
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a668c335-9446-4b9c-a788-f7acce2e6986
+        userCondition: null
+fields:
+  6d08def2-e449-4afb-a69f-7721aec3e6d9: # oEmbed Media
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: oembedMedia
+    instructions: null
+    name: 'oEmbed Media'
+    searchable: true
+    settings:
+      errorMessage: 'Unable to find component class ''wrav\oembed\fields\OembedField''.'
+      expectedType: wrav\oembed\fields\OembedField
+      settings:
+        __assoc__:
+          -
+            - url
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\MissingField
+  98ea29a1-74bd-46fc-a285-e93fce47c2c7: # oEmbed Media Link
+    columnSuffix: null
+    contentColumnType: string(1020)
+    fieldGroup: null
+    handle: oembedMediaLink
+    instructions: null
+    name: 'oEmbed Media Link'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 255
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  832efb09-f00b-4129-a3cc-2b8315b2b1ec: # oEmbed Media Title
+    columnSuffix: null
+    contentColumnType: string(1020)
+    fieldGroup: null
+    handle: oembedMediaTitle
+    instructions: null
+    name: 'oEmbed Media Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 255
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: oembedMediaBlock
+name: 'oEmbed Media Block'
+sortOrder: 5

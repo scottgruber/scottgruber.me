@@ -1,5 +1,5 @@
 fieldLayouts:
-  2ae7f7d4-8dea-45d7-ba28-25b2d1a2377a:
+  28afc0d2-b5fd-438f-9aac-df9a27a2ac6b:
     tabs:
       -
         elementCondition: null
@@ -26,31 +26,55 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: bbfc394e-873e-42fb-8e8a-414cd8028a59
+            uid: e1a6c632-967c-4a01-bc32-a8b3b1567da6
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: cd333917-1208-4c9a-a96b-3ff2bdfbaed9 # Heading
+            fieldUid: 959dff9f-9403-4943-8efc-69c8db5fa65c # SVG
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2d4fcc14-54b0-4921-ba83-278ba30f3b1c
+            uid: 550748f7-d340-4038-9410-3d706b2288b2
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: ed999e25-ff72-4caf-95c7-dc3821d2642f # Image
+            fieldUid: b642035e-5f77-4f22-bb9f-060720ddae95 # Chinese
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f88b2b65-2cac-4571-8104-9fab68e5f043
+            uid: c6f8f4e5-7fc9-4ccc-a17c-79a0aeaaa601
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fcdccecf-de72-4e6f-ab6b-df87f08f7622 # English
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c56f7ffa-1e40-42ec-82ab-055528666e85
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4484103a-3c36-4f70-94d2-e8c97abba2ed # Pinyin
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aeecdbca-5e38-4394-ba23-86d3d17decec
             userCondition: null
             warning: null
             width: 100
@@ -62,66 +86,30 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5e6b2078-11f8-44aa-8037-3304e3746431
+            uid: 6eb97617-8446-4bb1-815c-67309a0ca9eb
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: c56ecf3e-0e59-4033-8b25-33b8a3bad3f8 # Summary
+            fieldUid: 7299e97d-1b84-46a5-96be-de9062d0dd4e # Body
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 70d4e24f-0b36-4e66-8722-dd53e4e150f6
+            uid: e42c2fd0-c788-4cc1-928f-087772b5e0b5
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: a101802d-d3cc-4719-9415-cabcef3150ad # Wysiwyg Editor
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e8233d17-fa72-4544-b055-b2ebc25a08eb
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 5dfc3df6-d95a-4b06-af65-f376625c5700 # Related Entries
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: aaff2b27-d790-41be-9f8b-bf4840f69534
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 593ae0b4-d44a-428f-8c8e-5dc4d4b7bd6b # Meta Description
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 751e93c5-d673-4d6e-8e8c-42155eaf89fb
-            userCondition: null
-            warning: null
-            width: 100
-        name: 'Tab 1'
-        uid: 12957054-3f90-4b2e-aeb7-b4b86e251172
+        name: 'Chinese Zodiac'
+        uid: 68e5580b-ff2e-40a3-a330-c9bd3065f9b2
         userCondition: null
-handle: now
+handle: shengxiao
 hasTitleField: false
-name: Now
-section: a33f4dc4-20ca-4cdc-95e6-25819f455342 # Now
+name: 生肖
+section: 8bf050bc-0e15-47bc-9f8c-af669c632ed5 # 生肖
 sortOrder: 1
-titleFormat: '{section.name|raw}'
+titleFormat: '{english}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

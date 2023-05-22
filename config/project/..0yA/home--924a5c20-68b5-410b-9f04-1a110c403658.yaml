@@ -1,5 +1,5 @@
 fieldLayouts:
-  2ae7f7d4-8dea-45d7-ba28-25b2d1a2377a:
+  1d35bb52-2006-4bb6-89f1-4a11c343155d:
     tabs:
       -
         elementCondition: null
@@ -26,7 +26,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: bbfc394e-873e-42fb-8e8a-414cd8028a59
+            uid: 4715f226-1b96-4903-9cad-e3f6bec1ea8f
             userCondition: null
             warning: null
             width: 100
@@ -38,19 +38,31 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2d4fcc14-54b0-4921-ba83-278ba30f3b1c
+            uid: 781e34cd-7cba-4c75-8a2f-0ecb0bba6db7
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: ed999e25-ff72-4caf-95c7-dc3821d2642f # Image
+            fieldUid: 3cecc149-fd4c-49c4-9e8a-2aa6e3d0a323 # Hero Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f88b2b65-2cac-4571-8104-9fab68e5f043
+            uid: 93fe0732-2abf-4dbf-bb48-116658715372
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 959dff9f-9403-4943-8efc-69c8db5fa65c # SVG
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c1a0d9e-8587-419b-9626-00e7301b41db
             userCondition: null
             warning: null
             width: 100
@@ -62,43 +74,19 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5e6b2078-11f8-44aa-8037-3304e3746431
+            uid: 4319a9a1-5c18-4b26-8943-8b3bc841df14
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: c56ecf3e-0e59-4033-8b25-33b8a3bad3f8 # Summary
+            fieldUid: 7299e97d-1b84-46a5-96be-de9062d0dd4e # Body
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 70d4e24f-0b36-4e66-8722-dd53e4e150f6
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: a101802d-d3cc-4719-9415-cabcef3150ad # Wysiwyg Editor
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e8233d17-fa72-4544-b055-b2ebc25a08eb
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 5dfc3df6-d95a-4b06-af65-f376625c5700 # Related Entries
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: aaff2b27-d790-41be-9f8b-bf4840f69534
+            uid: c7b59df0-ac6b-4e21-b7f6-8c69f5846869
             userCondition: null
             warning: null
             width: 100
@@ -110,17 +98,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 751e93c5-d673-4d6e-8e8c-42155eaf89fb
+            uid: 06164594-1d94-4239-9fd4-decf66aea98d
             userCondition: null
             warning: null
             width: 100
-        name: 'Tab 1'
-        uid: 12957054-3f90-4b2e-aeb7-b4b86e251172
+        name: Home
+        uid: 34fbc5a9-a12a-489e-870b-c83433a62d18
         userCondition: null
-handle: now
+handle: home
 hasTitleField: false
-name: Now
-section: a33f4dc4-20ca-4cdc-95e6-25819f455342 # Now
+name: Home
+section: c6acf41a-56e6-41a0-946e-b1795c2c7b74 # Home
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

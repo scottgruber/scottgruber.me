@@ -1,0 +1,104 @@
+field: 2c12c66f-f886-4632-942c-5b4bcf3dee30 # Article Body
+fieldLayouts:
+  f784387a-935d-4adf-a1cd-097d9af3bd61:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a3f7c83c-c06b-4c12-996f-89cfac195f23 # pullQuote
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f578ce14-4c65-406a-be00-b2c28a9563c4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2fe9c488-ec49-4501-94b4-68725afc8c04 # Position
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dbc854bc-e3ea-45f1-b9b6-ec559b8431d9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cb1445cb-5794-4a6e-ae1f-ecee9b08fc15
+        userCondition: null
+fields:
+  2fe9c488-ec49-4501-94b4-68725afc8c04: # Position
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: null
+    name: Position
+    searchable: true
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Inline Start'
+            -
+              - value
+              - inlineStart
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Inline End'
+            -
+              - value
+              - inlineEnd
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Normal
+            -
+              - value
+              - normal
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  a3f7c83c-c06b-4c12-996f-89cfac195f23: # pullQuote
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: pullQuote
+    instructions: null
+    name: pullQuote
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: pullQuote
+name: 'Pull Quote'
+sortOrder: 4

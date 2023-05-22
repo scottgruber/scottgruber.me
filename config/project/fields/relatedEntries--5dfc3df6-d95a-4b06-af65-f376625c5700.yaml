@@ -7,12 +7,13 @@ name: 'Related Entries'
 searchable: true
 settings:
   allowSelfRelations: false
+  branchLimit: null
   localizeRelations: false
+  maintainHierarchy: false
   maxRelations: 5
   minRelations: null
   selectionLabel: null
   showSiteMenu: true
-  source: null
   sources:
     - 'section:530c73e4-c186-4ba2-bd9f-9e301383b88e' # Articles
     - 'section:b00f9752-ea7e-435b-990d-61505b8e35bc' # Notes
