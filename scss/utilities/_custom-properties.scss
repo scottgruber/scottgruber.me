@@ -1,14 +1,14 @@
 :root {
-  --font-family: "darkmode-off-cc", sans-serif;
-  --font-family-display:  "darkmode-off-cc", sans-serif;
-  --font-family-mono: "darkmode-mono-off", monospace;
+  --font-family: "darkmode-off-cc", ui-sans-serif, sans-serif;
+  --font-family-display:  "darkmode-off-cc", ui-sans-serif, sans-serif;
+  --font-family-mono: 'SF Mono', ui-monospace, monospace;
   //--font-weight-thin: 200;
-  //--font-weight-light: 300;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
-  --font-weight-medium: 500;
+  //--font-weight-medium: 500;
   --font-weight-bold: 700;
-  --font-weight-extra-bold: 800;
-  //--font-weight-black: 900;
+  //--font-weight-extra-bold: 800;
+  --font-weight-black: 900;
 
   --text-scale-ratio: 1.125;
   --line-height-text: 1.5;
@@ -111,7 +111,6 @@
     --color-accent: var(--yellow);
     --font-family: "darkmode-on-cc", sans-serif;
     --font-family-display: "darkmode-on-cc", sans-serif; 
-    --font-family-mono: var("darkmode-mono-on", monospace)
   }
 }
 
