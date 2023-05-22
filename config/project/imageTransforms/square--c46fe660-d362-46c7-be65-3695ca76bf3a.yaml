@@ -6,4 +6,5 @@ mode: crop
 name: '300 Square'
 position: center-center
 quality: 82
+upscale: true
 width: 300

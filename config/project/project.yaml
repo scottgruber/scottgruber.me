@@ -1,4 +1,4 @@
-dateModified: 1660773447
+dateModified: 1684703515
 email:
   fromEmail: scott@scottgruber.me
   fromName: 'Scott Gruber'
@@ -151,7 +151,7 @@ system:
   edition: solo
   live: true
   name: $SITE_NAME
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

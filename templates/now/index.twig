@@ -9,27 +9,8 @@
 <h1>{{ single.title }}</h1>
 <p class="lede">{{ single.lede }}</p>
 {{ single.summary|markdown }}
+{{ single.bodyWysiwyg }}
 {% endif %}
-
-{% set query = craft.entries.section('notes').limit(10) %}
-{% set entries = query.all() %}
-
-{% paginate query as pageInfo, entries %}
-{# Display the articles #}
-<div class="h-feed">
-{% for entry in entries %}
-<article class="h-entry">
-<h2 class="p-name"><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
-<time class="dt-published" datetime="{{ entry.postDate|atom }}">Now for {{ entry.postDate | date("M jS, Y") }} at {{ entry.postDate | date("g:i A") }}</time>
-</article>
-{% endfor %}
-</div>
-
-<hr>
-<p>{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}">Previous Page</a>{% endif %}
-
-{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}">Next Page</a>{% endif %}
-</p>
 
 <small><a href="https://nownownow.com/about">About a now page</a> by Derek Sivers, editor of <a href="https://nownownow.com">nownownow.com</a></small>
 
