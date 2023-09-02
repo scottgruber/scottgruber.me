@@ -121,6 +121,9 @@ handle: now
 hasTitleField: false
 name: Now
 section: a33f4dc4-20ca-4cdc-95e6-25819f455342 # Now
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

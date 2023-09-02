@@ -85,6 +85,9 @@ handle: notes
 hasTitleField: true
 name: Notes
 section: b00f9752-ea7e-435b-990d-61505b8e35bc # Notes
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

@@ -97,6 +97,9 @@ handle: links
 hasTitleField: true
 name: Links
 section: a1a12949-11a6-4002-b9fd-11bec4a22eba # Links
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

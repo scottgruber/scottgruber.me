@@ -116,6 +116,7 @@ fields:
     name: imagePosition
     searchable: true
     settings:
+      columnType: string
       options:
         -
           __assoc__:
@@ -162,6 +163,7 @@ fields:
     name: 'Image Type'
     searchable: true
     settings:
+      columnType: string
       options:
         -
           __assoc__:
@@ -208,6 +210,7 @@ fields:
     name: 'Caption Position'
     searchable: true
     settings:
+      columnType: string
       options:
         -
           __assoc__:

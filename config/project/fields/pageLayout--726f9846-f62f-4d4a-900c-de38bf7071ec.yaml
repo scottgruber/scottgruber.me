@@ -6,6 +6,7 @@ instructions: 'CSS class selector on the body element can be used to target a cu
 name: 'Page Layout'
 searchable: true
 settings:
+  columnType: string
   options:
     -
       __assoc__:

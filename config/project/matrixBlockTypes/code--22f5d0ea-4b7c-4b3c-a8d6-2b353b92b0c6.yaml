@@ -101,6 +101,7 @@ fields:
     name: Languages
     searchable: true
     settings:
+      columnType: string
       options:
         -
           __assoc__:

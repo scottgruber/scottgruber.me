@@ -109,6 +109,9 @@ handle: shengxiao
 hasTitleField: false
 name: 生肖
 section: 8bf050bc-0e15-47bc-9f8c-af669c632ed5 # 生肖
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{english}'
 titleTranslationKeyFormat: null

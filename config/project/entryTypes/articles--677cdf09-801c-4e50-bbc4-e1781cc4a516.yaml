@@ -157,6 +157,9 @@ handle: articles
 hasTitleField: true
 name: Articles
 section: 530c73e4-c186-4ba2-bd9f-9e301383b88e # Articles
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
