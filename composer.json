@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "4.5.3",
+    "craftcms/cms": "4.5.5",
     "craftcms/postmark": "3.0.0",
     "craftcms/redactor": "3.0.4",
     "vlucas/phpdotenv": "^5.4.0",
@@ -29,5 +29,12 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ]
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }
