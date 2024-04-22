@@ -17,8 +17,7 @@
 {% for entry in entries %}
 <article class="h-entry c-tags">
   <h2 class="p-name p-category"><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
-  <p class="lede">{{ entry.lede }}</p>
-  <a href="{{ entry.url }}">Continue reading →</a>
+  <p class="p-summary lede">{{ entry.lede }}</p>
 </article>
 {% endfor %}
 

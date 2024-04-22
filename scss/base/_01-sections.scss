@@ -12,7 +12,9 @@
 }
 
 html {
-  scroll-behavior: smooth;
+ -moz-text-size-adjust: none;
+ -webkit-text-size-adjust: none;
+ text-size-adjust: none;
 }
 
 body {

@@ -15,9 +15,6 @@
     <h2 class="p-name"><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
     <p class="p-summary lede">{{ entry.lede }}</p>
      
-	<time class="dt-published" datetime="{{ entry.postDate|atom }}">Posted on {{ entry.postDate | date("M jS, Y") }}</time>
-    
-    
     {# Fetch all of the categories related to this entry #}
     {% set categories = craft.categories.relatedTo(entry) %}
 

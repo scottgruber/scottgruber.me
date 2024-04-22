@@ -1,0 +1,43 @@
+columnSuffix: null
+handle: position
+instructions: null
+name: 'Article Body - Pull Quote - Position'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Inline Start'
+        -
+          - value
+          - inlineStart
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Inline End'
+        -
+          - value
+          - inlineEnd
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Normal
+        -
+          - value
+          - normal
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

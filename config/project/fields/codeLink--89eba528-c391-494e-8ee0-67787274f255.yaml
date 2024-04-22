@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: codeLink
+instructions: null
+name: 'Article Body - Code - Link'
+searchable: true
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

@@ -1,7 +1,19 @@
 defaultPlacement: end
 enableVersioning: false
+entryTypes:
+  - a913e819-b557-409a-9eed-370c9a138d23 # 生肖
 handle: shengxiao
+maxAuthors: 1
 name: 生肖
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: all
 siteSettings:
   840ad40c-34ac-4597-8c5f-747198813889: # Scott Gruber

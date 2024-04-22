@@ -1,0 +1,43 @@
+columnSuffix: null
+handle: imageType
+instructions: null
+name: 'Article Body - Image - Image Type'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Normal
+        -
+          - value
+          - normal
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Full Width'
+        -
+          - value
+          - fullWidth
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Infographic
+        -
+          - value
+          - infographic
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

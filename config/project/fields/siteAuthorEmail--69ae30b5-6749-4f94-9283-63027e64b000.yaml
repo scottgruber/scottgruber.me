@@ -1,6 +1,5 @@
 columnSuffix: null
 contentColumnType: string(400)
-fieldGroup: bb54b5cc-a6f1-4445-97ab-422838895d39 # Globals
 handle: siteAuthorEmail
 instructions: null
 name: 'Site Author Email'

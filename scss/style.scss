@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
 // UTILITIES
-@import "utilities/custom-properties";
-@import "utilities/global";
+
+//@import "utilities/global";
 
 // BASE STYLES
+@import "base/00-custom-properties";
 @import "base/01-sections";
 @import "base/02-headings";
 @import "base/03-grouping";
@@ -21,11 +22,11 @@
 @import "components/social-icons";
 @import "components/tags";
 @import "components/typography";
-@import "components/webmention";
+//@import "components/webmention";
 
 // LAYOUTS
 @import "layouts/print";
 
 // VENDORS
-@import "vendors/debug";
-@import "vendors/pesticide";
+//@import "vendors/debug";
+//@import "vendors/pesticide";

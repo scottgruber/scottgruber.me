@@ -1,0 +1,43 @@
+columnSuffix: null
+handle: imagePosition
+instructions: 'Use to float image left or right'
+name: 'Article Body - Image - imagePosition'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Normal
+        -
+          - value
+          - normal
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Inline Start'
+        -
+          - value
+          - left
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Inline End'
+        -
+          - value
+          - right
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

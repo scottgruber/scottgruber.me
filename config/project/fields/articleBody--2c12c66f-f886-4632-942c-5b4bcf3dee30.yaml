@@ -1,16 +1,26 @@
 columnSuffix: null
-contentColumnType: string
-fieldGroup: 80392b7c-eb61-48f1-a844-52382d42d4d0 # Article
 handle: articleBody
 instructions: null
 name: 'Article Body'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_articlebody}}'
-  maxBlocks: null
-  minBlocks: null
+  createButtonLabel: null
+  entryTypes:
+    - 001cafe4-9951-4d9f-bb8c-3be27a274d25
+    - 22f5d0ea-4b7c-4b3c-a8d6-2b353b92b0c6
+    - 81e0d769-aaa3-4b7f-aca5-734aaa9b17e5
+    - 537fe772-9a3a-44d4-b202-8ca50553e9f6
+    - 4397f088-eb6d-418b-be6f-73dbea513e60
+    - 64214bae-d1c1-4b72-bb81-6eb2195039fe
+    - 50556672-532a-42dc-986b-aee577c6ef78 # CKEditor
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

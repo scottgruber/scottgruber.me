@@ -69,16 +69,13 @@
 {% endif %}		
 </div>	
 
-<footer class="authorinfo">
-	<p>Posted by <a rel="me" class="p-author h-card u-url" href="https://scottgruber.me">{{ entry.author.name }}</a> on   
-	<time class="dt-published" datetime="{{ entry.postDate|atom }}">{{ entry.postDate | date("M jS, Y") }}</time></p>
-</footer>
+
 
 	{# Fetch all of the categories related to this entry #}
 	{% set categories = craft.categories.relatedTo(entry) %}
 		{% if categories|length %}
 	<div class="tags">
-	<h2>Tagged with</h2> 
+	<p><b>Tags</b>: </p> 
 	{# Output them #}
 	<ul>
 	{% for category in categories.all %}
@@ -88,6 +85,12 @@
 	</div>
 {% endif %}
 <div id="webmentions"></div>
+
+<footer class="authorinfo">
+	<small>Posted by <a rel="me" class="p-author h-card u-url" href="https://scottgruber.me">{{ entry.author.name }}</a> on   
+	<time class="dt-published" datetime="{{ entry.postDate|atom }}">{{ entry.postDate | date("M jS, Y") }}</time></small>
+</footer>
+
 </article>
 
 {% if criteria %}

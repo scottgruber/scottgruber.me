@@ -1,0 +1,66 @@
+color: null
+fieldLayouts:
+  35033d33-2975-4a13-b77a-4771dbf75225:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0a731147-6b21-43a1-98e6-b4a023ee0465
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: 'Section Heading'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c3a41a6c-bf71-419a-a57d-b58176756e4b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 79e741cf-5272-4f48-b3ed-84e4360b5fd2 # Article Body - Section Block - Section Summary
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Section Summary'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d9001ff2-4858-486f-8d2f-a37d103cb456
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 014896df-c8f7-47c3-abea-03dbec440413
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Section Image'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32ed1a72-23ef-4a1f-aa82-082e3e3c58f3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d5ccef14-4f83-4c82-bcb4-724fa51aa009
+        userCondition: null
+handle: sectionBlock
+hasTitleField: false
+icon: null
+name: 'Section Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

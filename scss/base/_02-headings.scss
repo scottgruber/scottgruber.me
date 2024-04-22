@@ -11,13 +11,31 @@ h3,
 h4 {
   font-family: var(--font-family-display);
   font-weight: var(--font-weight-black);
-  line-height: var(--line-height-heading);
+  line-height: 1.1;
+  text-wrap: balance;
   
 }
 
 h1 {
-  font-size: var(--font-size-xxx-large);
+  font-size: var(--font-size-xx-large);
 }
+
+h2 {
+  font-size: var(--font-size-x-large);
+  color: var(--color-text);
+}
+
+h3 {
+  font-size: var(--font-size-large);
+}
+
+h4 {
+  font-size: var(--font-size-medium);
+  font-style: bold;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
+
 
 header[role="banner"] h1 {
   margin-block-start: .5em;
@@ -44,25 +62,4 @@ header[role="banner"] h1:focus {
 
 
 
-h2 {
-  font-size: var(--font-size-display);
-  font-weight: var(--font-weight-light);
-  color: var(--color-text);
-}
 
-h3 {
-  font-size: var(--font-size-large);
-}
-
-h4 {
-  font-size: var(--font-size-medium);
-  font-style: bold;
-  font-weight: var(--font-weight-light);
-  text-transform: uppercase;
-}
-
-h5,
-h6 {
-  font-family: var(--font-family-display);
-  font-size: var(--font-size);
-}
