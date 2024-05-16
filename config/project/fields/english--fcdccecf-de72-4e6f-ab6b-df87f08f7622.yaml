@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string(1020)
 handle: english
 instructions: null
 name: English
@@ -8,7 +7,6 @@ settings:
   byteLimit: null
   charLimit: 255
   code: false
-  columnType: null
   initialRows: 4
   multiline: false
   placeholder: null

@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: relatedEntries
 instructions: null
 name: 'Related Entries'
@@ -12,6 +11,7 @@ settings:
   maxRelations: 5
   minRelations: null
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: true
   sources:
     - 'section:530c73e4-c186-4ba2-bd9f-9e301383b88e' # Articles

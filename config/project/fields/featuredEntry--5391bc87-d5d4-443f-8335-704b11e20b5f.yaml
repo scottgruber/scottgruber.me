@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: boolean
 handle: featuredEntry
 instructions: 'Should this be a featured entry?'
 name: 'Featured Entry'

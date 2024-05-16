@@ -1,11 +1,9 @@
 columnSuffix: null
-contentColumnType: string
 handle: language
 instructions: null
 name: Language
 searchable: false
 settings:
-  columnType: string
   options:
     -
       __assoc__:

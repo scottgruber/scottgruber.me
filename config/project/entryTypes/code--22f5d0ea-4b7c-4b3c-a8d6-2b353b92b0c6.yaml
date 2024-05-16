@@ -6,8 +6,37 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
             elementCondition: null
-            fieldUid: f6b8de39-72e6-457f-acf4-734b91e52182
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ad86474e-0b81-409b-9ea9-b62fc22b6858
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f6b8de39-72e6-457f-acf4-734b91e52182 # Article Body - Code - Code
             handle: null
             includeInCards: true
             instructions: null
@@ -22,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: ca134d3b-9a07-4a31-a00f-f3c2d1db702e
+            fieldUid: ca134d3b-9a07-4a31-a00f-f3c2d1db702e # Article Body - Code - Languages
             handle: null
             includeInCards: false
             instructions: null
@@ -37,7 +66,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 7ec485c5-0df8-49c9-93b2-2a9658d6edd4
+            fieldUid: 7ec485c5-0df8-49c9-93b2-2a9658d6edd4 # Article Body - Code - Caption
             handle: null
             includeInCards: false
             instructions: null
@@ -52,7 +81,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 89eba528-c391-494e-8ee0-67787274f255
+            fieldUid: 89eba528-c391-494e-8ee0-67787274f255 # Article Body - Code - Link
             handle: null
             includeInCards: false
             instructions: null

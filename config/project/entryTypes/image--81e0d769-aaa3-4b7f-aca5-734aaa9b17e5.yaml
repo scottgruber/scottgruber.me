@@ -6,8 +6,37 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
             elementCondition: null
-            fieldUid: 40cbbde4-37f6-4ee7-b533-e2bb9db0b1f1
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f9a281cc-1b01-4f4f-ba6b-5fb0c58b37e2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 40cbbde4-37f6-4ee7-b533-e2bb9db0b1f1 # Article Body - Image - Image
             handle: image
             includeInCards: false
             instructions: null
@@ -22,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 178afcda-33ec-4f50-8f65-0135132f98a4
+            fieldUid: 178afcda-33ec-4f50-8f65-0135132f98a4 # Article Body - Image - Image Type
             handle: null
             includeInCards: true
             instructions: null
@@ -37,7 +66,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 99a4c10e-65c3-4e9d-9750-3cc9901141ed
+            fieldUid: 99a4c10e-65c3-4e9d-9750-3cc9901141ed # Article Body - Image - imagePosition
             handle: null
             includeInCards: false
             instructions: null
@@ -67,7 +96,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e7488985-ca55-4f73-84c2-a6f182cdb2f4
+            fieldUid: e7488985-ca55-4f73-84c2-a6f182cdb2f4 # Article Body - Image - Caption Position
             handle: null
             includeInCards: false
             instructions: null

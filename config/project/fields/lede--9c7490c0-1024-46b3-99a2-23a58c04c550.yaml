@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: text
 handle: lede
 instructions: 'A lede paragraph should emphasize grabbing the attention of the reader i.e. "don''t bury the lede".'
 name: Lede
@@ -8,7 +7,6 @@ settings:
   byteLimit: null
   charLimit: null
   code: false
-  columnType: null
   initialRows: 2
   multiline: true
   placeholder: null

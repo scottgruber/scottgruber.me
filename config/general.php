@@ -33,5 +33,6 @@ return [
         'assetPath' => getenv('ASSET_PATH'),
         'assetUrl' => getenv('ASSET_URL'),
         '@web' => getenv('WEB_URL'),
+	'@webroot' => dirname(__DIR__) . '/web',
     ],
 ];

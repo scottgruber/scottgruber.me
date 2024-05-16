@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: svg
 instructions: null
 name: SVG
@@ -24,6 +23,7 @@ settings:
   restrictedLocationSource: 'volume:b0437cce-f374-4fae-b82f-d4afc4843678' # Vectors
   restrictedLocationSubpath: null
   selectionLabel: 'Add an SVG'
+  showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

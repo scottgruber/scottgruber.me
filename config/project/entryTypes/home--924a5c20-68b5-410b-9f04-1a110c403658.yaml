@@ -1,3 +1,4 @@
+color: null
 fieldLayouts:
   1d35bb52-2006-4bb6-89f1-4a11c343155d:
     tabs:
@@ -12,6 +13,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -34,8 +37,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: cd333917-1208-4c9a-a96b-3ff2bdfbaed9 # Heading
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -46,8 +52,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 3cecc149-fd4c-49c4-9e8a-2aa6e3d0a323 # Hero Image
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -58,8 +67,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 959dff9f-9403-4943-8efc-69c8db5fa65c # SVG
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -70,8 +82,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 9c7490c0-1024-46b3-99a2-23a58c04c550 # Lede
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -82,8 +97,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 7299e97d-1b84-46a5-96be-de9062d0dd4e # Body
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -94,8 +112,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 593ae0b4-d44a-428f-8c8e-5dc4d4b7bd6b # Meta Description
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -108,11 +129,12 @@ fieldLayouts:
         userCondition: null
 handle: home
 hasTitleField: false
+icon: null
 name: Home
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

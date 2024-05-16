@@ -1,3 +1,5 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
 fieldLayouts:
   668cc435-eebf-4d25-8b76-c3a6bbd96a58:
     tabs:
@@ -12,6 +14,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +23,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -38,6 +42,7 @@ fs: icons
 handle: icons
 name: Icons
 sortOrder: 4
+subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 transformFs: null

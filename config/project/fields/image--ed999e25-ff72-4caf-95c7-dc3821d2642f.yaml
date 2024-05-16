@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: image
 instructions: null
 name: Image
@@ -24,6 +23,7 @@ settings:
   restrictedLocationSource: 'volume:c2e619ef-2739-46b9-b26c-78d421566532' # Images
   restrictedLocationSubpath: null
   selectionLabel: 'Add an image'
+  showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

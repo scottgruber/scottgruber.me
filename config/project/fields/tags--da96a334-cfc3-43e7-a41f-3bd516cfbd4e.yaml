@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: tags
 instructions: null
 name: Tags
@@ -12,6 +11,7 @@ settings:
   maxRelations: null
   minRelations: null
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: true
   source: 'group:febbbd03-74e4-49e4-ba70-2a10660683f1' # Tags
   targetSiteId: null

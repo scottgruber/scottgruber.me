@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: icon
 instructions: null
 name: Icon
@@ -24,6 +23,7 @@ settings:
   restrictedLocationSource: 'volume:354dc212-5598-4653-b85c-2039e9d25a78' # Icons
   restrictedLocationSubpath: null
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

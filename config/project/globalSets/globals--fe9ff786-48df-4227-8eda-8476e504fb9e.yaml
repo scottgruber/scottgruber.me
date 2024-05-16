@@ -7,8 +7,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 90e1e15c-f3ec-4522-999d-401ffa0bcfbb # Site Author
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -19,8 +22,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 69ae30b5-6749-4f94-9283-63027e64b000 # Site Author Email
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -31,8 +37,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: e6a58602-4fcb-4319-a14c-053d4b9fd671 # Site Description
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
