@@ -114,6 +114,10 @@ main {
   align-items: center;
 }
 
+main > * {
+  display: block;
+}
+
 h1,
 h2,
 h3,
