@@ -130,7 +130,7 @@ body {
   text-rendering: optimizeSpeed;
 }
 
-@media (min-width: 48em) {
+/* @media (min-width: 48em) {
   body {
     grid-template-columns: var(--grid-compound-6-4);
     align-content: start;
@@ -153,7 +153,7 @@ body {
     margin-block-start: var(--spacing-large);
     border-top: var(--border-style-thin);
   }
-}
+} */
 nav[role=navigation] ul {
   display: flex;
   flex-wrap: wrap;
