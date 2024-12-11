@@ -48,8 +48,8 @@
   --color-neutral: var(--gray);
   --color-black: var(--black);
   --color-white: var(--white);
-  --color-text: var(--color-black);
-  --color-background: var(--color-white);
+  --color-text: var(--maroon);
+  --color-background: var(--silver);
   --color-base: var(--color-black);
   --color-border: var(--color-primary);
   --max-width: 72rem;
