@@ -1,6 +1,0 @@
-allowPublicRegistration: false
-deactivateByDefault: false
-defaultGroup: null
-photoSubpath: avatars
-photoVolumeUid: 0351aa6f-3eae-4261-ad3a-36fdd615091e
-requireEmailVerification: true

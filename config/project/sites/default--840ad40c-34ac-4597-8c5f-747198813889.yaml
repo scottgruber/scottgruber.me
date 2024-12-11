@@ -1,9 +1,0 @@
-baseUrl: $WEB_URL
-enabled: true
-handle: default
-hasUrls: true
-language: en-US
-name: 'Scott Gruber'
-primary: true
-siteGroup: 188d75c9-c3ea-42e5-b60d-6bfb7989d581 # scottgruber.me
-sortOrder: 1
