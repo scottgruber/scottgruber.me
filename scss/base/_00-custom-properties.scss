@@ -14,9 +14,9 @@
   --line-height-text: 1.5;
   --line-height-heading: 1.1;
 
-  --grid-compound-6-4: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
-  --grid-compound-4-3: 3fr 1fr 2fr 2fr 3fr 1fr;
-  --grid-compound-5-4: 6fr 1fr 4fr 3fr 3fr 4fr 1fr 6fr;
+  // --grid-compound-6-4: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+  // --grid-compound-4-3: 3fr 1fr 2fr 2fr 3fr 1fr;
+  // --grid-compound-5-4: 6fr 1fr 4fr 3fr 3fr 4fr 1fr 6fr;
   --grid-column-gap: 2vw;
   --grid-row-gap: 4vh;
   --gap: 1vw;
@@ -56,9 +56,9 @@
   --black:  #111111;
 
 
-  --color-primary: var(--blue); 
-  --color-secondary: var(--navy); 
-  --color-accent: var(--yellow);
+  --color-primary: var(--maroon); 
+  --color-secondary: var(--yellow); 
+  --color-accent: var(--white);
 
   --color-neutral: var(--gray);
   --color-black: var(--black); 
@@ -69,16 +69,16 @@
   --color-base: var(--color-black);
   --color-border: var(--color-primary);
     
-  --border-radius-x-small: 0.25rem;
-  --border-radius-small: 0.5rem;
-  --border-radius-medium: 0.75rem;
-  --border-radius-large: 1rem;
-  --border-radius-circle: 50%;
-  --border-width-hairline: 0.5px;
-  --border-width-thin: 1px;
-  --border-width-thick: var(--border-radius-medium);
-  --border-style-thin: var(--border-width-thin) solid var(--color-border);
-  --border-style-thick: var(--border-width-thick) solid var(--color-border);
+  // --border-radius-x-small: 0.25rem;
+  // --border-radius-small: 0.5rem;
+  // --border-radius-medium: 0.75rem;
+  // --border-radius-large: 1rem;
+  // --border-radius-circle: 50%;
+  // --border-width-hairline: 0.5px;
+  // --border-width-thin: 1px;
+  // --border-width-thick: var(--border-radius-medium);
+  // --border-style-thin: var(--border-width-thin) solid var(--color-border);
+  // --border-style-thick: var(--border-width-thick) solid var(--color-border);
 
   --max-width: 72rem;
   --spacing-xx-small: 0.25rem;
@@ -93,21 +93,21 @@
   --split-pair-space: 1rem;
   --flow-space: 1rem;
 
-  --duration-instantly: 0;
-  --duration-immediately: 0.05s;
-  --duration-quickly: 0.1s;
-  --duration-promptly: 0.2s;
-  --duration-slowly: 0.4s;
-  --timing: ease;
+  // --duration-instantly: 0;
+  // --duration-immediately: 0.05s;
+  // --duration-quickly: 0.1s;
+  // --duration-promptly: 0.2s;
+  // --duration-slowly: 0.4s;
+  // --timing: ease;
 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--navy);
+    --color-background: var(--maroon);
     --color-border: var(--teal);
-    --color-text: var(--color-white);
-    --color-base: var(--blue);
+    --color-text: var(-white);
+    --color-base: var(--orange);
     --color-accent: var(--yellow);
     --font-family: "darkmode-on-cc", sans-serif;
     --font-family-display: "darkmode-on-cc", sans-serif; 

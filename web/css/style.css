@@ -9,9 +9,6 @@
   --text-scale-ratio: 1.125;
   --line-height-text: 1.5;
   --line-height-heading: 1.1;
-  --grid-compound-6-4: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
-  --grid-compound-4-3: 3fr 1fr 2fr 2fr 3fr 1fr;
-  --grid-compound-5-4: 6fr 1fr 4fr 3fr 3fr 4fr 1fr 6fr;
   --grid-column-gap: 2vw;
   --grid-row-gap: 4vh;
   --gap: 1vw;
@@ -45,9 +42,9 @@
   --silver: #DDDDDD;
   --gray: #AAAAAA;
   --black: #111111;
-  --color-primary: var(--blue);
-  --color-secondary: var(--navy);
-  --color-accent: var(--yellow);
+  --color-primary: var(--maroon);
+  --color-secondary: var(--yellow);
+  --color-accent: var(--white);
   --color-neutral: var(--gray);
   --color-black: var(--black);
   --color-white: var(--white);
@@ -55,16 +52,6 @@
   --color-background: var(--color-white);
   --color-base: var(--color-black);
   --color-border: var(--color-primary);
-  --border-radius-x-small: 0.25rem;
-  --border-radius-small: 0.5rem;
-  --border-radius-medium: 0.75rem;
-  --border-radius-large: 1rem;
-  --border-radius-circle: 50%;
-  --border-width-hairline: 0.5px;
-  --border-width-thin: 1px;
-  --border-width-thick: var(--border-radius-medium);
-  --border-style-thin: var(--border-width-thin) solid var(--color-border);
-  --border-style-thick: var(--border-width-thick) solid var(--color-border);
   --max-width: 72rem;
   --spacing-xx-small: 0.25rem;
   --spacing-x-small: 0.5rem;
@@ -76,20 +63,14 @@
   --spacing-xx-large: 8rem;
   --split-pair-space: 1rem;
   --flow-space: 1rem;
-  --duration-instantly: 0;
-  --duration-immediately: 0.05s;
-  --duration-quickly: 0.1s;
-  --duration-promptly: 0.2s;
-  --duration-slowly: 0.4s;
-  --timing: ease;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--navy);
+    --color-background: var(--maroon);
     --color-border: var(--teal);
-    --color-text: var(--color-white);
-    --color-base: var(--blue);
+    --color-text: var(-white);
+    --color-base: var(--orange);
     --color-accent: var(--yellow);
     --font-family: "darkmode-on-cc", sans-serif;
     --font-family-display: "darkmode-on-cc", sans-serif;
@@ -137,47 +118,8 @@ h4 {
   text-wrap: balance;
 }
 
-h1 {
-  font-size: var(--font-size-xx-large);
-}
-
-h2 {
-  font-size: var(--font-size-x-large);
-  color: var(--color-text);
-}
-
-h3 {
-  font-size: var(--font-size-large);
-}
-
-h4 {
-  font-size: var(--font-size-medium);
-  font-style: bold;
-  font-weight: var(--font-weight-light);
-  text-transform: uppercase;
-}
-
-header[role=banner] h1 {
-  margin-block-start: 0.5em;
-  margin-block-end: 0;
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-x-display);
-  font-style: normal;
-  font-weight: var(--font-weight-black);
-}
-
-header h1 span {
-  display: block;
-  font-size: 75%;
-}
-
 main > h1:first-of-type {
   font-family: var(--font-family-display);
-}
-
-header[role=banner] h1:hover,
-header[role=banner] h1:focus {
-  color: var(--color-secondary);
 }
 
 /*# sourceMappingURL=style.css.map */
