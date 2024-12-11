@@ -56,7 +56,7 @@
   --black:  #111111;
 
 
-  --color-primary: var(--maroon); 
+  --color-primary: var(--red); 
   --color-secondary: var(--yellow); 
   --color-accent: var(--white);
 
@@ -64,7 +64,7 @@
   --color-black: var(--black); 
   --color-white: var(--white);
 
-  --color-text: var(--maroon);  
+  --color-text: var(--red);  
   --color-background: var(--silver);
   --color-base: var(--color-black);
   --color-border: var(--color-primary);
@@ -104,10 +104,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--maroon);
-    --color-border: var(--teal);
+    --color-background: var(--red);
+    --color-border: var(--red);
     --color-text: var(-white);
-    --color-base: var(--orange);
+    --color-base: var(--silver);
     --color-accent: var(--yellow);
     --font-family: "darkmode-on-cc", sans-serif;
     --font-family-display: "darkmode-on-cc", sans-serif; 
