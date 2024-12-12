@@ -1,0 +1,72 @@
+@media (min-width: 48em) {
+  .l-chinese-horoscope main {
+    grid-column: 2 / 8;
+  }
+}
+.l-chinese-horoscope .h-feed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--spacing);
+}
+
+.l-chinese-horoscope article {
+  margin-block-end: var(--spacing-medium);
+  
+}
+
+.l-chinese-horoscope article h1 {
+  margin-block-end: var(--spacing-small);
+}
+
+.l-chinese-horoscope .h-feed .standfirst {
+  margin-block-start: 0;
+  font-size: var(--font-size-xx-large);
+}
+
+@media (min-width: 48em) {
+  .l-chinese-horoscope .svg-container .svg {
+    width: 30vw;
+  }
+
+  .l-chinese-horoscope article svg {
+    width: 15vw;
+    filter: drop-shadow(4px 4px 4px black);
+  }
+
+  .l-chinese-horoscope article a {
+    outline: none;
+    outline-offset: 3px;
+  }
+}
+
+
+.anime-tiger {
+  margin: 2em 0 3em 2em;
+  shape-margin: 1em;
+  shape-outside: url(/assets/vectors/tiger.svg);
+}
+
+
+.anime-tiger svg[data-name="tiger"] {
+  width: 150px;
+  height: initial;
+  animation: tiger-head 3s ease;
+}
+
+@media (min-width: 48em) {
+  .anime-tiger svg {
+    width: 400px;
+  }
+}
+
+@keyframes tiger-head {
+  from {
+    transform: scale(0.4) rotate(0deg);
+  }
+
+  to {
+    transform: scale(1) rotate(16deg);
+  }
+}

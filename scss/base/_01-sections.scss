@@ -1,0 +1,108 @@
+//  =====================================================
+//  HTML Living Standard
+//  Sections elements
+//  https://html.spec.whatwg.org/multipage/sections.html
+//  body, article, section, nav, aside, hgroup, header, footer, address
+//  ======================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+ // -moz-text-size-adjust: none;
+ // -webkit-text-size-adjust: none;
+ text-size-adjust: none;
+}
+
+body {
+  display: grid;
+  gap: var(--gap);
+  min-height: 100vh;
+  padding: 1rem;
+  margin: 0;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  // color: var(--color-primary);
+  // background-color: var(--color-background);
+  text-rendering: optimizeSpeed;
+}
+
+main {
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+
+main > * {
+  display: block;
+}
+
+// @media (min-width: 48em) {
+// 
+//   body {
+//     grid-template-columns: var(--grid-compound-6-4);
+//     align-content: start;
+//   }
+// 
+//   header[role="banner"] {
+//     grid-column: 2 / -1;
+//   }
+// 
+//   nav[role="navigation"] {
+//     grid-column: 2 / 6;
+// 
+//   }
+// 
+//   main[role="main"] {
+//     grid-column: 2 / 6;
+//   }
+// 
+//   aside {
+//     grid-column: 2 / 6;
+//   }
+// 
+//   footer[role="contentinfo"] {
+//     grid-column: 2 / 6;
+//     padding: var(--spacing) 0;
+//     margin-block-start: var(--spacing-large);
+//     border-top: var(--border-style-thin);
+//   }
+// }
+// 
+// nav[role="navigation"] ul {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   padding: 0;
+//   margin: var(--spacing) 0;
+//   font-size: var(--font-size-small);
+//   text-transform: uppercase;
+//   list-style-type: none;
+// }
+// 
+// @media (min-width: 48em) {
+//   nav[role="navigation"] ul {
+//     font-size: var(--font-size-small);
+//   }
+// }
+// 
+// nav[role="navigation"] li {
+//   padding-inline: var(--spacing-x-small);
+// }
+// 
+// // main > h1:first-of-type {
+// //   margin-top: 0;
+// // }
+// 
+// aside h2 {
+//   font-size: var(--font-size-medium);
+// }
+// 
+// footer a,
+// footer a:focus,
+// footer a:hover {
+//   text-decoration: none;
+// }

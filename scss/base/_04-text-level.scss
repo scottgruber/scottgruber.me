@@ -1,0 +1,75 @@
+//  =====================================================
+//  HTML Living Standard
+//  Text-level semantics elements
+//  https://html.spec.whatwg.org/multipage/text-level-semantics.html
+//  a, em, strong, small, s, cite, q, dfn, abbr, ruby, rb, rt, rtc, rp, data, time, code, var, samp, kdb, sub, sup, i, b, u, mark, bdi, bdo, span, br, wbr
+//   =====================================================
+
+//* A elements that don't have a class get default styles */
+
+a {
+  color: currentColor;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a:link {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--color-primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary);
+  outline: 1px solid var(--color-border);
+  outline-offset: 3px;
+}
+
+a:visited {
+  color: var(--color-text);
+}
+
+time {
+  margin: 0;
+  font-size: var(--font-size-small);
+}
+
+time + p {
+  margin: 0;
+  font-size: var(--font-size-small);
+}
+
+.logotype a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.quote p,
+.quote h2 {
+  quotes: "“" "”" "‘" "‘";
+}
+
+.quote p::before,
+.quote h2::before {
+  margin-inline-start: -0.83ch;
+  font-size: var(--font-size-display);
+  content: open-quote;
+}
+
+.quote p::after,
+.quote h2::after {
+  font-size: var(--font-size-display);
+  content: close-quote;
+}
+
+code,
+pre {
+  font-family: var(--font-family-mono);
+  font-weight: 500;
+}

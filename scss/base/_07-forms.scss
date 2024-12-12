@@ -1,0 +1,103 @@
+//  =====================================================
+//  HTML Living Standard
+//  Forms
+//  https://html.spec.whatwg.org/multipage/forms.html
+//  Elements: form, label, input, button, select, datalist, optgroup, option, textarea, output, progress, meter, fieldset, legend
+//  =====================================================
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.1;
+}
+
+form {
+  padding: var(--spacing-medium);
+  margin: var(--spacing) 0;
+  border: var(--border-style-thin);
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+legend {
+  padding: 0;
+  margin-block-end: var(--spacing-x-small);
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin-block-end: var(--spacing-small);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+select[multiple] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--spacing-x-small);
+  margin: 0 0 var(--spacing-x-small);
+  background-color: var(--color-background);
+  border: var(--border-width-thin) solid var(--color-border);
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-border);
+    outline: none;
+    box-shadow: var(--color-black);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-background);
+
+    &:focus,
+    &:hover {
+      border: var(--border-width-thin) solid var(--color-border);
+    }
+  }
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+[type="search"] {
+  appearance: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-inline-end: var(--spacing-x-small);
+}
+
+[type="file"] {
+  width: 100%;
+  margin-block-end: var(--spacing-x-small);
+}
+
+select {
+  width: auto;
+  max-width: 100%;
+  margin-block-end: var(--spacing-x-small);
+}
+
+button {
+  padding: var(--spacing);
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  appearance: none;
+}

@@ -1,0 +1,23 @@
+.tags {
+  margin: var(--spacing) 0;
+}
+
+.tags h3 {
+  font-size: var(--font-size-medium);
+}
+
+.tags ul {
+  display: flex;
+  flex: 1;
+  order: 1;
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-small);
+  list-style: none;
+}
+
+.tags li:not(:last-child) {
+  padding-inline-end: var(--spacing-x-small);
+  
+}
+

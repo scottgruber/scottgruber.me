@@ -1,0 +1,65 @@
+//  =====================================================
+//  HTML Living Standard
+//  Heading elements (part of section elements)
+//  https://html.spec.whatwg.org/multipage/sections.html
+//  h1, h2, h3, h4, h5, h6
+//  =====================================================
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-black);
+  line-height: 1.1;
+  text-wrap: balance;
+  
+}
+
+// h1 {
+//   font-size: var(--font-size-xx-large);
+// }
+// 
+// h2 {
+//   font-size: var(--font-size-x-large);
+//   color: var(--color-text);
+// }
+// 
+// h3 {
+//   font-size: var(--font-size-large);
+// }
+// 
+// h4 {
+//   font-size: var(--font-size-medium);
+//   font-style: bold;
+//   font-weight: var(--font-weight-light);
+//   text-transform: uppercase;
+// }
+
+
+// header[role="banner"] h1 {
+//   margin-block-start: .5em;
+//   margin-block-end: 0;
+//   font-family: var(--font-family-display);
+//   font-size: var(--font-size-x-display);
+//   font-style: normal;
+//   font-weight: var(--font-weight-black);
+// }
+// 
+// header h1 span {
+//   display: block;
+//   font-size: 75%;
+// }
+
+main > h1:first-of-type {
+  font-family: var(--font-family-display);
+}
+
+// header[role="banner"] h1:hover,
+// header[role="banner"] h1:focus {
+//   color: var(--color-secondary);
+// }
+
+
+
+

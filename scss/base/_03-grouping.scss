@@ -1,0 +1,112 @@
+//  =====================================================
+//  HTML Living Standard
+//  Grouping content elements
+//  https://html.spec.whatwg.org/multipage/grouping-content.html
+//  p, hr, pre, blockquote, ol, ul, menu, li, dl, dt, dd,
+//  figure, figcaption, main, div
+//  =====================================================
+
+// figure,
+// blockquote,
+// dl,
+// dd {
+//   margin: 0;
+// }
+
+// p {
+//   max-width: 70ch;
+//   font-size: var(--font-size);
+// }
+
+
+hr {
+  margin: var(--spacing) 0;
+  border-block-end: var(--border-style-thin);
+}
+
+pre {
+  max-width: 40em;
+}
+
+blockquote {
+  display: flex;
+  margin-block-start: var(--spacing);
+  margin-inline-start: -16ch;
+  gap: 2vw;
+}
+
+blockquote > * {
+  font-size: var(--font-size-medium);
+  font-style: italic;
+
+}
+
+blockquote:before {
+  align-self: flex-start;
+  font-size: var(--font-size-xxx-display);
+  line-height: 1.1;
+  color: var(--color-border);
+  content: "“";
+}
+
+blockquote:after {
+  align-self: flex-end;
+  font-size: var(--font-size-xxx-display);
+  line-height: 0;
+  color: var(--color-accent);
+  content: "”";
+}
+
+.e-content > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+ul > li {
+  margin: 0 0 var(--spacing-small);
+}
+
+ul.breadcrumbs li {
+  display: inline-block;
+
+  a {
+    padding: var(--spacing-medium) / 2;
+    border-radius: 10px;
+    transition-duration: 3s;
+    transition-property: all;
+
+    &:focus,
+    &:hover {
+      border-radius: 4px;
+    }
+  }
+}
+
+ul.comments {
+  font-size: 80%;
+  list-style-type: none;
+}
+
+ul.comments li {
+  margin-block-start: 0.5em;
+}
+
+dl,
+dd {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}

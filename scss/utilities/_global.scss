@@ -1,0 +1,6 @@
+/* Utilities */
+
+/* Flow utility: https://piccalil.li/quick-tip/flow-css-utility/ */
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
