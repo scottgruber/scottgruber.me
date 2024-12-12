@@ -94,8 +94,6 @@ body {
   margin: 0;
   font-family: var(--font-family);
   line-height: 1.5;
-  color: var(--color-primary);
-  background-color: var(--color-background);
   text-rendering: optimizeSpeed;
 }
 
