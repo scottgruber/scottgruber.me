@@ -35,20 +35,20 @@
   --font-size-small: 0.8rem;
   --font-size-x-small: 0.64rem;
 
-  --aqua:  #7FDBFF;
-  --blue:  #0074D9;
-  --navy:  #001F3F;
-  --teal:  #39CCCC;
-  --green: #2ECC40;
-  --olive: #3D9970;
-  --lime:  #01FF70;
+  // --aqua:  #7FDBFF;
+  // --blue:  #0074D9;
+  // --navy:  #001F3F;
+  // --teal:  #39CCCC;
+  // --green: #2ECC40;
+  // --olive: #3D9970;
+  // --lime:  #01FF70;
   
   --yellow:  #FFDC00;
   --orange:  #FF851B;
   --red:     #a40000;
-  --fuchsia: #F012BE;
-  --purple:  #B10DC9;
-  --maroon:  #85144B;
+  // --fuchsia: #F012BE;
+  // --purple:  #B10DC9;
+  // --maroon:  #85144B;
   
   --white:  #FFFFFF;
   --silver: #DDDDDD;
@@ -106,6 +106,7 @@
   :root {
     --color-background: var(--red);
     --color-border: var(--red);
+    --color-primary: var(-white);
     --color-text: var(-white);
     --color-base: var(--silver);
     --color-accent: var(--yellow);
