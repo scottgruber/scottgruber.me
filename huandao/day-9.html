@@ -1,0 +1,338 @@
+<!-- GENERATED FILE — edit templates/day.html.jinja + data/day-N.json, then rerun scripts/generate_pages.py -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 9 — 環島 Around the Island</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="description" content="Day 9: Hualien City to Taipei (Xinyi District) — 50.1 miles of our 2023 round-Taiwan bike tour.">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <meta name="theme-color" content="#00111f">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <script>
+    try {
+      if (localStorage.getItem("huandao-units") === "metric") document.documentElement.classList.add("metric");
+    } catch (e) {}
+  </script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <h1 class="huandao"><a href="index.html"><span lang="zh-Hant">環島</span> <span>Cycling Around Taiwan</span></a></h1>
+  </header>
+
+  <nav class="site-nav" aria-label="Site">
+  <ul role="list">
+   
+<li>
+      <a href="day-1.html">
+        <span lang="zh-Hant">一</span> Day 1
+      </a>
+    </li>
+<li>
+      <a href="day-2.html">
+        <span lang="zh-Hant">二</span> Day 2
+      </a>
+    </li>
+<li>
+      <a href="day-3.html">
+        <span lang="zh-Hant">三</span> Day 3
+      </a>
+    </li>
+<li>
+      <a href="day-4.html">
+        <span lang="zh-Hant">四</span> Day 4
+      </a>
+    </li>
+<li>
+      <a href="day-5.html">
+        <span lang="zh-Hant">五</span> Day 5
+      </a>
+    </li>
+<li>
+      <a href="day-6.html">
+        <span lang="zh-Hant">六</span> Day 6
+      </a>
+    </li>
+<li>
+      <a href="day-7.html">
+        <span lang="zh-Hant">七</span> Day 7
+      </a>
+    </li>
+<li>
+      <a href="day-8.html">
+        <span lang="zh-Hant">八</span> Day 8
+      </a>
+    </li>
+<li>
+      <a href="day-9.html" aria-current="page">
+        <span lang="zh-Hant">九</span> Day 9
+      </a>
+    </li>
+<li>
+      <a href="story.html">Story</a>
+    </li>
+    <li>
+      <a href="glossary.html">Glossary</a>
+    </li>
+  </ul>
+
+ 
+</nav>
+
+  <main id="main">
+
+    <div class="day-title">
+      <div class="day-title__number">
+        <span lang="zh-Hant">九</span>
+        <span class="day-title__label">Day 9</span>
+      </div>
+      <h2 class="day-title__route town-route">
+        <span class="town-name"><span lang="zh-Hant">花蓮</span>Hualien</span>
+        <span class="arrow">&rarr;</span>
+        <span class="town-name"><span lang="zh-Hant">台北</span>Taipei</span>
+      </h2>
+    </div>
+
+    <div class="stat-row">
+      <dl class="stat-item">
+        <dt class="stat-label">Distance</dt>
+        <dd class="stat-value"><span class="unit-pair"><span class="unit-pair__imperial">50.1<span class="stat-unit">mi</span></span><span class="unit-pair__metric">80.6<span class="stat-unit">km</span></span></span></dd>
+      </dl>
+      <dl class="stat-item">
+        <dt class="stat-label">Elevation gain</dt>
+        <dd class="stat-value"><span class="unit-pair"><span class="unit-pair__imperial">1607<span class="stat-unit">ft</span></span><span class="unit-pair__metric">489.9<span class="stat-unit">m</span></span></span></dd>
+      </dl>
+      <dl class="stat-item">
+        <dt class="stat-label">Avg speed</dt>
+        <dd class="stat-value"><span class="unit-pair"><span class="unit-pair__imperial">11.5<span class="stat-unit">mph</span></span><span class="unit-pair__metric">18.5<span class="stat-unit">kph</span></span></span></dd>
+      </dl>
+      <dl class="stat-item">
+        <dt class="stat-label">Moving time</dt>
+        <dd class="stat-value">4:22:18</dd>
+      </dl>
+      <button type="button" class="unit-toggle" id="unit-toggle" aria-pressed="false" aria-label="Toggle between imperial and metric units">
+        <span class="unit-toggle__option" data-unit="imperial">mi</span>
+        <span class="unit-toggle__option" data-unit="metric">km</span>
+      </button>
+    </div>
+
+    <div class="route-section">
+      <figure class="map-card">
+        <div id="map" class="map-card__map" role="region" aria-label="Map of Day 9's route, Hualien to Taipei"></div>
+        <figcaption class="map-card__caption">
+          <span lang="zh-Hant">花蓮市</span> Hualien City
+          &rarr;
+          <span lang="zh-Hant">台北市信義區</span> Taipei (Xinyi District)
+        </figcaption>
+      </figure>
+      <aside class="route-aside" aria-label="Route notes">
+        <figure class="day-board">
+          <img src="assets/img/day-boards/day-9-board.jpg" alt="Hand-written chalkboard listing Day 9's route, waypoints, and lunch stop" loading="lazy">
+          <figcaption>This morning's route, chalked up before rollout.</figcaption>
+        </figure>
+        <figure class="elevation-card">
+          <h2>Elevation profile</h2>
+          <svg viewBox="0 0 600 140" role="img" aria-labelledby="elev-title-9 elev-desc-9"><title id="elev-title-9">Elevation profile for Day 9</title><desc id="elev-desc-9">Ranges from 6m to 260m elevation over 52.4 miles.</desc><path d="M6.0,133.0 L6.7,132.5 L7.3,132.1 L8.1,131.6 L8.8,131.3 L9.5,131.3 L10.2,131.3 L10.8,131.4 L11.6,131.3 L12.3,131.1 L13.0,130.9 L13.6,130.8 L14.4,130.7 L15.1,130.8 L15.8,131.0 L16.4,131.3 L17.1,131.5 L17.9,131.9 L18.6,132.1 L19.2,132.3 L19.9,132.3 L20.6,132.4 L21.4,132.6 L22.0,132.7 L22.7,132.7 L23.4,132.9 L24.2,132.8 L24.8,132.8 L25.5,132.8 L26.2,132.8 L26.9,132.8 L27.6,132.8 L28.3,132.6 L29.0,132.4 L29.7,132.2 L30.3,132.0 L31.1,131.8 L31.8,131.7 L32.5,131.7 L33.1,131.8 L33.9,131.8 L34.6,131.8 L35.3,131.8 L35.9,131.8 L36.6,131.6 L37.4,131.1 L38.1,130.3 L38.8,129.4 L39.4,128.6 L40.1,128.5 L40.9,129.1 L41.6,130.3 L42.2,131.6 L42.9,132.6 L43.7,133.4 L44.4,133.7 L45.0,133.9 L45.7,134.0 L46.4,133.9 L47.2,133.8 L47.8,133.7 L48.5,133.5 L49.2,133.2 L49.9,132.9 L50.6,132.7 L51.3,132.4 L52.0,132.1 L52.7,131.9 L53.4,131.8 L54.1,131.6 L54.8,131.5 L55.5,131.4 L56.1,131.4 L56.9,131.6 L57.6,131.6 L58.3,131.7 L58.9,131.8 L59.6,131.7 L60.4,131.6 L61.1,131.6 L61.7,131.5 L62.4,131.6 L63.2,131.8 L63.9,131.9 L64.6,132.1 L65.2,132.2 L65.9,132.2 L66.7,132.2 L67.4,132.2 L68.0,132.3 L68.7,132.3 L69.4,132.3 L70.2,132.3 L70.8,132.2 L71.5,132.1 L72.2,131.8 L73.0,131.7 L73.6,131.6 L74.3,131.5 L75.0,131.5 L75.7,131.5 L76.4,131.6 L77.1,131.5 L77.8,131.5 L78.5,131.6 L79.1,131.5 L79.9,131.5 L80.6,131.5 L81.3,131.3 L81.9,131.1 L82.7,130.9 L83.4,130.9 L84.1,130.9 L84.7,131.0 L85.4,131.2 L86.2,131.4 L86.9,131.3 L87.5,131.2 L88.2,131.1 L88.9,131.1 L89.7,131.0 L90.4,131.0 L91.0,130.8 L91.7,130.5 L92.5,130.1 L93.2,130.0 L93.8,129.9 L94.5,130.0 L95.2,130.3 L96.0,130.5 L96.6,130.6 L97.3,130.5 L98.0,130.6 L98.7,130.6 L99.4,130.5 L100.1,130.4 L100.8,130.4 L101.5,130.3 L102.1,130.2 L102.9,130.0 L103.6,130.1 L104.3,129.9 L104.9,130.0 L105.7,130.3 L106.4,130.5 L107.1,130.4 L107.7,130.1 L108.4,129.5 L109.2,128.7 L109.9,128.2 L110.5,127.9 L111.2,128.0 L111.9,128.5 L112.7,128.8 L113.3,129.3 L114.0,129.8 L114.7,130.0 L115.5,130.0 L116.2,130.1 L116.8,130.0 L117.5,129.7 L118.2,129.5 L119.0,129.2 L119.6,128.9 L120.3,128.7 L121.0,128.6 L121.6,128.6 L122.4,128.6 L123.1,128.6 L123.8,128.6 L124.5,128.5 L125.2,128.5 L125.9,128.5 L126.6,128.5 L127.3,128.7 L127.9,128.9 L128.7,129.1 L129.4,129.1 L130.1,129.0 L130.7,128.9 L131.4,129.0 L132.2,129.2 L132.9,129.3 L133.5,129.4 L134.2,129.4 L135.0,129.3 L135.7,129.3 L136.3,129.3 L137.0,129.3 L137.7,128.8 L138.5,128.5 L139.1,128.3 L139.8,128.3 L140.5,128.5 L141.2,128.9 L142.0,129.4 L142.6,129.5 L143.3,129.3 L144.0,129.0 L144.8,128.8 L145.4,128.5 L146.1,128.2 L146.8,128.1 L147.4,128.1 L148.2,128.2 L148.9,128.4 L149.6,128.4 L150.3,128.5 L150.9,128.5 L151.7,128.7 L152.4,129.0 L153.1,129.3 L153.7,129.3 L154.5,129.3 L155.2,129.2 L155.9,129.0 L156.5,129.1 L157.2,129.3 L158.0,128.9 L158.7,128.0 L159.3,126.6 L160.0,125.1 L160.7,124.2 L161.5,124.0 L162.1,124.1 L162.8,124.7 L163.5,124.9 L164.3,124.7 L164.9,124.4 L165.6,124.1 L166.3,124.3 L167.0,124.6 L167.8,124.9 L168.4,125.2 L169.1,125.5 L169.8,125.7 L170.4,126.0 L171.2,126.3 L171.9,126.6 L172.6,126.6 L173.2,126.0 L174.0,125.2 L174.7,124.3 L175.4,123.2 L176.1,122.1 L176.7,121.6 L177.5,121.5 L178.2,121.5 L178.9,121.3 L179.5,121.4 L180.2,121.9 L181.0,122.4 L181.7,123.1 L182.3,123.9 L183.0,124.4 L183.7,124.0 L184.5,123.3 L185.1,122.7 L185.8,122.4 L186.5,122.2 L187.3,122.2 L187.9,122.2 L188.6,122.2 L189.3,122.7 L190.0,123.2 L190.7,123.8 L191.4,124.3 L192.1,124.4 L192.8,124.0 L193.4,123.7 L194.2,123.3 L194.9,123.1 L195.6,122.9 L196.2,122.7 L197.0,122.5 L197.7,122.3 L198.4,122.1 L199.0,121.9 L199.7,121.7 L200.5,121.4 L201.2,121.2 L201.9,121.0 L202.5,120.8 L203.2,120.6 L204.0,120.4 L204.7,120.2 L205.3,120.0 L206.0,119.8 L206.8,119.6 L207.5,119.4 L208.1,119.2 L208.8,118.9 L209.5,118.4 L210.3,117.5 L210.9,117.1 L211.6,117.0 L212.3,117.0 L213.0,117.8 L213.7,119.1 L214.4,120.2 L215.1,121.0 L215.8,122.1 L216.5,123.2 L217.2,124.2 L217.9,124.9 L218.6,125.7 L219.2,126.5 L220.0,127.0 L220.7,127.3 L221.4,127.7 L222.0,128.0 L222.7,128.0 L223.5,127.9 L224.2,127.9 L224.8,128.5 L225.5,128.9 L226.3,129.0 L227.0,129.0 L227.6,128.8 L228.3,128.2 L229.0,127.6 L229.8,127.2 L230.5,126.9 L231.1,126.4 L231.8,125.9 L232.5,125.3 L233.3,124.3 L233.9,123.3 L234.6,122.8 L235.3,122.6 L236.1,122.7 L236.7,123.9 L237.4,125.2 L238.1,125.7 L238.8,125.7 L239.5,125.8 L240.2,125.6 L240.9,125.4 L241.6,125.6 L242.2,126.5 L243.0,127.3 L243.7,127.9 L244.4,128.4 L245.0,129.1 L245.8,129.5 L246.5,129.6 L247.2,129.4 L247.8,129.4 L248.5,129.4 L249.3,129.0 L250.0,129.0 L250.6,128.7 L251.3,128.5 L252.0,128.4 L252.8,127.9 L253.4,127.1 L254.1,126.4 L254.8,125.3 L255.6,123.8 L256.3,122.9 L256.9,122.7 L257.6,122.9 L258.3,123.4 L259.1,124.3 L259.7,124.9 L260.4,125.1 L261.1,125.0 L261.7,124.6 L262.5,124.4 L263.2,124.4 L263.9,124.3 L264.6,123.8 L265.3,123.3 L266.0,122.2 L266.7,121.0 L267.4,120.7 L268.0,121.1 L268.8,121.7 L269.5,123.1 L270.2,124.6 L270.8,125.2 L271.5,125.3 L272.3,125.5 L273.0,125.3 L273.6,124.6 L274.3,123.8 L275.0,123.1 L275.8,122.4 L276.4,121.9 L277.1,122.0 L277.8,122.1 L278.6,122.4 L279.2,122.8 L279.9,122.8 L280.6,122.6 L281.3,122.3 L282.1,121.9 L282.7,121.3 L283.4,120.9 L284.1,120.8 L284.7,120.5 L285.5,120.3 L286.2,120.2 L286.9,120.1 L287.5,120.2 L288.3,120.4 L289.0,120.5 L289.7,120.7 L290.4,120.9 L291.0,120.7 L291.8,120.3 L292.5,120.1 L293.2,120.0 L293.8,119.7 L294.5,119.7 L295.3,119.9 L296.0,120.0 L296.6,119.0 L297.3,118.3 L298.1,116.9 L298.8,115.1 L299.4,112.7 L300.1,110.8 L300.8,109.2 L301.6,108.5 L302.2,108.6 L302.9,110.0 L303.6,111.6 L304.3,112.8 L305.0,113.6 L305.7,114.0 L306.4,113.7 L307.1,113.2 L307.9,112.8 L308.5,112.4 L309.2,112.0 L309.9,111.6 L310.5,111.2 L311.3,110.8 L312.0,110.3 L312.7,109.9 L313.3,109.5 L314.0,109.2 L314.8,109.0 L315.5,108.7 L316.2,108.5 L316.8,108.2 L317.6,107.8 L318.3,107.5 L319.0,107.3 L319.6,106.9 L320.3,106.6 L321.1,106.3 L321.8,105.8 L322.4,105.2 L323.1,104.4 L323.8,103.4 L324.6,102.1 L325.2,101.0 L325.9,100.1 L326.6,99.3 L327.4,98.7 L328.0,98.3 L328.7,97.7 L329.4,96.9 L330.1,96.1 L330.8,95.2 L331.5,94.3 L332.2,93.7 L332.9,93.2 L333.5,92.8 L334.3,92.7 L335.0,92.8 L335.7,92.9 L336.3,92.9 L337.1,92.5 L337.8,91.3 L338.5,89.3 L339.1,86.7 L339.8,83.8 L340.6,80.9 L341.3,78.4 L342.0,76.2 L342.6,74.2 L343.3,72.1 L344.1,70.0 L344.8,67.8 L345.4,65.6 L346.1,63.0 L346.9,60.3 L347.6,57.2 L348.2,54.0 L348.9,50.6 L349.6,47.3 L350.4,43.8 L351.0,40.1 L351.7,36.7 L352.4,33.7 L353.1,30.7 L353.8,28.4 L354.5,26.5 L355.2,24.4 L355.9,22.1 L356.5,20.1 L357.3,18.0 L358.0,16.2 L358.7,14.6 L359.3,13.2 L360.1,11.5 L360.8,9.8 L361.5,8.3 L362.1,7.1 L362.8,6.2 L363.6,6.0 L364.3,6.5 L364.9,7.4 L365.6,8.7 L366.3,10.4 L367.1,12.3 L367.8,14.1 L368.4,15.7 L369.1,17.3 L369.9,18.7 L370.6,20.2 L371.2,21.5 L371.9,22.8 L372.6,24.1 L373.4,25.1 L374.0,26.3 L374.7,27.9 L375.4,29.9 L376.1,32.2 L376.8,34.7 L377.5,37.5 L378.2,39.9 L378.9,40.5 L379.6,41.4 L380.3,42.0 L381.0,41.4 L381.7,40.4 L382.3,40.7 L383.1,40.1 L383.8,39.6 L384.5,39.3 L385.1,39.2 L385.8,39.2 L386.6,39.2 L387.3,38.6 L387.9,37.7 L388.6,35.7 L389.4,33.4 L390.1,30.3 L390.7,26.9 L391.4,23.1 L392.1,19.5 L392.9,16.1 L393.6,13.3 L394.2,11.6 L394.9,10.8 L395.6,10.5 L396.4,10.4 L397.0,10.1 L397.7,9.4 L398.4,8.4 L399.2,7.7 L399.8,7.2 L400.5,7.1 L401.2,7.6 L401.9,8.6 L402.6,9.8 L403.3,11.1 L404.0,12.3 L404.7,13.4 L405.3,14.6 L406.1,15.6 L406.8,16.7 L407.5,18.0 L408.1,19.1 L408.9,20.1 L409.6,21.4 L410.3,22.4 L410.9,23.5 L411.6,24.7 L412.4,26.0 L413.1,26.9 L413.7,28.0 L414.4,29.0 L415.1,29.8 L415.9,30.5 L416.5,31.1 L417.2,31.4 L417.9,32.1 L418.7,33.4 L419.3,35.5 L420.0,38.2 L420.7,41.7 L421.4,45.6 L422.2,49.6 L422.8,53.6 L423.5,57.7 L424.2,61.2 L424.8,64.2 L425.6,67.0 L426.3,69.4 L427.0,71.5 L427.7,73.4 L428.4,75.6 L429.1,77.7 L429.8,79.5 L430.5,81.4 L431.1,83.2 L431.9,84.7 L432.6,86.2 L433.3,87.8 L433.9,89.5 L434.6,91.0 L435.4,92.5 L436.1,93.6 L436.7,94.3 L437.4,94.9 L438.2,95.6 L438.9,96.6 L439.5,97.6 L440.2,98.8 L440.9,100.0 L441.7,101.2 L442.3,102.3 L443.0,103.3 L443.7,104.2 L444.4,105.0 L445.1,105.6 L445.8,106.3 L446.5,106.9 L447.2,107.6 L447.8,108.4 L448.6,109.0 L449.3,109.3 L450.0,109.6 L450.6,108.9 L451.4,108.4 L452.1,108.1 L452.8,108.2 L453.4,108.7 L454.1,109.9 L454.9,111.0 L455.6,112.0 L456.3,112.6 L456.9,113.1 L457.6,113.7 L458.4,114.4 L459.1,114.9 L459.7,115.3 L460.4,115.5 L461.2,115.6 L461.9,115.9 L462.5,116.3 L463.2,116.8 L463.9,117.4 L464.7,117.8 L465.3,118.0 L466.0,117.9 L466.7,117.7 L467.4,117.3 L468.1,117.1 L468.8,117.1 L469.5,117.1 L470.2,117.2 L470.9,117.3 L471.6,117.3 L472.3,117.4 L473.0,117.4 L473.6,117.4 L474.4,117.5 L475.1,117.5 L475.8,117.4 L476.4,117.4 L477.1,117.4 L477.9,117.3 L478.6,117.4 L479.2,117.5 L479.9,117.7 L480.7,117.9 L481.4,118.0 L482.1,118.1 L482.7,118.3 L483.4,118.5 L484.2,118.6 L484.9,118.6 L485.5,118.5 L486.2,118.4 L486.9,118.2 L487.7,118.4 L488.3,118.9 L489.0,119.7 L489.7,120.5 L490.5,121.2 L491.1,121.7 L491.8,121.8 L492.5,121.8 L493.2,121.7 L493.9,121.7 L494.6,121.7 L495.3,121.7 L496.0,121.6 L496.6,121.1 L497.4,120.9 L498.1,120.6 L498.8,120.0 L499.4,119.6 L500.2,119.8 L500.9,119.4 L501.6,118.8 L502.2,118.3 L502.9,117.3 L503.7,115.8 L504.4,114.0 L505.0,112.3 L505.7,111.4 L506.4,111.0 L507.2,111.1 L507.9,111.8 L508.5,112.5 L509.2,113.0 L510.0,113.3 L510.7,113.4 L511.3,113.6 L512.0,114.1 L512.7,114.7 L513.5,115.3 L514.1,116.2 L514.8,117.1 L515.5,118.1 L516.2,119.1 L516.9,120.2 L517.6,121.2 L518.3,121.8 L519.0,122.1 L519.7,122.1 L520.4,122.0 L521.1,121.6 L521.8,121.6 L522.4,121.7 L523.2,121.8 L523.9,121.9 L524.6,122.2 L525.2,122.1 L525.9,122.1 L526.7,122.1 L527.4,122.1 L528.0,122.0 L528.7,122.1 L529.4,122.2 L530.2,122.4 L530.8,122.6 L531.5,122.5 L532.2,122.3 L533.0,122.2 L533.7,121.9 L534.3,121.3 L535.0,120.9 L535.7,120.5 L536.5,120.0 L537.1,119.4 L537.8,119.0 L538.5,118.3 L539.1,117.7 L539.9,117.0 L540.6,116.6 L541.3,116.4 L542.0,116.7 L542.7,117.2 L543.4,117.9 L544.1,118.5 L544.8,118.9 L545.4,119.6 L546.2,120.0 L546.9,120.4 L547.6,120.7 L548.2,121.1 L548.9,121.1 L549.7,120.9 L550.4,120.8 L551.0,120.8 L551.7,120.7 L552.5,120.6 L553.2,120.8 L553.8,121.0 L554.5,120.8 L555.2,120.5 L556.0,120.3 L556.6,119.9 L557.3,119.7 L558.0,120.0 L558.7,120.6 L559.5,121.3 L560.1,121.9 L560.8,122.2 L561.5,122.6 L562.3,123.0 L562.9,123.2 L563.6,123.7 L564.3,124.4 L564.9,124.9 L565.7,125.1 L566.4,125.5 L567.1,125.7 L567.8,125.6 L568.4,125.6 L569.2,125.6 L569.9,125.6 L570.6,125.6 L571.2,125.6 L572.0,125.5 L572.7,125.3 L573.4,125.1 L574.0,124.8 L574.7,124.5 L575.5,124.3 L576.2,124.2 L576.8,124.0 L577.5,123.9 L578.2,123.9 L579.0,123.8 L579.6,123.8 L580.3,123.9 L581.0,123.9 L581.8,123.9 L582.4,124.0 L583.1,124.1 L583.8,124.4 L584.5,124.6 L585.3,124.8 L585.9,125.0 L586.6,124.9 L587.3,124.7 L587.9,124.7 L588.7,124.7 L589.4,124.9 L590.1,125.1 L590.7,125.3 L591.5,125.3 L592.2,125.2 L592.9,125.0 L593.6,124.8 L594.0,124.7 L594.0,134 L6.0,134 Z" fill="var(--color-theme)" fill-opacity="0.18" stroke="none"/><path d="M6.0,133.0 L6.7,132.5 L7.3,132.1 L8.1,131.6 L8.8,131.3 L9.5,131.3 L10.2,131.3 L10.8,131.4 L11.6,131.3 L12.3,131.1 L13.0,130.9 L13.6,130.8 L14.4,130.7 L15.1,130.8 L15.8,131.0 L16.4,131.3 L17.1,131.5 L17.9,131.9 L18.6,132.1 L19.2,132.3 L19.9,132.3 L20.6,132.4 L21.4,132.6 L22.0,132.7 L22.7,132.7 L23.4,132.9 L24.2,132.8 L24.8,132.8 L25.5,132.8 L26.2,132.8 L26.9,132.8 L27.6,132.8 L28.3,132.6 L29.0,132.4 L29.7,132.2 L30.3,132.0 L31.1,131.8 L31.8,131.7 L32.5,131.7 L33.1,131.8 L33.9,131.8 L34.6,131.8 L35.3,131.8 L35.9,131.8 L36.6,131.6 L37.4,131.1 L38.1,130.3 L38.8,129.4 L39.4,128.6 L40.1,128.5 L40.9,129.1 L41.6,130.3 L42.2,131.6 L42.9,132.6 L43.7,133.4 L44.4,133.7 L45.0,133.9 L45.7,134.0 L46.4,133.9 L47.2,133.8 L47.8,133.7 L48.5,133.5 L49.2,133.2 L49.9,132.9 L50.6,132.7 L51.3,132.4 L52.0,132.1 L52.7,131.9 L53.4,131.8 L54.1,131.6 L54.8,131.5 L55.5,131.4 L56.1,131.4 L56.9,131.6 L57.6,131.6 L58.3,131.7 L58.9,131.8 L59.6,131.7 L60.4,131.6 L61.1,131.6 L61.7,131.5 L62.4,131.6 L63.2,131.8 L63.9,131.9 L64.6,132.1 L65.2,132.2 L65.9,132.2 L66.7,132.2 L67.4,132.2 L68.0,132.3 L68.7,132.3 L69.4,132.3 L70.2,132.3 L70.8,132.2 L71.5,132.1 L72.2,131.8 L73.0,131.7 L73.6,131.6 L74.3,131.5 L75.0,131.5 L75.7,131.5 L76.4,131.6 L77.1,131.5 L77.8,131.5 L78.5,131.6 L79.1,131.5 L79.9,131.5 L80.6,131.5 L81.3,131.3 L81.9,131.1 L82.7,130.9 L83.4,130.9 L84.1,130.9 L84.7,131.0 L85.4,131.2 L86.2,131.4 L86.9,131.3 L87.5,131.2 L88.2,131.1 L88.9,131.1 L89.7,131.0 L90.4,131.0 L91.0,130.8 L91.7,130.5 L92.5,130.1 L93.2,130.0 L93.8,129.9 L94.5,130.0 L95.2,130.3 L96.0,130.5 L96.6,130.6 L97.3,130.5 L98.0,130.6 L98.7,130.6 L99.4,130.5 L100.1,130.4 L100.8,130.4 L101.5,130.3 L102.1,130.2 L102.9,130.0 L103.6,130.1 L104.3,129.9 L104.9,130.0 L105.7,130.3 L106.4,130.5 L107.1,130.4 L107.7,130.1 L108.4,129.5 L109.2,128.7 L109.9,128.2 L110.5,127.9 L111.2,128.0 L111.9,128.5 L112.7,128.8 L113.3,129.3 L114.0,129.8 L114.7,130.0 L115.5,130.0 L116.2,130.1 L116.8,130.0 L117.5,129.7 L118.2,129.5 L119.0,129.2 L119.6,128.9 L120.3,128.7 L121.0,128.6 L121.6,128.6 L122.4,128.6 L123.1,128.6 L123.8,128.6 L124.5,128.5 L125.2,128.5 L125.9,128.5 L126.6,128.5 L127.3,128.7 L127.9,128.9 L128.7,129.1 L129.4,129.1 L130.1,129.0 L130.7,128.9 L131.4,129.0 L132.2,129.2 L132.9,129.3 L133.5,129.4 L134.2,129.4 L135.0,129.3 L135.7,129.3 L136.3,129.3 L137.0,129.3 L137.7,128.8 L138.5,128.5 L139.1,128.3 L139.8,128.3 L140.5,128.5 L141.2,128.9 L142.0,129.4 L142.6,129.5 L143.3,129.3 L144.0,129.0 L144.8,128.8 L145.4,128.5 L146.1,128.2 L146.8,128.1 L147.4,128.1 L148.2,128.2 L148.9,128.4 L149.6,128.4 L150.3,128.5 L150.9,128.5 L151.7,128.7 L152.4,129.0 L153.1,129.3 L153.7,129.3 L154.5,129.3 L155.2,129.2 L155.9,129.0 L156.5,129.1 L157.2,129.3 L158.0,128.9 L158.7,128.0 L159.3,126.6 L160.0,125.1 L160.7,124.2 L161.5,124.0 L162.1,124.1 L162.8,124.7 L163.5,124.9 L164.3,124.7 L164.9,124.4 L165.6,124.1 L166.3,124.3 L167.0,124.6 L167.8,124.9 L168.4,125.2 L169.1,125.5 L169.8,125.7 L170.4,126.0 L171.2,126.3 L171.9,126.6 L172.6,126.6 L173.2,126.0 L174.0,125.2 L174.7,124.3 L175.4,123.2 L176.1,122.1 L176.7,121.6 L177.5,121.5 L178.2,121.5 L178.9,121.3 L179.5,121.4 L180.2,121.9 L181.0,122.4 L181.7,123.1 L182.3,123.9 L183.0,124.4 L183.7,124.0 L184.5,123.3 L185.1,122.7 L185.8,122.4 L186.5,122.2 L187.3,122.2 L187.9,122.2 L188.6,122.2 L189.3,122.7 L190.0,123.2 L190.7,123.8 L191.4,124.3 L192.1,124.4 L192.8,124.0 L193.4,123.7 L194.2,123.3 L194.9,123.1 L195.6,122.9 L196.2,122.7 L197.0,122.5 L197.7,122.3 L198.4,122.1 L199.0,121.9 L199.7,121.7 L200.5,121.4 L201.2,121.2 L201.9,121.0 L202.5,120.8 L203.2,120.6 L204.0,120.4 L204.7,120.2 L205.3,120.0 L206.0,119.8 L206.8,119.6 L207.5,119.4 L208.1,119.2 L208.8,118.9 L209.5,118.4 L210.3,117.5 L210.9,117.1 L211.6,117.0 L212.3,117.0 L213.0,117.8 L213.7,119.1 L214.4,120.2 L215.1,121.0 L215.8,122.1 L216.5,123.2 L217.2,124.2 L217.9,124.9 L218.6,125.7 L219.2,126.5 L220.0,127.0 L220.7,127.3 L221.4,127.7 L222.0,128.0 L222.7,128.0 L223.5,127.9 L224.2,127.9 L224.8,128.5 L225.5,128.9 L226.3,129.0 L227.0,129.0 L227.6,128.8 L228.3,128.2 L229.0,127.6 L229.8,127.2 L230.5,126.9 L231.1,126.4 L231.8,125.9 L232.5,125.3 L233.3,124.3 L233.9,123.3 L234.6,122.8 L235.3,122.6 L236.1,122.7 L236.7,123.9 L237.4,125.2 L238.1,125.7 L238.8,125.7 L239.5,125.8 L240.2,125.6 L240.9,125.4 L241.6,125.6 L242.2,126.5 L243.0,127.3 L243.7,127.9 L244.4,128.4 L245.0,129.1 L245.8,129.5 L246.5,129.6 L247.2,129.4 L247.8,129.4 L248.5,129.4 L249.3,129.0 L250.0,129.0 L250.6,128.7 L251.3,128.5 L252.0,128.4 L252.8,127.9 L253.4,127.1 L254.1,126.4 L254.8,125.3 L255.6,123.8 L256.3,122.9 L256.9,122.7 L257.6,122.9 L258.3,123.4 L259.1,124.3 L259.7,124.9 L260.4,125.1 L261.1,125.0 L261.7,124.6 L262.5,124.4 L263.2,124.4 L263.9,124.3 L264.6,123.8 L265.3,123.3 L266.0,122.2 L266.7,121.0 L267.4,120.7 L268.0,121.1 L268.8,121.7 L269.5,123.1 L270.2,124.6 L270.8,125.2 L271.5,125.3 L272.3,125.5 L273.0,125.3 L273.6,124.6 L274.3,123.8 L275.0,123.1 L275.8,122.4 L276.4,121.9 L277.1,122.0 L277.8,122.1 L278.6,122.4 L279.2,122.8 L279.9,122.8 L280.6,122.6 L281.3,122.3 L282.1,121.9 L282.7,121.3 L283.4,120.9 L284.1,120.8 L284.7,120.5 L285.5,120.3 L286.2,120.2 L286.9,120.1 L287.5,120.2 L288.3,120.4 L289.0,120.5 L289.7,120.7 L290.4,120.9 L291.0,120.7 L291.8,120.3 L292.5,120.1 L293.2,120.0 L293.8,119.7 L294.5,119.7 L295.3,119.9 L296.0,120.0 L296.6,119.0 L297.3,118.3 L298.1,116.9 L298.8,115.1 L299.4,112.7 L300.1,110.8 L300.8,109.2 L301.6,108.5 L302.2,108.6 L302.9,110.0 L303.6,111.6 L304.3,112.8 L305.0,113.6 L305.7,114.0 L306.4,113.7 L307.1,113.2 L307.9,112.8 L308.5,112.4 L309.2,112.0 L309.9,111.6 L310.5,111.2 L311.3,110.8 L312.0,110.3 L312.7,109.9 L313.3,109.5 L314.0,109.2 L314.8,109.0 L315.5,108.7 L316.2,108.5 L316.8,108.2 L317.6,107.8 L318.3,107.5 L319.0,107.3 L319.6,106.9 L320.3,106.6 L321.1,106.3 L321.8,105.8 L322.4,105.2 L323.1,104.4 L323.8,103.4 L324.6,102.1 L325.2,101.0 L325.9,100.1 L326.6,99.3 L327.4,98.7 L328.0,98.3 L328.7,97.7 L329.4,96.9 L330.1,96.1 L330.8,95.2 L331.5,94.3 L332.2,93.7 L332.9,93.2 L333.5,92.8 L334.3,92.7 L335.0,92.8 L335.7,92.9 L336.3,92.9 L337.1,92.5 L337.8,91.3 L338.5,89.3 L339.1,86.7 L339.8,83.8 L340.6,80.9 L341.3,78.4 L342.0,76.2 L342.6,74.2 L343.3,72.1 L344.1,70.0 L344.8,67.8 L345.4,65.6 L346.1,63.0 L346.9,60.3 L347.6,57.2 L348.2,54.0 L348.9,50.6 L349.6,47.3 L350.4,43.8 L351.0,40.1 L351.7,36.7 L352.4,33.7 L353.1,30.7 L353.8,28.4 L354.5,26.5 L355.2,24.4 L355.9,22.1 L356.5,20.1 L357.3,18.0 L358.0,16.2 L358.7,14.6 L359.3,13.2 L360.1,11.5 L360.8,9.8 L361.5,8.3 L362.1,7.1 L362.8,6.2 L363.6,6.0 L364.3,6.5 L364.9,7.4 L365.6,8.7 L366.3,10.4 L367.1,12.3 L367.8,14.1 L368.4,15.7 L369.1,17.3 L369.9,18.7 L370.6,20.2 L371.2,21.5 L371.9,22.8 L372.6,24.1 L373.4,25.1 L374.0,26.3 L374.7,27.9 L375.4,29.9 L376.1,32.2 L376.8,34.7 L377.5,37.5 L378.2,39.9 L378.9,40.5 L379.6,41.4 L380.3,42.0 L381.0,41.4 L381.7,40.4 L382.3,40.7 L383.1,40.1 L383.8,39.6 L384.5,39.3 L385.1,39.2 L385.8,39.2 L386.6,39.2 L387.3,38.6 L387.9,37.7 L388.6,35.7 L389.4,33.4 L390.1,30.3 L390.7,26.9 L391.4,23.1 L392.1,19.5 L392.9,16.1 L393.6,13.3 L394.2,11.6 L394.9,10.8 L395.6,10.5 L396.4,10.4 L397.0,10.1 L397.7,9.4 L398.4,8.4 L399.2,7.7 L399.8,7.2 L400.5,7.1 L401.2,7.6 L401.9,8.6 L402.6,9.8 L403.3,11.1 L404.0,12.3 L404.7,13.4 L405.3,14.6 L406.1,15.6 L406.8,16.7 L407.5,18.0 L408.1,19.1 L408.9,20.1 L409.6,21.4 L410.3,22.4 L410.9,23.5 L411.6,24.7 L412.4,26.0 L413.1,26.9 L413.7,28.0 L414.4,29.0 L415.1,29.8 L415.9,30.5 L416.5,31.1 L417.2,31.4 L417.9,32.1 L418.7,33.4 L419.3,35.5 L420.0,38.2 L420.7,41.7 L421.4,45.6 L422.2,49.6 L422.8,53.6 L423.5,57.7 L424.2,61.2 L424.8,64.2 L425.6,67.0 L426.3,69.4 L427.0,71.5 L427.7,73.4 L428.4,75.6 L429.1,77.7 L429.8,79.5 L430.5,81.4 L431.1,83.2 L431.9,84.7 L432.6,86.2 L433.3,87.8 L433.9,89.5 L434.6,91.0 L435.4,92.5 L436.1,93.6 L436.7,94.3 L437.4,94.9 L438.2,95.6 L438.9,96.6 L439.5,97.6 L440.2,98.8 L440.9,100.0 L441.7,101.2 L442.3,102.3 L443.0,103.3 L443.7,104.2 L444.4,105.0 L445.1,105.6 L445.8,106.3 L446.5,106.9 L447.2,107.6 L447.8,108.4 L448.6,109.0 L449.3,109.3 L450.0,109.6 L450.6,108.9 L451.4,108.4 L452.1,108.1 L452.8,108.2 L453.4,108.7 L454.1,109.9 L454.9,111.0 L455.6,112.0 L456.3,112.6 L456.9,113.1 L457.6,113.7 L458.4,114.4 L459.1,114.9 L459.7,115.3 L460.4,115.5 L461.2,115.6 L461.9,115.9 L462.5,116.3 L463.2,116.8 L463.9,117.4 L464.7,117.8 L465.3,118.0 L466.0,117.9 L466.7,117.7 L467.4,117.3 L468.1,117.1 L468.8,117.1 L469.5,117.1 L470.2,117.2 L470.9,117.3 L471.6,117.3 L472.3,117.4 L473.0,117.4 L473.6,117.4 L474.4,117.5 L475.1,117.5 L475.8,117.4 L476.4,117.4 L477.1,117.4 L477.9,117.3 L478.6,117.4 L479.2,117.5 L479.9,117.7 L480.7,117.9 L481.4,118.0 L482.1,118.1 L482.7,118.3 L483.4,118.5 L484.2,118.6 L484.9,118.6 L485.5,118.5 L486.2,118.4 L486.9,118.2 L487.7,118.4 L488.3,118.9 L489.0,119.7 L489.7,120.5 L490.5,121.2 L491.1,121.7 L491.8,121.8 L492.5,121.8 L493.2,121.7 L493.9,121.7 L494.6,121.7 L495.3,121.7 L496.0,121.6 L496.6,121.1 L497.4,120.9 L498.1,120.6 L498.8,120.0 L499.4,119.6 L500.2,119.8 L500.9,119.4 L501.6,118.8 L502.2,118.3 L502.9,117.3 L503.7,115.8 L504.4,114.0 L505.0,112.3 L505.7,111.4 L506.4,111.0 L507.2,111.1 L507.9,111.8 L508.5,112.5 L509.2,113.0 L510.0,113.3 L510.7,113.4 L511.3,113.6 L512.0,114.1 L512.7,114.7 L513.5,115.3 L514.1,116.2 L514.8,117.1 L515.5,118.1 L516.2,119.1 L516.9,120.2 L517.6,121.2 L518.3,121.8 L519.0,122.1 L519.7,122.1 L520.4,122.0 L521.1,121.6 L521.8,121.6 L522.4,121.7 L523.2,121.8 L523.9,121.9 L524.6,122.2 L525.2,122.1 L525.9,122.1 L526.7,122.1 L527.4,122.1 L528.0,122.0 L528.7,122.1 L529.4,122.2 L530.2,122.4 L530.8,122.6 L531.5,122.5 L532.2,122.3 L533.0,122.2 L533.7,121.9 L534.3,121.3 L535.0,120.9 L535.7,120.5 L536.5,120.0 L537.1,119.4 L537.8,119.0 L538.5,118.3 L539.1,117.7 L539.9,117.0 L540.6,116.6 L541.3,116.4 L542.0,116.7 L542.7,117.2 L543.4,117.9 L544.1,118.5 L544.8,118.9 L545.4,119.6 L546.2,120.0 L546.9,120.4 L547.6,120.7 L548.2,121.1 L548.9,121.1 L549.7,120.9 L550.4,120.8 L551.0,120.8 L551.7,120.7 L552.5,120.6 L553.2,120.8 L553.8,121.0 L554.5,120.8 L555.2,120.5 L556.0,120.3 L556.6,119.9 L557.3,119.7 L558.0,120.0 L558.7,120.6 L559.5,121.3 L560.1,121.9 L560.8,122.2 L561.5,122.6 L562.3,123.0 L562.9,123.2 L563.6,123.7 L564.3,124.4 L564.9,124.9 L565.7,125.1 L566.4,125.5 L567.1,125.7 L567.8,125.6 L568.4,125.6 L569.2,125.6 L569.9,125.6 L570.6,125.6 L571.2,125.6 L572.0,125.5 L572.7,125.3 L573.4,125.1 L574.0,124.8 L574.7,124.5 L575.5,124.3 L576.2,124.2 L576.8,124.0 L577.5,123.9 L578.2,123.9 L579.0,123.8 L579.6,123.8 L580.3,123.9 L581.0,123.9 L581.8,123.9 L582.4,124.0 L583.1,124.1 L583.8,124.4 L584.5,124.6 L585.3,124.8 L585.9,125.0 L586.6,124.9 L587.3,124.7 L587.9,124.7 L588.7,124.7 L589.4,124.9 L590.1,125.1 L590.7,125.3 L591.5,125.3 L592.2,125.2 L592.9,125.0 L593.6,124.8 L594.0,124.7" fill="none" stroke="var(--color-theme)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <figcaption class="elevation-card__summary">
+            <span>Climbed <strong><span class="unit-pair"><span class="unit-pair__imperial">1607<span class="stat-unit">ft</span></span><span class="unit-pair__metric">489.9<span class="stat-unit">m</span></span></span></strong></span>
+            <span>Descended <strong><span class="unit-pair"><span class="unit-pair__imperial">1554<span class="stat-unit">ft</span></span><span class="unit-pair__metric">473.6<span class="stat-unit">m</span></span></span></strong></span>
+          </figcaption>
+        </figure>
+      </aside>
+    </div>
+
+    <div class="day-videos">
+      <video class="day-hero" controls preload="metadata" poster="assets/img/posters/day-9.jpg">
+        <source src="assets/videos/Day-9.mp4" type="video/mp4">
+      </video>
+      <video class="route-card-video" muted loop autoplay playsinline aria-hidden="true">
+        <source src="assets/videos/Day-9-Yellow.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <h2>Along the way</h2>
+    <div class="day-gallery">
+      <figure>
+        <img src="assets/img/day-9/day-9-003-1600w.jpg" srcset="assets/img/day-9/day-9-003-480w.jpg 480w, assets/img/day-9/day-9-003-960w.jpg 960w, assets/img/day-9/day-9-003-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Turtle Island silhouetted against a glittering sea" loading="lazy" decoding="async" width="1600" height="1066">
+        <figcaption>Turtle Island silhouetted against a glittering sea</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-001-1600w.jpg" srcset="assets/img/day-9/day-9-001-480w.jpg 480w, assets/img/day-9/day-9-001-960w.jpg 960w, assets/img/day-9/day-9-001-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Turtle Island rising from the sea at dawn" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>Turtle Island rising from the sea at dawn</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-005-1600w.jpg" srcset="assets/img/day-9/day-9-005-480w.jpg 480w, assets/img/day-9/day-9-005-960w.jpg 960w, assets/img/day-9/day-9-005-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Hands raised together with Turtle Island behind" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>Hands raised together with Turtle Island behind</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-006-1600w.jpg" srcset="assets/img/day-9/day-9-006-480w.jpg 480w, assets/img/day-9/day-9-006-960w.jpg 960w, assets/img/day-9/day-9-006-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A bike held high in silhouette against the sea" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>A bike held high in silhouette against the sea</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-007-1600w.jpg" srcset="assets/img/day-9/day-9-007-480w.jpg 480w, assets/img/day-9/day-9-007-960w.jpg 960w, assets/img/day-9/day-9-007-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Green hills against a clear blue sky" loading="lazy" decoding="async" width="1600" height="1066">
+        <figcaption>Green hills against a clear blue sky</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-008-1600w.jpg" srcset="assets/img/day-9/day-9-008-480w.jpg 480w, assets/img/day-9/day-9-008-960w.jpg 960w, assets/img/day-9/day-9-008-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="The whole tour posed at a stone monument" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>The whole tour posed at a stone monument</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-009-1600w.jpg" srcset="assets/img/day-9/day-9-009-480w.jpg 480w, assets/img/day-9/day-9-009-960w.jpg 960w, assets/img/day-9/day-9-009-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="The pack rolling along the road" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>The pack rolling along the road</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-010-1600w.jpg" srcset="assets/img/day-9/day-9-010-480w.jpg 480w, assets/img/day-9/day-9-010-960w.jpg 960w, assets/img/day-9/day-9-010-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Leading the pack down the road" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>Leading the pack down the road</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-011-1600w.jpg" srcset="assets/img/day-9/day-9-011-480w.jpg 480w, assets/img/day-9/day-9-011-960w.jpg 960w, assets/img/day-9/day-9-011-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Riding at the front of the group" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>Riding at the front of the group</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-012-1600w.jpg" srcset="assets/img/day-9/day-9-012-480w.jpg 480w, assets/img/day-9/day-9-012-960w.jpg 960w, assets/img/day-9/day-9-012-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="All smiles out on the road" loading="lazy" decoding="async" width="1600" height="2133">
+        <figcaption>All smiles out on the road</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-013-1600w.jpg" srcset="assets/img/day-9/day-9-013-480w.jpg 480w, assets/img/day-9/day-9-013-960w.jpg 960w, assets/img/day-9/day-9-013-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A close-up portrait, sunglasses reflecting the ride" loading="lazy" decoding="async" width="1600" height="2133">
+        <figcaption>A close-up portrait, sunglasses reflecting the ride</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-014-1600w.jpg" srcset="assets/img/day-9/day-9-014-480w.jpg 480w, assets/img/day-9/day-9-014-960w.jpg 960w, assets/img/day-9/day-9-014-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A grinning portrait after a long day's ride" loading="lazy" decoding="async" width="1600" height="2133">
+        <figcaption>A grinning portrait after a long day's ride</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-015-1600w.jpg" srcset="assets/img/day-9/day-9-015-480w.jpg 480w, assets/img/day-9/day-9-015-960w.jpg 960w, assets/img/day-9/day-9-015-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A selfie in front of an old brick tunnel" loading="lazy" decoding="async" width="1600" height="1066">
+        <figcaption>A selfie in front of an old brick tunnel</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-016-1600w.jpg" srcset="assets/img/day-9/day-9-016-480w.jpg 480w, assets/img/day-9/day-9-016-960w.jpg 960w, assets/img/day-9/day-9-016-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Riding through the historic railway tunnel" loading="lazy" decoding="async" width="1600" height="2133">
+        <figcaption>Riding through the historic railway tunnel</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-017-1600w.jpg" srcset="assets/img/day-9/day-9-017-480w.jpg 480w, assets/img/day-9/day-9-017-960w.jpg 960w, assets/img/day-9/day-9-017-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="The grand facade of a mountain temple" loading="lazy" decoding="async" width="1600" height="1066">
+        <figcaption>The grand facade of a mountain temple</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-018-1600w.jpg" srcset="assets/img/day-9/day-9-018-480w.jpg 480w, assets/img/day-9/day-9-018-960w.jpg 960w, assets/img/day-9/day-9-018-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A close look at an ornate temple roofline" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>A close look at an ornate temple roofline</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-019-1600w.jpg" srcset="assets/img/day-9/day-9-019-480w.jpg 480w, assets/img/day-9/day-9-019-960w.jpg 960w, assets/img/day-9/day-9-019-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="The group standing before the temple entrance" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>The group standing before the temple entrance</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-020-1600w.jpg" srcset="assets/img/day-9/day-9-020-480w.jpg 480w, assets/img/day-9/day-9-020-960w.jpg 960w, assets/img/day-9/day-9-020-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A selfie with the temple towers behind" loading="lazy" decoding="async" width="1600" height="1066">
+        <figcaption>A selfie with the temple towers behind</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-021-1600w.jpg" srcset="assets/img/day-9/day-9-021-480w.jpg 480w, assets/img/day-9/day-9-021-960w.jpg 960w, assets/img/day-9/day-9-021-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="The temple's golden altar, lit in red" loading="lazy" decoding="async" width="1600" height="2133">
+        <figcaption>The temple's golden altar, lit in red</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-022-1600w.jpg" srcset="assets/img/day-9/day-9-022-480w.jpg 480w, assets/img/day-9/day-9-022-960w.jpg 960w, assets/img/day-9/day-9-022-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A carved golden dragon inside the temple" loading="lazy" decoding="async" width="1600" height="2133">
+        <figcaption>A carved golden dragon inside the temple</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-023-1600w.jpg" srcset="assets/img/day-9/day-9-023-480w.jpg 480w, assets/img/day-9/day-9-023-960w.jpg 960w, assets/img/day-9/day-9-023-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A thumbs up at the temple" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>A thumbs up at the temple</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-024-1600w.jpg" srcset="assets/img/day-9/day-9-024-480w.jpg 480w, assets/img/day-9/day-9-024-960w.jpg 960w, assets/img/day-9/day-9-024-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Three of the support crew posing together" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>Three of the support crew posing together</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-025-1600w.jpg" srcset="assets/img/day-9/day-9-025-480w.jpg 480w, assets/img/day-9/day-9-025-960w.jpg 960w, assets/img/day-9/day-9-025-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="All smiles in the Formosa jersey" loading="lazy" decoding="async" width="1600" height="1066">
+        <figcaption>All smiles in the Formosa jersey</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-026-1600w.jpg" srcset="assets/img/day-9/day-9-026-480w.jpg 480w, assets/img/day-9/day-9-026-960w.jpg 960w, assets/img/day-9/day-9-026-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A white ginger flower in bloom" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>A white ginger flower in bloom</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-027-1600w.jpg" srcset="assets/img/day-9/day-9-027-480w.jpg 480w, assets/img/day-9/day-9-027-960w.jpg 960w, assets/img/day-9/day-9-027-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="The group gathered at the Shifen Lantern sign" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>The group gathered at the Shifen Lantern sign</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-030-1600w.jpg" srcset="assets/img/day-9/day-9-030-480w.jpg 480w, assets/img/day-9/day-9-030-960w.jpg 960w, assets/img/day-9/day-9-030-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A handwritten wish for good health, brushed on a lantern" loading="lazy" decoding="async" width="1600" height="1066">
+        <figcaption>A handwritten wish for good health, brushed on a lantern</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-029-1600w.jpg" srcset="assets/img/day-9/day-9-029-480w.jpg 480w, assets/img/day-9/day-9-029-960w.jpg 960w, assets/img/day-9/day-9-029-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A lantern wishing riders health and happiness" loading="lazy" decoding="async" width="1600" height="2133">
+        <figcaption>A lantern wishing riders health and happiness</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-028-1600w.jpg" srcset="assets/img/day-9/day-9-028-480w.jpg 480w, assets/img/day-9/day-9-028-960w.jpg 960w, assets/img/day-9/day-9-028-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Holding up a lantern beneath an old gate" loading="lazy" decoding="async" width="1600" height="2400">
+        <figcaption>Holding up a lantern beneath an old gate</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-031-1600w.jpg" srcset="assets/img/day-9/day-9-031-480w.jpg 480w, assets/img/day-9/day-9-031-960w.jpg 960w, assets/img/day-9/day-9-031-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="The old stone archway of a Shifen cafe" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>The old stone archway of a Shifen cafe</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-032-1600w.jpg" srcset="assets/img/day-9/day-9-032-480w.jpg 480w, assets/img/day-9/day-9-032-960w.jpg 960w, assets/img/day-9/day-9-032-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="The pack riding on into the mountains" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>The pack riding on into the mountains</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-033-1600w.jpg" srcset="assets/img/day-9/day-9-033-480w.jpg 480w, assets/img/day-9/day-9-033-960w.jpg 960w, assets/img/day-9/day-9-033-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A group selfie with the ocean behind" loading="lazy" decoding="async" width="1600" height="1066">
+        <figcaption>A group selfie with the ocean behind</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-034-1600w.jpg" srcset="assets/img/day-9/day-9-034-480w.jpg 480w, assets/img/day-9/day-9-034-960w.jpg 960w, assets/img/day-9/day-9-034-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A cheerful roadside selfie" loading="lazy" decoding="async" width="1600" height="1066">
+        <figcaption>A cheerful roadside selfie</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-037-1600w.jpg" srcset="assets/img/day-9/day-9-037-480w.jpg 480w, assets/img/day-9/day-9-037-960w.jpg 960w, assets/img/day-9/day-9-037-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="A couple celebrating with their finisher certificates" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>A couple celebrating with their finisher certificates</figcaption>
+      </figure>
+      <figure>
+        <video src="assets/img/day-9/day-9-038.mp4" poster="assets/img/day-9/day-9-038-poster.jpg" controls preload="metadata" width="1280" height="720" aria-label="Two riders doing their secret handshake to celebrate finishing the ride"></video>
+        <figcaption>Two riders doing their secret handshake to celebrate finishing the ride</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-035-1600w.jpg" srcset="assets/img/day-9/day-9-035-480w.jpg 480w, assets/img/day-9/day-9-035-960w.jpg 960w, assets/img/day-9/day-9-035-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="The whole group celebrating at the finish" loading="lazy" decoding="async" width="1600" height="1067">
+        <figcaption>The whole group celebrating at the finish</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/day-9/day-9-036-1600w.jpg" srcset="assets/img/day-9/day-9-036-480w.jpg 480w, assets/img/day-9/day-9-036-960w.jpg 960w, assets/img/day-9/day-9-036-1600w.jpg 1600w" sizes="(min-width: 64em) 47vw, 94vw" alt="Holding the finisher certificate back at the start" loading="lazy" decoding="async" width="1600" height="2133">
+        <figcaption>Holding the finisher certificate back at the start</figcaption>
+      </figure>
+    </div>
+
+    <nav class="day-pager" aria-label="Previous and next day">
+      <a class="prev" href="day-8.html">
+        <span class="day-pager__label">&larr; Previous</span>
+        <span class="day-pager__title">Day 8</span>
+      </a>
+      <a class="next" href="index.html">
+        <span class="day-pager__label">Next &rarr;</span>
+        <span class="day-pager__title">Whole route</span>
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    window.__route = [[24.83098, 121.7782], [24.83115, 121.7784], [24.8339, 121.78054], [24.83491, 121.78161], [24.8352, 121.78208], [24.83724, 121.78808], [24.83832, 121.79104], [24.83846, 121.79171], [24.83858, 121.79359], [24.83868, 121.79413], [24.83886, 121.79466], [24.83958, 121.7959], [24.83975, 121.79637], [24.84073, 121.80029], [24.84092, 121.80082], [24.84119, 121.80134], [24.84431, 121.80577], [24.84487, 121.80667], [24.84594, 121.80925], [24.84697, 121.81202], [24.8477, 121.81357], [24.84793, 121.81388], [24.84904, 121.81488], [24.84938, 121.81526], [24.85075, 121.81713], [24.85153, 121.81833], [24.85287, 121.82115], [24.85313, 121.82154], [24.85684, 121.82484], [24.8576, 121.8254], [24.86227, 121.82849], [24.86274, 121.82874], [24.86331, 121.82889], [24.86373, 121.82892], [24.86503, 121.82884], [24.86875, 121.83155], [24.86912, 121.83195], [24.87095, 121.83469], [24.87173, 121.83562], [24.8747, 121.83842], [24.87558, 121.83913], [24.87733, 121.84033], [24.87849, 121.84151], [24.88093, 121.84336], [24.88157, 121.84393], [24.88521, 121.8477], [24.88552, 121.84794], [24.89005, 121.84954], [24.89047, 121.84977], [24.89091, 121.85014], [24.89143, 121.85084], [24.89181, 121.8516], [24.8922, 121.85355], [24.89324, 121.85643], [24.89409, 121.85805], [24.8945, 121.85866], [24.89499, 121.8591], [24.89614, 121.8599], [24.89647, 121.86021], [24.89758, 121.86207], [24.89792, 121.86249], [24.89833, 121.86278], [24.89959, 121.86333], [24.90155, 121.86351], [24.9021, 121.86361], [24.90238, 121.86376], [24.90273, 121.86407], [24.90304, 121.86446], [24.90331, 121.865], [24.90402, 121.86762], [24.90456, 121.86898], [24.90705, 121.87225], [24.90855, 121.87402], [24.90943, 121.87478], [24.9108, 121.87615], [24.91385, 121.87833], [24.91423, 121.87886], [24.91423, 121.87897], [24.91404, 121.87919], [24.91393, 121.87918], [24.91413, 121.87909], [24.91436, 121.87909], [24.91592, 121.8814], [24.91675, 121.88233], [24.91755, 121.88307], [24.91791, 121.88335], [24.91829, 121.88354], [24.9201, 121.88383], [24.92102, 121.88375], [24.92228, 121.8834], [24.92314, 121.8835], [24.92372, 121.88381], [24.92395, 121.884], [24.92481, 121.88499], [24.92533, 121.88547], [24.92636, 121.88598], [24.92675, 121.88606], [24.92748, 121.88612], [24.92787, 121.88609], [24.93169, 121.88459], [24.93265, 121.88445], [24.93326, 121.88451], [24.93384, 121.88467], [24.93464, 121.88519], [24.93507, 121.8856], [24.93642, 121.88741], [24.93925, 121.89143], [24.93979, 121.89265], [24.94084, 121.89406], [24.94186, 121.89562], [24.94199, 121.89596], [24.942, 121.8968], [24.94184, 121.89817], [24.94148, 121.89985], [24.94164, 121.90077], [24.94201, 121.90159], [24.9425, 121.90216], [24.94334, 121.90269], [24.94408, 121.90297], [24.94603, 121.90333], [24.94646, 121.90358], [24.94684, 121.90392], [24.94933, 121.90753], [24.95118, 121.90991], [24.95193, 121.91178], [24.95328, 121.91549], [24.95351, 121.91594], [24.95378, 121.91627], [24.95444, 121.91681], [24.95567, 121.91736], [24.95762, 121.91764], [24.95813, 121.91779], [24.95907, 121.91842], [24.9612, 121.92014], [24.96158, 121.92022], [24.96274, 121.91993], [24.96321, 121.91999], [24.96371, 121.9202], [24.96587, 121.92156], [24.96655, 121.92206], [24.96781, 121.92336], [24.96878, 121.92418], [24.97092, 121.9275], [24.97201, 121.92945], [24.97336, 121.93264], [24.97381, 121.93392], [24.97435, 121.93456], [24.97454, 121.93489], [24.97511, 121.93645], [24.97515, 121.93722], [24.9751, 121.93845], [24.97525, 121.93977], [24.97535, 121.94009], [24.97635, 121.94142], [24.97762, 121.94354], [24.97909, 121.94647], [24.97977, 121.94835], [24.98073, 121.94952], [24.98109, 121.95077], [24.98179, 121.95218], [24.98181, 121.95229], [24.98173, 121.95239], [24.98153, 121.95222], [24.98158, 121.95216], [24.98166, 121.9522], [24.98168, 121.95265], [24.98184, 121.95302], [24.98254, 121.95391], [24.98257, 121.95433], [24.9833, 121.95489], [24.98357, 121.95522], [24.98388, 121.95547], [24.98341, 121.95514], [24.98319, 121.95511], [24.98325, 121.95504], [24.98315, 121.95511], [24.98323, 121.9552], [24.98333, 121.95508], [24.98354, 121.95525], [25.00373, 121.95842], [25.00427, 121.95817], [25.00488, 121.95808], [25.00515, 121.9579], [25.00526, 121.95775], [25.00548, 121.9571], [25.00619, 121.95621], [25.00648, 121.95543], [25.00688, 121.95466], [25.00714, 121.95381], [25.00757, 121.95325], [25.00796, 121.95292], [25.0085, 121.95264], [25.00948, 121.95251], [25.01067, 121.95268], [25.01139, 121.95295], [25.01159, 121.95292], [25.01328, 121.9517], [25.01402, 121.95088], [25.01445, 121.95021], [25.0146, 121.94877], [25.0148, 121.94776], [25.01512, 121.94684], [25.01542, 121.94636], [25.01596, 121.94488], [25.01601, 121.94478], [25.0161, 121.94478], [25.01656, 121.94492], [25.01671, 121.94493], [25.01675, 121.94488], [25.0166, 121.94415], [25.01659, 121.94299], [25.01689, 121.94217], [25.01704, 121.94202], [25.01737, 121.94134], [25.01799, 121.94045], [25.01836, 121.93968], [25.01848, 121.93839], [25.01833, 121.93687], [25.01833, 121.93555], [25.01856, 121.93434], [25.01911, 121.93312], [25.01793, 121.93207], [25.01765, 121.93171], [25.01761, 121.93057], [25.01725, 121.92835], [25.01728, 121.9273], [25.01719, 121.92709], [25.01683, 121.92693], [25.01569, 121.92712], [25.01517, 121.92709], [25.01278, 121.926], [25.01143, 121.92454], [25.01166, 121.92249], [25.01174, 121.92233], [25.01285, 121.92105], [25.01534, 121.91902], [25.01557, 121.9188], [25.01558, 121.91868], [25.0155, 121.91863], [25.01576, 121.91885], [25.01585, 121.91866], [25.0156, 121.91861], [25.016, 121.91847], [25.01578, 121.91736], [25.01595, 121.91651], [25.01605, 121.91478], [25.01597, 121.91459], [25.01579, 121.91443], [25.01577, 121.9143], [25.01613, 121.91366], [25.01648, 121.91263], [25.0173, 121.91141], [25.01742, 121.91105], [25.01744, 121.91073], [25.01736, 121.91051], [25.0169, 121.90993], [25.01654, 121.90907], [25.01647, 121.90874], [25.01655, 121.90848], [25.01672, 121.90828], [25.01702, 121.90812], [25.0189, 121.90755], [25.01926, 121.90748], [25.02026, 121.90755], [25.0204, 121.90743], [25.02054, 121.90715], [25.02084, 121.90587], [25.02097, 121.90458], [25.02069, 121.90311], [25.02068, 121.9027], [25.02087, 121.90217], [25.02151, 121.90115], [25.0216, 121.90067], [25.02147, 121.90013], [25.02131, 121.89995], [25.02061, 121.89963], [25.02049, 121.89948], [25.02044, 121.89931], [25.02084, 121.89666], [25.02069, 121.89551], [25.02067, 121.8938], [25.02075, 121.89321], [25.02096, 121.8923], [25.02117, 121.89184], [25.0231, 121.88968], [25.02341, 121.88913], [25.0236, 121.88842], [25.02364, 121.88794], [25.02347, 121.87741], [25.02348, 121.87676], [25.02359, 121.87622], [25.02372, 121.87588], [25.02405, 121.87532], [25.02529, 121.87406], [25.02608, 121.87309], [25.0269, 121.87159], [25.02755, 121.87078], [25.02795, 121.87055], [25.02838, 121.87042], [25.0288, 121.87038], [25.03056, 121.87055], [25.03082, 121.87045], [25.03107, 121.8702], [25.03115, 121.86995], [25.03122, 121.86931], [25.03137, 121.86867], [25.03203, 121.86684], [25.03244, 121.86606], [25.0329, 121.86494], [25.03366, 121.8634], [25.03375, 121.86341], [25.03445, 121.86275], [25.03482, 121.86224], [25.03508, 121.86164], [25.03519, 121.86102], [25.03512, 121.8604], [25.03488, 121.85919], [25.03486, 121.85819], [25.03497, 121.8576], [25.03594, 121.85398], [25.03604, 121.85356], [25.0361, 121.85282], [25.036, 121.85183], [25.03524, 121.84949], [25.03513, 121.84778], [25.03492, 121.84655], [25.03486, 121.84588], [25.03503, 121.84314], [25.03497, 121.84251], [25.03478, 121.84176], [25.03414, 121.84019], [25.03354, 121.83893], [25.03321, 121.83844], [25.03129, 121.83656], [25.03092, 121.83606], [25.03076, 121.83568], [25.03035, 121.83386], [25.02427, 121.81989], [25.02399, 121.81904], [25.02324, 121.81613], [25.02303, 121.81572], [25.02275, 121.81539], [25.02152, 121.81458], [25.02125, 121.81418], [25.02105, 121.81343], [25.02105, 121.81026], [25.02102, 121.80956], [25.02095, 121.80919], [25.02073, 121.80855], [25.02046, 121.80802], [25.01996, 121.80731], [25.019, 121.80628], [25.01883, 121.80597], [25.01873, 121.80537], [25.01905, 121.80413], [25.01898, 121.80337], [25.01872, 121.80288], [25.01846, 121.80263], [25.017, 121.80175], [25.01675, 121.80142], [25.01652, 121.80084], [25.01647, 121.80048], [25.01652, 121.80003], [25.01736, 121.7973], [25.01772, 121.79676], [25.01874, 121.79615], [25.0191, 121.79574], [25.01921, 121.79513], [25.01919, 121.7941], [25.01934, 121.79356], [25.02491, 121.78144], [25.02485, 121.78109], [25.02499, 121.78092], [25.02534, 121.78087], [25.02553, 121.7807], [25.02584, 121.78059], [25.02626, 121.78056], [25.02802, 121.78067], [25.02862, 121.78052], [25.02919, 121.78021], [25.03109, 121.77888], [25.03177, 121.77869], [25.03241, 121.77873], [25.03413, 121.77931], [25.03486, 121.77948], [25.0357, 121.77942], [25.03657, 121.77914], [25.03693, 121.77919], [25.03746, 121.77938], [25.03833, 121.78005], [25.03869, 121.78019], [25.03887, 121.78006], [25.03972, 121.77901], [25.04034, 121.77811], [25.04093, 121.77757], [25.04123, 121.77715], [25.04143, 121.77714], [25.04176, 121.77722], [25.04224, 121.77707], [25.04185, 121.77635], [25.04181, 121.7762], [25.04185, 121.77616], [25.04208, 121.77631], [25.04204, 121.77672], [25.04314, 121.77785], [25.04376, 121.77915], [25.04498, 121.77987], [25.04543, 121.78033], [25.04572, 121.78072], [25.04603, 121.78075], [25.04622, 121.78069], [25.04616, 121.78054], [25.04583, 121.78015], [25.04563, 121.77981], [25.0455, 121.77914], [25.04544, 121.7784], [25.04534, 121.77819], [25.04512, 121.77785], [25.04473, 121.77756], [25.04506, 121.77656], [25.04514, 121.77602], [25.04558, 121.77565], [25.04591, 121.77505], [25.04604, 121.77505], [25.04622, 121.77525], [25.04639, 121.77586], [25.04666, 121.77615], [25.04682, 121.77657], [25.04703, 121.77675], [25.04712, 121.77678], [25.04722, 121.77669], [25.04696, 121.77624], [25.04696, 121.77579], [25.04699, 121.77568], [25.04709, 121.77562], [25.04744, 121.77605], [25.04788, 121.77634], [25.04831, 121.77699], [25.04853, 121.77714], [25.04869, 121.7771], [25.05054, 121.77522], [25.05108, 121.77453], [25.05197, 121.7732], [25.05229, 121.77286], [25.05257, 121.77265], [25.05295, 121.77247], [25.05478, 121.77202], [25.07487, 121.75798], [25.07534, 121.75786], [25.07566, 121.75795], [25.07604, 121.75815], [25.07631, 121.75816], [25.07643, 121.75811], [25.07661, 121.7579], [25.07664, 121.7575], [25.07639, 121.75719], [25.07586, 121.75699], [25.07565, 121.7568], [25.0756, 121.75651], [25.07572, 121.75625], [25.07599, 121.75612], [25.07662, 121.75607], [25.07686, 121.75588], [25.077, 121.75559], [25.07706, 121.75517], [25.07729, 121.7544], [25.07758, 121.75402], [25.07795, 121.75392], [25.07859, 121.75408], [25.0788, 121.75402], [25.07901, 121.75383], [25.07933, 121.75326], [25.07953, 121.75231], [25.07979, 121.75195], [25.08044, 121.75162], [25.08101, 121.75122], [25.08171, 121.75108], [25.08188, 121.75097], [25.08205, 121.75072], [25.08217, 121.75026], [25.08227, 121.75008], [25.08246, 121.74992], [25.08304, 121.74968], [25.08326, 121.74941], [25.08345, 121.74904], [25.08361, 121.74844], [25.08386, 121.74815], [25.0841, 121.74802], [25.08431, 121.74801], [25.08504, 121.74839], [25.0857, 121.74857], [25.08603, 121.74856], [25.08627, 121.74842], [25.08644, 121.7481], [25.0865, 121.74692], [25.08639, 121.74648], [25.08592, 121.74571], [25.0859, 121.74547], [25.08601, 121.74515], [25.08661, 121.74455], [25.08705, 121.74381], [25.08748, 121.74344], [25.08827, 121.74306], [25.08995, 121.74136], [25.0909, 121.74083], [25.09112, 121.74066], [25.09196, 121.73971], [25.09313, 121.73898], [25.09341, 121.73892], [25.09455, 121.73903], [25.09771, 121.73875], [25.0982, 121.73851], [25.09844, 121.73832], [25.09902, 121.73726], [25.09929, 121.73702], [25.09977, 121.73644], [25.10016, 121.73618], [25.10066, 121.73595], [25.10281, 121.73594], [25.10723, 121.73385], [25.10849, 121.73235], [25.10897, 121.73159], [25.10918, 121.73108], [25.10908, 121.73073], [25.10861, 121.72968], [25.10806, 121.72874], [25.10683, 121.7269], [25.10657, 121.72667], [25.10605, 121.7264], [25.10385, 121.72616], [25.10348, 121.72601], [25.10317, 121.7258], [25.10281, 121.72549], [25.10217, 121.72471], [25.10159, 121.72359], [25.1006, 121.72228], [25.10046, 121.72185], [25.10026, 121.72005], [25.10004, 121.71897], [25.09949, 121.71774], [25.0988, 121.71669], [25.09824, 121.71562], [25.09769, 121.71374], [25.09689, 121.71173], [25.09543, 121.70746], [25.09529, 121.70679], [25.09516, 121.70303], [25.09404, 121.70096], [25.09283, 121.69957], [25.09044, 121.69699], [25.09041, 121.69692], [25.09078, 121.6968], [25.09065, 121.69693], [25.09029, 121.69694], [25.08806, 121.69564], [25.08767, 121.69529], [25.08686, 121.69391], [25.08659, 121.69364], [25.08634, 121.69357], [25.08602, 121.69362], [25.08279, 121.6943], [25.08243, 121.69431], [25.08194, 121.69424], [25.08146, 121.69405], [25.07991, 121.69307], [25.07846, 121.69302], [25.07822, 121.69292], [25.07807, 121.69274], [25.07806, 121.69248], [25.07824, 121.69129], [25.07825, 121.69082], [25.07804, 121.68976], [25.07757, 121.68888], [25.07631, 121.68774], [25.07592, 121.68712], [25.07578, 121.68659], [25.07549, 121.6842], [25.07535, 121.68375], [25.07518, 121.68353], [25.07471, 121.68332], [25.07423, 121.68333], [25.07368, 121.68353], [25.07348, 121.68352], [25.07315, 121.68339], [25.07209, 121.68218], [25.07148, 121.68106], [25.07123, 121.68028], [25.07125, 121.6788], [25.07131, 121.67822], [25.07153, 121.67752], [25.07175, 121.67703], [25.07212, 121.67639], [25.07278, 121.67569], [25.07322, 121.67537], [25.0756, 121.67396], [25.07601, 121.67359], [25.07657, 121.67291], [25.077, 121.67218], [25.07768, 121.67029], [25.0778, 121.66944], [25.07771, 121.66867], [25.0776, 121.66828], [25.07734, 121.66772], [25.07683, 121.667], [25.07604, 121.66616], [25.07558, 121.66592], [25.07514, 121.6655], [25.0745, 121.66526], [25.07359, 121.6653], [25.07229, 121.66503], [25.07168, 121.6648], [25.07101, 121.66433], [25.07049, 121.66376], [25.06969, 121.66241], [25.06773, 121.65976], [25.06751, 121.65933], [25.06739, 121.65894], [25.06731, 121.65756], [25.06721, 121.65714], [25.06712, 121.65636], [25.06696, 121.65577], [25.06667, 121.65512], [25.06631, 121.65457], [25.06472, 121.65275], [25.06432, 121.652], [25.06404, 121.65075], [25.0639, 121.65042], [25.06352, 121.64986], [25.06344, 121.64965], [25.06315, 121.64832], [25.06302, 121.64705], [25.06288, 121.64656], [25.06253, 121.64578], [25.06211, 121.64511], [25.06189, 121.6446], [25.06091, 121.64177], [25.05786, 121.63488], [25.05742, 121.63367], [25.05716, 121.63322], [25.05678, 121.63273], [25.0549, 121.63072], [25.05456, 121.6301], [25.05433, 121.62917], [25.0545, 121.62848], [25.05508, 121.62732], [25.05525, 121.62659], [25.05526, 121.62592], [25.055, 121.62422], [25.05501, 121.6237], [25.0552, 121.62315], [25.05543, 121.62287], [25.05587, 121.62254], [25.05595, 121.62227], [25.05585, 121.62202], [25.05523, 121.62177], [25.05512, 121.62164], [25.05515, 121.62136], [25.05493, 121.62019], [25.05491, 121.61944], [25.05495, 121.61903], [25.05519, 121.61822], [25.05535, 121.61657], [25.05469, 121.61647], [25.0546, 121.61635], [25.05434, 121.61357], [25.05365, 121.609], [25.05363, 121.60858], [25.05342, 121.60744], [25.05342, 121.60695], [25.05321, 121.60646], [25.05301, 121.60555], [25.05304, 121.60541], [25.0528, 121.60395], [25.0526, 121.6034], [25.05243, 121.60232], [25.05202, 121.59774], [25.0517, 121.59566], [25.05157, 121.59528], [25.05132, 121.59394], [25.05003, 121.58544], [25.05005, 121.58487], [25.04968, 121.58305], [25.04956, 121.58176], [25.04955, 121.58088], [25.04943, 121.58065], [25.0494, 121.58022], [25.04949, 121.57948], [25.04939, 121.57876], [25.04941, 121.57837], [25.04959, 121.5776], [25.04933, 121.57756]];
+    window.__towns = {"start": {"full": {"zh": "花蓮市", "en": "Hualien City"}, "city": {"zh": "花蓮", "en": "Hualien", "pinyin": "huālián"}}, "end": {"full": {"zh": "台北市信義區", "en": "Taipei (Xinyi District)"}, "city": {"zh": "台北", "en": "Taipei", "pinyin": "táiběi"}}};
+  </script>
+  <script src="js/map.js"></script>
+  <script src="js/units.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,831 @@
+/* 環島 — Cycling Around the Island
+   Design tokens, a small reset, base element defaults, and the editorial
+   components used on the day pages and overview page. Dark-navy/pink
+   theme; layout patterns (full-bleed hero, big type, metric-forward stat
+   rows, generous whitespace) borrowed from destinations.bike rather than
+   its light palette. */
+
+/* Tokens --------------------------------------------------------------- */
+
+:root {
+  --font-family-default: 'Noto Sans TC', sans-serif;
+  --font-family-chinese: 'Noto Sans TC', sans-serif;
+  --font-size-display-xxxx-large: 7.43em; /* 118.88px */
+  --font-size-display-xxx-large: 6.192em; /* 99.072px */
+  --font-size-display-xx-large: 5.16em; /* 82.56px */
+  --font-size-display-x-large: 4.3em; /* 68.8px */
+  --font-size-display-large: 3.583em; /* 57.328px */
+  --font-size-display: 2.986em; /* 47.78px */
+  --font-size-xxx-large: 2.488em; /* 39.81px */
+  --font-size-xx-large: 2.074em; /* 33.18px */
+  --font-size-x-large: 1.728em; /* 27.65px */
+  --font-size-large: 1.44em; /* 23.04px */
+  --font-size-medium: 1.2em; /* 19.02px */
+  --font-size-default: 1em; /* 16px */
+  --font-size-small: 0.833em; /* 13.33px */
+  --font-size-x-small: 0.694em; /* 11.11px */
+
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  --line-height-text: 1.5;
+  --line-height-heading: 1.2;
+  --line-height-heading-alt: 1;
+
+  /* Color */
+  --color-background: #00111f;
+  --color-base: #000;
+  --color-border: #ff83dc;
+  --color-theme: #ff83dc; /* hsl(317, 100%, 76%) */
+  --color-title: #7cffc4;
+  --color-surface: #05192b;
+  --color-surface-border: rgba(255, 131, 220, 0.25);
+  --color-text-default: #fff;
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-text-link: var(--color-theme);
+  --color-text-link-hover: var(--color-title);
+  --color-text-link-underline: var(--color-text-link);
+  --color-nav: var(--color-theme);
+  --color-nav-hover: var(--color-title);
+
+  /* Borders */
+  --border-width-hairline: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-thick: 2px;
+  --border-radius: 0.25rem;
+
+  /* Layout */
+  --editorial-max-width: 72rem;
+  --editorial-gutter: 1.5rem;
+
+  /* Spacing */
+  --spacing-x-small: 0.25rem;
+  --spacing-small: 0.5rem;
+  --spacing-default: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 3rem;
+
+  --duration-immediately: 0.1s;
+  --duration-instantly: 0;
+  --duration-quickly: 0.2s;
+  --duration-promptly: 0.5s;
+  --duration-slowly: 1s;
+}
+
+/* Reset & base elements ------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: var(--font-family-default);
+}
+
+/* Remove default margin in favor of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+figure,
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: var(--line-height-text);
+  background-color: var(--color-background);
+  color: var(--color-text-default);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Baseline visible-focus ring for every link and button, so nothing (the
+   header logo, the plain "Read the full story" link, etc.) is left with no
+   keyboard-focus indicator just because a component didn't define its own. */
+a:focus-visible,
+button:focus-visible {
+  outline: var(--border-width-thick) solid var(--color-theme);
+  outline-offset: 2px;
+  border-radius: var(--border-radius);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+[lang="zh-Hant"] {
+  font-family: var(--font-family-chinese);
+  font-weight: var(--font-weight-black);
+}
+
+::selection,
+::-moz-selection {
+  background-color: var(--color-theme);
+  color: var(--color-background);
+  text-shadow: none;
+}
+
+/* Skip link: off-screen until keyboard-focused, then snaps into view above
+   the header so keyboard users can bypass the repeated nav on every page. */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: var(--spacing-medium);
+  z-index: 100;
+  padding: 0.5em 1em;
+  background: var(--color-theme);
+  color: var(--color-background);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius);
+  transition: top var(--duration-quickly) ease;
+}
+
+.skip-link:focus {
+  top: var(--spacing-medium);
+}
+
+/* Site header ------------------------------------------------------------ */
+
+header, nav {
+  max-width: var(--editorial-max-width);
+  margin-inline: auto;
+}
+
+header h1 {
+  display: grid;
+}
+
+.huandao span:nth-child(1) {
+  font-size: calc(var(--font-size-display) * 2);
+  color: var(--color-theme);
+}
+
+.huandao span:nth-child(2) {
+  font-size: var(--font-size-large);
+  color: var(--color-theme);
+}
+
+/* Shared page shell ------------------------------------------------------ */
+
+main {
+  max-width: var(--editorial-max-width);
+  margin-inline: auto;
+  padding-inline: var(--editorial-gutter);
+}
+
+/* Site nav ---------------------------------------------------------------- */
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--spacing-small) var(--spacing-medium);
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  text-decoration: none;
+  color: var(--color-nav);
+  font-size: var(--font-size-medium);
+  border-bottom: var(--border-width-thin) solid transparent;
+  transition: border-color var(--duration-quickly) ease, color var(--duration-quickly) ease;
+}
+
+.site-nav a span[lang="zh-Hant"] {
+  font-size: var(--font-size-large);
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--color-nav-hover);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--color-text-default);
+  border-color: var(--color-theme);
+}
+
+.site-nav a.overview-link {
+  margin-inline-start: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--font-size-small);
+}
+
+/* Imperial/metric toggle — see js/units.js. Flips visibility of the
+   .unit-pair spans (templates/_units.html.jinja) via a class on <html>. */
+
+.unit-toggle {
+  display: inline-flex;
+  margin-top: var(--spacing-small);
+  width: fit-content;
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--color-surface);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.unit-toggle__option {
+  padding: 0.3em 0.9em;
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  transition: background var(--duration-quickly) ease, color var(--duration-quickly) ease;
+}
+
+.unit-toggle[aria-pressed="false"] .unit-toggle__option[data-unit="imperial"],
+.unit-toggle[aria-pressed="true"] .unit-toggle__option[data-unit="metric"] {
+  background: var(--color-theme);
+  color: var(--color-base);
+}
+
+.unit-pair__metric {
+  display: none;
+}
+
+html.metric .unit-pair__imperial {
+  display: none;
+}
+
+html.metric .unit-pair__metric {
+  display: inline;
+}
+
+/* Day title (promoted out of the video overlay into a real heading) ------ */
+
+.day-title {
+  margin-block: var(--spacing-large) var(--spacing-medium);
+}
+
+.day-title__number {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-small);
+  color: var(--color-theme);
+  margin-bottom: var(--spacing-x-small);
+}
+
+.day-title__number span[lang="zh-Hant"] {
+  font-size: var(--font-size-xxx-large);
+}
+
+.day-title__label {
+  font-size: var(--font-size-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-x-small);
+}
+
+.day-title__route {
+  margin: 0;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--color-title);
+  text-wrap: balance;
+}
+
+/* Day hero video ----------------------------------------------------------- */
+
+.day-hero {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: var(--color-surface);
+  object-fit: cover;
+}
+
+/* Day board: the hand-chalked route photo, stacked above the elevation
+   chart in .route-aside --------------------------------------------- */
+
+.day-board {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+}
+
+.day-board img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+
+.day-board figcaption {
+  padding: var(--spacing-small) var(--spacing-default);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* Videos section: main Relive flyover + the small stat-card clip --------- */
+
+.day-videos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+}
+
+.day-videos .day-hero {
+  flex: 3 1 28rem;
+}
+
+/* Day gallery: plain grid of curated ride photos, one per cell. Cells share
+   a fixed 3:2 ratio — the most common shape across the actual photo set —
+   so object-fit: fill rarely has to stretch far from a photo's native
+   ratio, rows and columns stay fully packed, and there's nothing to
+   compute per photo (no masonry, no inline styles). */
+
+.day-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+}
+
+.day-gallery > * {
+  aspect-ratio: 3 / 2; 
+  overflow: hidden; 
+}
+
+.day-gallery img,
+.day-gallery video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+}
+
+.day-gallery figcaption {
+  padding: var(--spacing-small) var(--spacing-default);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* Bilingual town line, e.g. "臺北市信義區 Taipei (Xinyi District) → 新竹市東區 Hsinchu City" */
+
+.town-route {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.town-route .town-name span[lang="zh-Hant"] {
+  margin-inline-end: 0.35em;
+}
+
+.town-route .arrow {
+  color: var(--color-theme);
+}
+
+/* Stat row --------------------------------------------------------------- */
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-medium) var(--spacing-large);
+  padding-block: var(--spacing-medium);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+  border-bottom: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+@media (min-width: 40em) {
+  .stat-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.15em;
+}
+
+.stat-item .stat-value {
+  font-size: var(--font-size-xx-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading-alt);
+}
+
+.stat-item .stat-value .stat-unit {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+  margin-inline-start: 0.2em;
+}
+
+.stat-item .stat-label {
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+/* Route section: map + elevation ------------------------------------------ */
+
+.route-section {
+  display: grid;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+}
+
+@media (min-width: 60em) {
+  .route-section {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .route-section--single {
+    grid-template-columns: 1fr;
+  }
+}
+
+.route-aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.map-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.map-card__map {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 60em) {
+  /* Only the two-column day-page layout (map beside .route-aside) stretches
+     the map to match its neighbor's height; route-section--single (index
+     page) keeps the fixed ratio since there's nothing to match. */
+  .route-section:not(.route-section--single) .map-card__map {
+    flex: 1 1 auto;
+    aspect-ratio: auto;
+  }
+}
+
+.map-card__caption {
+  padding: var(--spacing-small) var(--spacing-default);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.elevation-card {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  padding: var(--spacing-default);
+}
+
+.elevation-card h2,
+.map-card h2 {
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-small);
+}
+
+.elevation-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.elevation-card__summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-small) var(--spacing-medium);
+  margin-top: var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.elevation-card__summary strong {
+  color: var(--color-text-default);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Route card (Relive stat clip) -------------------------------------------- */
+
+.route-card-video {
+  display: block;
+  width: 100%;
+  max-width: 16rem;
+  flex: 1 0 12rem;
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+}
+
+/* Prev/next day footer nav ------------------------------------------------- */
+
+.day-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+  padding-top: var(--spacing-medium);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+.day-pager a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  text-decoration: none;
+  color: var(--color-text-default);
+  max-width: 45%;
+}
+
+.day-pager a.next {
+  text-align: right;
+  align-items: flex-end;
+  margin-inline-start: auto;
+}
+
+.day-pager .day-pager__label {
+  font-size: var(--font-size-x-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.day-pager .day-pager__title {
+  font-size: var(--font-size-medium);
+  color: var(--color-theme);
+  transition: color var(--duration-quickly) ease;
+}
+
+.day-pager a:hover .day-pager__title,
+.day-pager a:focus-visible .day-pager__title {
+  color: var(--color-title);
+}
+
+/* Overview page: whole-route hero + day card grid ------------------------- */
+
+.overview-stats {
+  margin-block: var(--spacing-medium) var(--spacing-large);
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+}
+
+@media (min-width: 40em) {
+  .day-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  .day-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  text-decoration: none;
+  color: var(--color-text-default);
+}
+
+.day-card__yellow,
+.day-card__board {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slowly) ease;
+}
+
+.day-card__yellow {
+  aspect-ratio: 1 / 1;
+  border-top: var(--border-width-thin) solid var(--color-surface-border);
+}
+
+.day-card__board {
+  aspect-ratio: 4 / 3;
+}
+
+.day-card:hover .day-card__yellow,
+.day-card:hover .day-card__board,
+.day-card:focus-visible .day-card__yellow,
+.day-card:focus-visible .day-card__board {
+  transform: scale(1.04);
+}
+
+.day-card__body {
+  padding: var(--spacing-default);
+}
+
+.day-card__number {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-x-small);
+  color: var(--color-theme);
+  margin-bottom: 0.2em;
+}
+
+.day-card__number span[lang="zh-Hant"] {
+  font-size: var(--font-size-x-large);
+}
+
+.day-card__route {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-text);
+}
+
+/* Story page: long-form essay, narrower measure than the editorial-width
+   stat/gallery layouts for comfortable reading line length ----------------- */
+
+.story {
+  max-width: 42rem;
+}
+
+.story p {
+  margin-block-end: var(--spacing-medium);
+}
+
+.story .lede {
+  font-size: var(--font-size-medium);
+}
+
+.story .lang-link {
+  font-size: var(--font-size-small);
+  margin-block-end: var(--spacing-medium);
+}
+
+/* story-zh.html sets <html lang="zh-Hant">, which makes the global
+   [lang="zh-Hant"] rule (meant for short inline spans like 環島) inherit
+   font-weight: black into every paragraph of the article. Bring body text
+   back down to a normal reading weight and size. */
+html[lang="zh-Hant"] .story p {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+}
+
+.story h3 {
+  margin-block: var(--spacing-large) var(--spacing-small);
+  font-size: var(--font-size-x-large);
+  color: var(--color-title);
+}
+
+.story a {
+  color: var(--color-text-link);
+  text-decoration-color: var(--color-text-link-underline);
+}
+
+.story a:hover,
+.story a:focus-visible {
+  color: var(--color-text-link-hover);
+}
+
+.story-coda {
+  margin-block-start: var(--spacing-large);
+  padding-block-start: var(--spacing-medium);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+.story-coda h3 {
+  margin-block-start: 0;
+}
+
+/* Glossary page ------------------------------------------------------------ */
+
+.glossary-table {
+  width: 100%;
+  max-width: 42rem;
+  border-collapse: collapse;
+  margin-block: var(--spacing-medium) var(--spacing-large);
+}
+
+.glossary-table th {
+  text-align: left;
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-regular);
+  padding-block-end: var(--spacing-small);
+  border-bottom: var(--border-width-thin) solid var(--color-surface-border);
+}
+
+.glossary-table td {
+  padding-block: var(--spacing-small);
+  border-bottom: var(--border-width-hairline) solid var(--color-surface-border);
+  vertical-align: baseline;
+}
+
+.glossary-table td[lang="zh-Hant"] {
+  color: var(--color-title);
+  white-space: nowrap;
+  padding-inline-end: var(--spacing-medium);
+}
+
+.glossary-table td.pinyin {
+  font-style: italic;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  padding-inline-end: var(--spacing-medium);
+}
+
+/* Visually-hidden accessible text ------------------------------------------ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

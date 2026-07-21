@@ -4,5 +4,7 @@ config.codekit3
 print-to-web
 shengxiao
 assets
+!/huandao/assets/
+/huandao/assets/videos/
 
 
