@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<gpx creator="Garmin Connect" version="1.1"
-  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd"
-  xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
-  xmlns="http://www.topografix.com/GPX/1/1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" creator="Garmin Connect" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd">
   <metadata>
     <name>Day 6: Oceano to Solvang</name>
     <link href="connect.garmin.com">
@@ -11,12 +7,12 @@
     </link>
     <time>2026-08-05T23:08:58.000Z</time>
   </metadata>
-  <wpt lat="35.1070059" lon="-120.6237587">
+  <wpt lat="35.10700589977205" lon="-120.62375865876675"><name>START — Oceano</name><sym>Flag, Blue</sym><type>Start</type></wpt><wpt lat="35.1070059" lon="-120.6237587">
     <ele>0.0</ele>
     <name>Dune Surfer Inn</name>
     <type>GENERIC</type>
   </wpt>
-  <trk>
+  <wpt lat="35.109481" lon="-120.626897"><name>Toilets (mi 0.0)</name><cmt>Toilets at mile 0.0, 0.25 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="35.028217" lon="-120.498091"><name>Toilets (mi 11.4)</name><cmt>Toilets at mile 11.4, 0.11 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="34.985294" lon="-120.437662"><name>Toilets (mi 16.9)</name><cmt>Toilets at mile 16.9, 0.21 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="34.608023" lon="-120.122861"><name>Toilets (mi 57.0)</name><cmt>Toilets at mile 57.0, 0.03 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="34.595877" lon="-120.140213"><name>Water (mi 58.8)</name><cmt>Water at mile 58.8, 0.22 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="34.59566865116358" lon="-120.14642243273556"><name>FINISH — Solvang</name><sym>Flag, Green</sym><type>Finish</type></wpt><trk>
     <name>Day 6: Oceano to Solvang</name>
     <trkseg>
       <trkpt lat="35.10700589977205" lon="-120.62375865876675">

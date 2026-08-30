@@ -1,70 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<gpx xmlns:gpxdata="http://www.cluetrust.com/XML/GPXDATA/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="http://ridewithgps.com/" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.cluetrust.com/XML/GPXDATA/1/0 http://www.cluetrust.com/Schemas/gpxdata10.xsd">
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="http://ridewithgps.com/" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.cluetrust.com/XML/GPXDATA/1/0 http://www.cluetrust.com/Schemas/gpxdata10.xsd">
   <metadata>
-    <name>King City to Paso Robles</name>
+    <name>Day 4: King City to Paso Robles</name>
     <link href="https://ridewithgps.com/routes/49209241">
       <text>King City to Paso Robles</text>
     </link>
     <time>2024-12-06T12:58:12Z</time>
   </metadata>
-  <wpt lat="36.204179" lon="-121.144629">
-    <name>Left</name>
-    <cmt>Turn left onto San Antonio Drive</cmt>
-    <desc>Turn left onto San Antonio Drive</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lat="36.20382" lon="-121.142459">
-    <name>Right</name>
-    <cmt>Turn right</cmt>
-    <desc>Turn right</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lat="36.19804" lon="-121.1484">
-    <name>Left</name>
-    <cmt>Turn left onto Jolon Road</cmt>
-    <desc>Turn left onto Jolon Road</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lat="35.936769" lon="-121.082129">
-    <name>Right</name>
-    <cmt>Turn right onto Interlake Road</cmt>
-    <desc>Turn right onto Interlake Road</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lat="35.77487" lon="-120.89123">
-    <name>Right</name>
-    <cmt>Turn right onto Nacimiento Lake Drive</cmt>
-    <desc>Turn right onto Nacimiento Lake Drive</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lat="35.68984" lon="-120.797469">
-    <name>Left</name>
-    <cmt>Turn left onto Nacimiento Lake Drive</cmt>
-    <desc>Turn left onto Nacimiento Lake Drive</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lat="35.639109" lon="-120.69344">
-    <name>Slight Right</name>
-    <cmt>Keep right onto 24th Street</cmt>
-    <desc>Keep right onto 24th Street</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <wpt lat="35.63916" lon="-120.692439">
-    <name>Right</name>
-    <cmt>Turn right onto Spring Street</cmt>
-    <desc>Turn right onto Spring Street</desc>
-    <sym>Dot</sym>
-    <type>Dot</type>
-  </wpt>
-  <trk>
-    <name>King City to Paso Robles</name>
+  <wpt lat="36.20565" lon="-121.14967"><name>START — King City</name><sym>Flag, Blue</sym><type>Start</type></wpt><wpt lat="36.205937" lon="-121.146585"><name>Toilets (mi 0.4)</name><cmt>Toilets at mile 0.4, 0.06 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="35.742957" lon="-120.877742"><name>Toilets (mi 48.2)</name><cmt>Toilets at mile 48.2, 0.13 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="35.63898" lon="-120.69243"><name>FINISH — Paso Robles</name><sym>Flag, Green</sym><type>Finish</type></wpt><trk>
+    <name>Day 4: King City to Paso Robles</name>
     <trkseg>
       <trkpt lat="36.20565" lon="-121.14967">
         <ele>86.8</ele>
