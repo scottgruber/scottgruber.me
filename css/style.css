@@ -1,49 +1,30 @@
-@font-face {
-  font-family: "Tofino";
-  src: url("/fonts/TofinoVariable.ttf") format("truetype");
-  font-weight: 100 900;
-}
-
-@font-face {
-  font-family: "Tofino Text";
-  src: url("/fonts/TofinoTextVariable.ttf") format("truetype");
-  font-weight: 100 900;
-}
-
-
 :root {
-  --font-family: "Tofino Text", serif;
-  --font-family-display: "Tofino", sans-serif;
-
-  //* Typography Perfect Fourth 1.333 */
-  --font-size-display: 4.209rem;
-  --font-size-xx-large: 3.157rem;
-  --font-size-x-large: 2.369rem;
-  --font-size-large: 1.777rem;
-  --font-size-medium: 1.333rem;
-  --font-size-default: 1rem;
-  --font-size-small: 0.833rem;
-  --font-size-x-small: 0.694rem;
-
-
-  --font-weight-thin: 100;
-  --font-weight-extra-light: 200;
+  --font-family: "darkmode-off-cc", ui-sans-serif, sans-serif;
+  --font-family-display: "darkmode-off-cc", ui-sans-serif, sans-serif;
+  --font-family-mono: "SF Mono", ui-monospace, monospace;
   --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semi-bold: 600;
+  --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --font-weight-extra-bold: 800;
   --font-weight-black: 900;
-
+  --text-scale-ratio: 1.125;
   --line-height-text: 1.5;
   --line-height-heading: 1.1;
-
   --grid-column-gap: 2vw;
   --grid-row-gap: 4vh;
   --gap: 1vw;
-
-
+  --font-size-xxx-display: 11.642rem;
+  --font-size-xx-display: 9.313rem;
+  --font-size-x-display: 5.96rem;
+  --font-size-display: 4.768rem;
+  --font-size-xxxx-large: 3.815rem;
+  --font-size-xxx-large: 3.052rem;
+  --font-size-xx-large: 2.441rem;
+  --font-size-x-large: 1.953rem;
+  --font-size-large: 1.563rem;
+  --font-size-medium: 1.25rem;
+  --font-size: 1rem;
+  --font-size-small: 0.8rem;
+  --font-size-x-small: 0.64rem;
   --yellow: #FFDC00;
   --orange: #FF851B;
   --red: #a40000;
@@ -82,22 +63,19 @@
     --color-text: var(-white);
     --color-base: var(--silver);
     --color-accent: var(--yellow);
-
+    --font-family: "darkmode-on-cc", sans-serif;
+    --font-family-display: "darkmode-on-cc", sans-serif;
   }
 }
-
 @-ms-viewport {
   width: device-width;
 }
-
 @-o-viewport {
   width: device-width;
 }
-
 @viewport {
   width: device-width;
 }
-
 *,
 *::before,
 *::after {
@@ -125,7 +103,7 @@ main {
   align-items: center;
 }
 
-main>* {
+main > * {
   display: block;
 }
 
@@ -139,8 +117,73 @@ h4 {
   text-wrap: balance;
 }
 
-main>h1:first-of-type {
+main > h1:first-of-type {
   font-family: var(--font-family-display);
+}
+
+@media (min-width: 48em) {
+  .l-chinese-horoscope main {
+    grid-column: 2/8;
+  }
+}
+.l-chinese-horoscope .h-feed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--spacing);
+}
+
+.l-chinese-horoscope article {
+  margin-block-end: var(--spacing-medium);
+}
+
+.l-chinese-horoscope article h1 {
+  margin-block-end: var(--spacing-small);
+}
+
+.l-chinese-horoscope .h-feed .standfirst {
+  margin-block-start: 0;
+  font-size: var(--font-size-xx-large);
+}
+
+@media (min-width: 48em) {
+  .l-chinese-horoscope .svg-container .svg {
+    width: 30vw;
+  }
+  .l-chinese-horoscope article svg {
+    width: 15vw;
+    
+  }
+  .l-chinese-horoscope article a {
+    outline: none;
+    outline-offset: 3px;
+  }
+}
+.anime-tiger {
+  margin: 2em 0 3em 2em;
+  shape-margin: 1em;
+  shape-outside: url(/assets/vectors/tiger.svg);
+}
+
+.anime-tiger svg[data-name=tiger] {
+  width: 150px;
+  height: initial;
+  animation: tiger-head 3s ease;
+}
+
+@media (min-width: 48em) {
+  .anime-tiger svg {
+    width: 400px;
+  }
+}
+@keyframes tiger-head {
+  from {
+    transform: scale(0.4) rotate(0deg);
+  }
+  to {
+    transform: scale(1) rotate(16deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

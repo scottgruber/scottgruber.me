@@ -1,10 +1,8 @@
-// Leaflet map init shared by day-N.html (window.__route/__towns/__waypoints)
-// and index.html (window.__days). CARTO Positron tiles (no API key).
+// Leaflet map init shared by day-N.html (window.__route/__towns/__waypoints/
+// __options) and index.html (window.__days). Basemaps, the layer switcher and
+// the click-to-hand-off popup all come from js/basemap.js.
 (function () {
-  var TILE_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-  var TILE_ATTRIBUTION =
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors ' +
-    '&copy; <a href="https://carto.com/attributions">CARTO</a>';
+  var BASE = window.PCGF_BASEMAP;
 
   // The route line always matches the compare page's "our planned route"
   // color, not --color-theme (which is reserved for badge/CTA fills).
@@ -12,21 +10,8 @@
     return getComputedStyle(document.documentElement).getPropertyValue("--color-route-planned").trim() || "#E8542B";
   }
 
-  function addTiles(map) {
-    L.tileLayer(TILE_URL, {
-      attribution: TILE_ATTRIBUTION,
-      subdomains: "abcd",
-      maxZoom: 19,
-    }).addTo(map);
-  }
-
-  // The map card can grow after Leaflet has already measured it. Keep
-  // Leaflet's cached size in sync whenever the container's box changes.
-  function observeResize(el, map) {
-    if (typeof ResizeObserver === "undefined") return;
-    new ResizeObserver(function () {
-      map.invalidateSize();
-    }).observe(el);
+  function altColor() {
+    return getComputedStyle(document.documentElement).getPropertyValue("--color-route-reference").trim() || "#5C7A8A";
   }
 
   function initDayMap() {
@@ -35,8 +20,8 @@
 
     var color = routeColor();
     var map = L.map(el, { scrollWheelZoom: false });
-    addTiles(map);
-    observeResize(el, map);
+    BASE.addTiles(map);
+    BASE.enablePointHandoff(map);
 
     var latlngs = window.__route;
     var line = L.polyline(latlngs, {
@@ -45,6 +30,24 @@
       lineCap: "round",
       lineJoin: "round",
     }).addTo(map);
+
+    // Days still choosing between candidate tracks draw the others behind the
+    // primary, dashed, so the divergence is visible at a glance.
+    var bounds = line.getBounds();
+    (window.__options || []).forEach(function (o) {
+      if (!o.route || o.primary) return;
+      var alt = L.polyline(o.route, {
+        color: altColor(),
+        weight: 3,
+        opacity: 0.9,
+        dashArray: "6 6",
+        lineCap: "round",
+        lineJoin: "round",
+      })
+        .addTo(map)
+        .bindTooltip(o.label + " — " + o.distance_mi + " mi", { sticky: true });
+      bounds = bounds.extend(alt.getBounds());
+    });
 
     var start = latlngs[0];
     var end = latlngs[latlngs.length - 1];
@@ -81,7 +84,10 @@
         .bindPopup(w.name);
     });
 
-    map.fitBounds(line.getBounds(), { padding: [20, 20] });
+    map.fitBounds(bounds, { padding: [20, 20] });
+    BASE.observeResize(el, map, function () {
+      return bounds;
+    });
   }
 
   function initOverviewMap() {
@@ -90,8 +96,8 @@
 
     var color = routeColor();
     var map = L.map(el, { scrollWheelZoom: false });
-    addTiles(map);
-    observeResize(el, map);
+    BASE.addTiles(map);
+    BASE.enablePointHandoff(map);
 
     var group = L.featureGroup().addTo(map);
 
@@ -118,6 +124,9 @@
     });
 
     map.fitBounds(group.getBounds(), { padding: [20, 20] });
+    BASE.observeResize(el, map, function () {
+      return group.getBounds();
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
