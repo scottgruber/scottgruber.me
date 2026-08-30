@@ -18,10 +18,12 @@ window.PCGF_BASEMAP = (function () {
   var CARTO_ATTR = OSM_ATTR + ' &copy; <a href="https://carto.com/attributions">CARTO</a>';
   var MAPBOX_ATTR = '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> ' + OSM_ATTR;
 
+  // Elevation is the default: contours and hillshade are what this route is
+  // actually being judged on, and it still carries road and town labels.
   var STYLES = [
-    { label: "Plain", style: "mapbox/light-v11" },
+    { label: "Elevation", style: "mapbox/outdoors-v12", default: true },
     { label: "Vegetation", style: "mapbox/satellite-streets-v12" },
-    { label: "Elevation", style: "mapbox/outdoors-v12" },
+    { label: "Plain", style: "mapbox/light-v11" },
   ];
 
   function token() {
@@ -57,10 +59,10 @@ window.PCGF_BASEMAP = (function () {
       return null;
     }
     var layers = {};
-    STYLES.forEach(function (s, i) {
+    STYLES.forEach(function (s) {
       var layer = mapboxLayer(s.style);
       layers[s.label] = layer;
-      if (i === 0) layer.addTo(map);
+      if (s.default) layer.addTo(map);
     });
     if (opts.addControl !== false) {
       L.control.layers(layers, null, { position: "topright" }).addTo(map);

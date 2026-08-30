@@ -1247,3 +1247,44 @@ html.metric .unit-pair__metric {
   padding-top: var(--spacing-small);
   border-top: var(--border-width-hairline) solid var(--color-surface-border);
 }
+
+/* Route option switching (day pages with undecided routes)
+   ------------------------------------------------------------------------ */
+
+.route-option__head input[type="radio"] {
+  margin: 0;
+  accent-color: var(--color-route-planned);
+}
+
+.route-option__head label {
+  cursor: pointer;
+}
+
+/* The dashed border marks "not currently previewed"; the selected option gets
+   a solid border matching its now-solid line on the map. Only one option is
+   ever selected, and selection is preview only — the "Current pick" badge, not
+   the selection, marks the route the day's stats come from. */
+.route-option--selected {
+  border-style: solid;
+  border-color: var(--color-route-planned);
+}
+
+.route-option:not(.route-option--selected) {
+  border-style: dashed;
+  border-color: var(--color-surface-border);
+}
+
+.elevation-card__chart[hidden] {
+  display: none;
+}
+
+/* Makes it unmistakable that the chart above belongs to a previewed
+   alternate while the figures below it do not. */
+.elevation-card__preview {
+  margin: 0.4rem 0 0;
+  padding: 0.4rem 0.55rem;
+  border-radius: var(--border-radius);
+  border-left: var(--border-width-thick) solid var(--color-route-reference);
+  background: var(--color-surface);
+  font-size: var(--font-size-x-small);
+}

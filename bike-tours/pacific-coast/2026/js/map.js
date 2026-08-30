@@ -31,23 +31,54 @@
       lineJoin: "round",
     }).addTo(map);
 
-    // Days still choosing between candidate tracks draw the others behind the
-    // primary, dashed, so the divergence is visible at a glance.
+    // Days still choosing between candidate tracks draw every option, so the
+    // divergence is visible at a glance. The selected one is solid and on top;
+    // the rest are dashed and muted. Selecting is preview only — it never
+    // changes the day's official stats.
     var bounds = line.getBounds();
-    (window.__options || []).forEach(function (o) {
-      if (!o.route || o.primary) return;
-      var alt = L.polyline(o.route, {
-        color: altColor(),
-        weight: 3,
-        opacity: 0.9,
-        dashArray: "6 6",
-        lineCap: "round",
-        lineJoin: "round",
-      })
-        .addTo(map)
-        .bindTooltip(o.label + " — " + o.distance_mi + " mi", { sticky: true });
-      bounds = bounds.extend(alt.getBounds());
-    });
+    var options = window.__options || [];
+    var optionLines = [];
+
+    if (options.length) {
+      // The primary is already drawn as `line`; give the others their own
+      // polyline so any of them can be promoted to selected.
+      options.forEach(function (o) {
+        if (!o.route) return;
+        var lyr = o.primary ? line : L.polyline(o.route, {
+          lineCap: "round",
+          lineJoin: "round",
+        }).addTo(map);
+        lyr.bindTooltip(o.label + " — " + o.distance_mi + " mi", { sticky: true });
+        optionLines[o.index] = lyr;
+        bounds = bounds.extend(lyr.getBounds());
+      });
+    }
+
+    function selectOption(index) {
+      optionLines.forEach(function (lyr, i) {
+        if (!lyr) return;
+        var on = i === index;
+        lyr.setStyle({
+          color: on ? color : altColor(),
+          weight: on ? 4 : 3,
+          opacity: on ? 1 : 0.55,
+          dashArray: on ? null : "6 6",
+        });
+        // Only meaningful once the map has a view; guarded so a call before
+        // fitBounds can never abort init.
+        if (on && lyr._map) lyr.bringToFront();
+      });
+
+      document.querySelectorAll("[data-elevation-for]").forEach(function (el) {
+        el.hidden = Number(el.getAttribute("data-elevation-for")) !== index;
+      });
+      document.querySelectorAll("[data-route-option]").forEach(function (el) {
+        el.classList.toggle(
+          "route-option--selected",
+          Number(el.getAttribute("data-route-option")) === index
+        );
+      });
+    }
 
     var start = latlngs[0];
     var end = latlngs[latlngs.length - 1];
@@ -85,6 +116,20 @@
     });
 
     map.fitBounds(bounds, { padding: [20, 20] });
+
+    // Wire the option switcher only after fitBounds has given the map a view —
+    // Leaflet creates path renderers lazily, so styling or reordering a line
+    // before then throws and would abort the rest of this function.
+    if (options.length) {
+      document.querySelectorAll("[data-route-toggle]").forEach(function (input) {
+        input.addEventListener("change", function () {
+          if (input.checked) selectOption(Number(input.value));
+        });
+      });
+      var checked = document.querySelector("[data-route-toggle]:checked");
+      selectOption(checked ? Number(checked.value) : 0);
+    }
+
     BASE.observeResize(el, map, function () {
       return bounds;
     });
