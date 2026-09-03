@@ -382,7 +382,12 @@ html.metric .unit-pair__metric {
   font-style: italic;
   font-weight: var(--font-weight-regular);
   color: var(--color-text-muted);
-  font-size: var(--font-size-small);
+  /* rem, not the em-based tokens used elsewhere: .town-route can sit inside
+     a very large heading (.day-title__route), and font-size: var(--font-
+     size-small) (0.833em) would compound against that huge parent instead
+     of just being modestly smaller — huandao's plain-table pinyin has no
+     such heading to compound against, so it never hit this. */
+  font-size: 0.875rem;
 }
 
 /* Stat row --------------------------------------------------------------- */
@@ -617,28 +622,6 @@ html.metric .unit-pair__metric {
 
 .overview-stats {
   margin-block: var(--spacing-medium) var(--spacing-large);
-}
-
-.overview-section {
-  margin-block: var(--spacing-large) 0;
-  padding-top: var(--spacing-large);
-  border-top: var(--border-width-hairline) solid var(--color-surface-border);
-}
-
-.overview-section:first-of-type {
-  border-top: none;
-  padding-top: 0;
-}
-
-.overview-section__title {
-  font-size: var(--font-size-xxx-large);
-  color: var(--color-title);
-  margin-bottom: var(--spacing-x-small);
-}
-
-.overview-section__title span[lang="zh-Hant"] {
-  color: var(--color-theme);
-  margin-inline-end: 0.35em;
 }
 
 .overview-section__description {
