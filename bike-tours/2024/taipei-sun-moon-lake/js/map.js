@@ -10,7 +10,7 @@
   var BASE = window.TSML_BASEMAP;
 
   function routeColor() {
-    return getComputedStyle(document.documentElement).getPropertyValue("--color-theme").trim() || "#ff83dc";
+    return getComputedStyle(document.documentElement).getPropertyValue("--color-route").trim() || "#dc3caf";
   }
 
   function initDayMap() {

@@ -45,7 +45,11 @@
   --color-border: #ff83dc;
   --color-theme: #ff83dc; /* hsl(317, 100%, 76%) */
   --color-title: #7cffc4;
-  --color-route-daytrips: #4da3ff; /* mint read too faint against the map tiles */
+  /* One route color for every map, site-wide — a step darker than
+     --color-theme (hsl(317,100%,76%) -> hsl(317,70%,55%)). Mint read too
+     faint against the map tiles, and the blue tried after it read too
+     close to Mapbox's own water color. */
+  --color-route: #dc3caf;
   --color-surface: #05192b;
   --color-surface-border: rgba(255, 131, 220, 0.25);
   --color-text-default: #fff;
