@@ -379,18 +379,6 @@ html.metric .unit-pair__metric {
   color: var(--color-theme);
 }
 
-.town-route .pinyin {
-  font-style: italic;
-  font-weight: var(--font-weight-regular);
-  color: var(--color-text-muted);
-  /* rem, not the em-based tokens used elsewhere: .town-route can sit inside
-     a very large heading (.day-title__route), and font-size: var(--font-
-     size-small) (0.833em) would compound against that huge parent instead
-     of just being modestly smaller — huandao's plain-table pinyin has no
-     such heading to compound against, so it never hit this. */
-  font-size: 0.875rem;
-}
-
 /* Stat row --------------------------------------------------------------- */
 
 .stat-row {
