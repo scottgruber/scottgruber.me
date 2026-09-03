@@ -1,47 +1,33 @@
 // Leaflet map init shared by day-N.html (window.__route/__towns) and
-// overview.html (window.__days). CARTO Positron tiles (no API key).
+// overview.html (window.__days). Basemaps, the layer switcher and the
+// click-to-hand-off popup come from js/basemap.js.
+//
+// Aligned with the taipei-sun-moon-lake/pacific-coast pattern: Mapbox
+// raster tiles (js/basemap.js) instead of CARTO-only, and the same
+// site-wide darker-pink route color instead of a plain hardcoded hex.
 (function () {
-  var TILE_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-  var TILE_ATTRIBUTION =
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors ' +
-    '&copy; <a href="https://carto.com/attributions">CARTO</a>';
-  var ROUTE_COLOR = "#ff83dc";
+  var BASE = window.HUANDAO_BASEMAP;
 
-  function addTiles(map) {
-    L.tileLayer(TILE_URL, {
-      attribution: TILE_ATTRIBUTION,
-      subdomains: "abcd",
-      maxZoom: 19,
-    }).addTo(map);
+  function routeColor() {
+    return getComputedStyle(document.documentElement).getPropertyValue("--color-route").trim() || "#dc3caf";
   }
 
   function townLabel(town) {
-    return (
-      '<span lang="zh-Hant">' + town.zh + "</span><br>" + town.en
-    );
-  }
-
-  // The map card can grow after Leaflet has already measured it — e.g. the
-  // day-board photo beside it loads late and stretches the shared grid row.
-  // Keep Leaflet's cached size in sync whenever the container's box changes.
-  function observeResize(el, map) {
-    if (typeof ResizeObserver === "undefined") return;
-    new ResizeObserver(function () {
-      map.invalidateSize();
-    }).observe(el);
+    return '<span lang="zh-Hant">' + town.zh + "</span><br>" + town.en;
   }
 
   function initDayMap() {
     var el = document.getElementById("map");
     if (!el || !window.__route) return;
 
+    var color = routeColor();
     var map = L.map(el, { scrollWheelZoom: false });
-    addTiles(map);
-    observeResize(el, map);
+    BASE.addTiles(map);
+    BASE.enablePointHandoff(map);
 
     var latlngs = window.__route;
     var line = L.polyline(latlngs, {
-      color: ROUTE_COLOR,
+      color: color,
       weight: 4,
       lineCap: "round",
       lineJoin: "round",
@@ -54,7 +40,7 @@
       radius: 7,
       color: "#fff",
       weight: 2,
-      fillColor: "#7CFFC4",
+      fillColor: "#7cffc4",
       fillOpacity: 1,
     })
       .addTo(map)
@@ -64,28 +50,34 @@
       radius: 7,
       color: "#fff",
       weight: 2,
-      fillColor: ROUTE_COLOR,
+      fillColor: color,
       fillOpacity: 1,
     })
       .addTo(map)
       .bindPopup(townLabel(window.__towns.end));
 
-    map.fitBounds(line.getBounds(), { padding: [20, 20] });
+    var bounds = line.getBounds();
+    map.fitBounds(bounds, { padding: [20, 20] });
+
+    BASE.observeResize(el, map, function () {
+      return bounds;
+    });
   }
 
   function initOverviewMap() {
     var el = document.getElementById("map");
     if (!el || !window.__days) return;
 
+    var color = routeColor();
     var map = L.map(el, { scrollWheelZoom: false });
-    addTiles(map);
-    observeResize(el, map);
+    BASE.addTiles(map);
+    BASE.enablePointHandoff(map);
 
     var group = L.featureGroup().addTo(map);
 
     window.__days.forEach(function (d) {
       L.polyline(d.route, {
-        color: ROUTE_COLOR,
+        color: color,
         weight: 3,
         opacity: 0.85,
         lineCap: "round",
@@ -97,7 +89,7 @@
         radius: 5,
         color: "#fff",
         weight: 1.5,
-        fillColor: "#7CFFC4",
+        fillColor: "#7cffc4",
         fillOpacity: 1,
       })
         .addTo(group)
@@ -107,6 +99,9 @@
     });
 
     map.fitBounds(group.getBounds(), { padding: [20, 20] });
+    BASE.observeResize(el, map, function () {
+      return group.getBounds();
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function () {

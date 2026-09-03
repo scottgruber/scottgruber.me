@@ -45,6 +45,10 @@
   --color-border: #ff83dc;
   --color-theme: #ff83dc; /* hsl(317, 100%, 76%) */
   --color-title: #7cffc4;
+  /* Map route line — a step darker than --color-theme (hsl(317,100%,76%) ->
+     hsl(317,70%,55%)), matching the taipei-sun-moon-lake/pacific-coast
+     sites: the brighter theme pink read too washed-out as a route stroke. */
+  --color-route: #dc3caf;
   --color-surface: #05192b;
   --color-surface-border: rgba(255, 131, 220, 0.25);
   --color-text-default: #fff;
@@ -546,6 +550,18 @@ html.metric .unit-pair__metric {
 .map-card__caption {
   padding: var(--spacing-small) var(--spacing-default);
   font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* Click-a-point handoff popup (js/basemap.js enablePointHandoff). */
+.map-handoff {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.map-handoff__coords {
+  margin: 0 0 0.15rem;
+  font-variant-numeric: tabular-nums;
   color: var(--color-text-muted);
 }
 
