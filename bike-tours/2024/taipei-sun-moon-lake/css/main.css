@@ -45,6 +45,7 @@
   --color-border: #ff83dc;
   --color-theme: #ff83dc; /* hsl(317, 100%, 76%) */
   --color-title: #7cffc4;
+  --color-route-daytrips: #4da3ff; /* mint read too faint against the map tiles */
   --color-surface: #05192b;
   --color-surface-border: rgba(255, 131, 220, 0.25);
   --color-text-default: #fff;
