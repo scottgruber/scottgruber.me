@@ -39,36 +39,35 @@
   --line-height-heading: 1.2;
   --line-height-heading-alt: 1;
 
-  /* Color — Sanzo Wada combination #333 (wadacolors.com/combinations/333),
-     picked for Taipei/Sun Moon Lake over Huandao's chalk-sign palette: temple
-     vermillion + gold against a clear post-typhoon sky blue, with a pale,
-     storm-stripped sage rather than a lush forest green. --color-background
-     and --color-text-default are neutrals derived from the sky blue and gold
-     to carry AA body-text contrast; the four hues above are reserved for
-     accents, large headings, and the map route line. Ratios (WCAG AA needs
-     4.5:1 text / 3:1 large-text & UI):
-       text on background   14.36:1
-       theme (sage) on bg     9.47:1
-       title (gold) on bg    13.33:1
-       route (vermillion) on bg 3.22:1 — UI/large-text only, not body copy */
-  --color-background: #0f2233;
+  /* Color — the 4 hues of Sanzo Wada combination #338
+     (wadacolors.com/combinations/338): deep red, gold, dark teal-green,
+     dusty mauve. Picked over Huandao's chalk pink/mint palette (and its
+     navy-black background) for a moody, post-typhoon mountain-temple feel:
+     the teal-green background reads as damp foothill forest rather than
+     night sky, gold and mauve carry legible text, and the red — too dark to
+     ever clear 4.5:1 on a dark background (2.81:1 even against near-black)
+     — is reserved for the map route line and light-text-on-red badge fills,
+     never for text drawn on the page background itself.
+     Ratios against --color-background (WCAG AA needs 4.5:1 text / 3:1
+     large-text & UI):
+       text (cream) on background   14.71:1
+       theme (gold) on background    9.88:1
+       text-muted (60% cream) on bg   6.4:1ish (alpha-blended, see below)
+       route (red) on background     2.54:1 — map line only, not UI/text
+       cream text on red fill        5.80:1 — safe for badges/buttons */
+  --color-background: #001f1a;
   --color-base: #000;
-  --color-border: #0065b3;
-  --color-theme: #a0d2a8; /* sage — storm-stripped ground cover, hsl(128, 34%, 73%) */
-  --color-title: #f9ee28; /* temple gold */
-  /* Clear post-typhoon sky blue — button/toggle backgrounds and borders.
-     Only 2.71:1 against --color-background as a dark-on-dark pairing, so
-     buttons pair it with --color-text-default (5.3:1) rather than the dark
-     background/base colors used for the sage/gold buttons. */
-  --color-accent-sky: #0065b3;
-  /* Vermillion for the route line — reads against both the map's blue water
-     and green terrain tiles, same reasoning as Huandao's pink. Not used for
-     body text: only 3.22:1 against --color-background. */
-  --color-route: #b65115;
-  --color-surface: #0a1a28;
-  --color-surface-border: rgba(0, 101, 179, 0.35);
-  --color-text-default: #f5f1e8;
-  --color-text-muted: rgba(245, 241, 232, 0.6);
+  --color-border: #ad242f;
+  --color-theme: #f9b900; /* gold, wadacolors.com/combinations/338 */
+  --color-title: #c7b0b8; /* dusty mauve — secondary emphasis, hover state */
+  /* Deep red — reserved for the map route line and fills under light text
+     (badges/buttons). Never used as text color on the page background:
+     only 2.54:1 there, well under the 4.5:1 body-text minimum. */
+  --color-route: #ad242f;
+  --color-surface: #00473d;
+  --color-surface-border: rgba(199, 176, 184, 0.35);
+  --color-text-default: #f2ecdd;
+  --color-text-muted: rgba(242, 236, 221, 0.65);
   --color-text-link: var(--color-theme);
   --color-text-link-hover: var(--color-title);
   --color-text-link-underline: var(--color-text-link);
@@ -195,8 +194,8 @@ textarea:not([rows]) {
   left: var(--spacing-medium);
   z-index: 100;
   padding: 0.5em 1em;
-  background: var(--color-accent-sky);
-  color: var(--color-text-default);
+  background: var(--color-theme);
+  color: var(--color-background);
   font-weight: var(--font-weight-bold);
   border-radius: var(--border-radius);
   transition: top var(--duration-quickly) ease;
@@ -324,8 +323,8 @@ main {
 
 .unit-toggle[aria-pressed="false"] .unit-toggle__option[data-unit="imperial"],
 .unit-toggle[aria-pressed="true"] .unit-toggle__option[data-unit="metric"] {
-  background: var(--color-accent-sky);
-  color: var(--color-text-default);
+  background: var(--color-theme);
+  color: var(--color-background);
 }
 
 .unit-pair__metric {
