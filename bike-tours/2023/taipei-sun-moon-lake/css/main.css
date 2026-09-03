@@ -1,0 +1,714 @@
+/* Taipei → Sun Moon Lake, 2023
+   Design tokens, reset, and editorial components ported from
+   ~/Sites/huandao/css/main.css (dark-navy/pink/mint bilingual theme), with
+   the map/elevation/climb components ported and extended from
+   ~/Sites/pacific-coast/css/main.css. Lodging/conditions/weather/route-
+   option components are intentionally not carried over — out of scope. */
+
+/* Tokens --------------------------------------------------------------- */
+
+:root {
+  --font-family-default: 'Noto Sans TC', sans-serif;
+  --font-family-chinese: 'Noto Sans TC', sans-serif;
+  --font-size-display-xxxx-large: 7.43em;
+  --font-size-display-xxx-large: 6.192em;
+  --font-size-display-xx-large: 5.16em;
+  --font-size-display-x-large: 4.3em;
+  --font-size-display-large: 3.583em;
+  --font-size-display: 2.986em;
+  --font-size-xxx-large: 2.488em;
+  --font-size-xx-large: 2.074em;
+  --font-size-x-large: 1.728em;
+  --font-size-large: 1.44em;
+  --font-size-medium: 1.2em;
+  --font-size-default: 1em;
+  --font-size-small: 0.833em;
+  --font-size-x-small: 0.694em;
+
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  --line-height-text: 1.5;
+  --line-height-heading: 1.2;
+  --line-height-heading-alt: 1;
+
+  /* Color */
+  --color-background: #00111f;
+  --color-base: #000;
+  --color-border: #ff83dc;
+  --color-theme: #ff83dc; /* hsl(317, 100%, 76%) */
+  --color-title: #7cffc4;
+  --color-surface: #05192b;
+  --color-surface-border: rgba(255, 131, 220, 0.25);
+  --color-text-default: #fff;
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-text-link: var(--color-theme);
+  --color-text-link-hover: var(--color-title);
+  --color-text-link-underline: var(--color-text-link);
+  --color-nav: var(--color-theme);
+  --color-nav-hover: var(--color-title);
+
+  /* Borders */
+  --border-width-hairline: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-thick: 2px;
+  --border-radius: 0.25rem;
+
+  /* Layout */
+  --editorial-max-width: 72rem;
+  --editorial-gutter: 1.5rem;
+
+  /* Spacing */
+  --spacing-x-small: 0.25rem;
+  --spacing-small: 0.5rem;
+  --spacing-default: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 3rem;
+
+  --duration-immediately: 0.1s;
+  --duration-instantly: 0;
+  --duration-quickly: 0.2s;
+  --duration-promptly: 0.5s;
+  --duration-slowly: 1s;
+}
+
+/* Reset & base elements ------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: var(--font-family-default);
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+figure,
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: var(--line-height-text);
+  background-color: var(--color-background);
+  color: var(--color-text-default);
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: var(--border-width-thick) solid var(--color-theme);
+  outline-offset: 2px;
+  border-radius: var(--border-radius);
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+[lang="zh-Hant"] {
+  font-family: var(--font-family-chinese);
+  font-weight: var(--font-weight-black);
+}
+
+::selection,
+::-moz-selection {
+  background-color: var(--color-theme);
+  color: var(--color-background);
+  text-shadow: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: var(--spacing-medium);
+  z-index: 100;
+  padding: 0.5em 1em;
+  background: var(--color-theme);
+  color: var(--color-background);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius);
+  transition: top var(--duration-quickly) ease;
+}
+
+.skip-link:focus {
+  top: var(--spacing-medium);
+}
+
+/* Site header ------------------------------------------------------------ */
+
+header, nav {
+  max-width: var(--editorial-max-width);
+  margin-inline: auto;
+}
+
+header h1 {
+  display: grid;
+}
+
+header h1 {
+  padding-block: var(--spacing-medium) var(--spacing-small);
+}
+
+.site-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.site-title a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+  text-decoration: none;
+}
+
+.site-title span:nth-child(1) {
+  font-size: var(--font-size-x-large);
+  color: var(--color-theme);
+}
+
+.site-title span:nth-child(2) {
+  font-size: var(--font-size-large);
+  color: var(--color-text-default);
+}
+
+/* Shared page shell ------------------------------------------------------ */
+
+main {
+  max-width: var(--editorial-max-width);
+  margin-inline: auto;
+  padding-inline: var(--editorial-gutter);
+}
+
+/* Site nav ---------------------------------------------------------------- */
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--spacing-small) var(--spacing-medium);
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  text-decoration: none;
+  color: var(--color-nav);
+  font-size: var(--font-size-medium);
+  border-bottom: var(--border-width-thin) solid transparent;
+  transition: border-color var(--duration-quickly) ease, color var(--duration-quickly) ease;
+}
+
+.site-nav a span[lang="zh-Hant"] {
+  font-size: var(--font-size-large);
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--color-nav-hover);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--color-text-default);
+  border-color: var(--color-theme);
+}
+
+.site-nav a.overview-link {
+  margin-inline-start: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--font-size-small);
+}
+
+/* Imperial/metric toggle — see js/units.js. Flips visibility of the
+   .unit-pair spans (_includes/partials/unit.njk) via a class on <html>. */
+
+.unit-toggle {
+  display: inline-flex;
+  margin-top: var(--spacing-small);
+  width: fit-content;
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--color-surface);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.unit-toggle__option {
+  padding: 0.3em 0.9em;
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  transition: background var(--duration-quickly) ease, color var(--duration-quickly) ease;
+}
+
+.unit-toggle[aria-pressed="false"] .unit-toggle__option[data-unit="imperial"],
+.unit-toggle[aria-pressed="true"] .unit-toggle__option[data-unit="metric"] {
+  background: var(--color-theme);
+  color: var(--color-base);
+}
+
+.unit-pair__metric {
+  display: none;
+}
+
+html.metric .unit-pair__imperial {
+  display: none;
+}
+
+html.metric .unit-pair__metric {
+  display: inline;
+}
+
+/* Day title --------------------------------------------------------------- */
+
+.day-title {
+  margin-block: var(--spacing-large) var(--spacing-medium);
+}
+
+.day-title__number {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-small);
+  color: var(--color-theme);
+  margin-bottom: var(--spacing-x-small);
+}
+
+.day-title__number span[lang="zh-Hant"] {
+  font-size: var(--font-size-xxx-large);
+}
+
+.day-title__label {
+  font-size: var(--font-size-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-x-small);
+}
+
+.day-title__route {
+  margin: 0;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--color-title);
+  text-wrap: balance;
+}
+
+/* Bilingual town line ------------------------------------------------------ */
+
+.town-route {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.town-route .town-name span[lang="zh-Hant"] {
+  margin-inline-end: 0.35em;
+}
+
+.town-route .arrow {
+  color: var(--color-theme);
+}
+
+.town-route .pinyin {
+  font-style: italic;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+
+/* Stat row --------------------------------------------------------------- */
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-medium) var(--spacing-large);
+  padding-block: var(--spacing-medium);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+  border-bottom: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+@media (min-width: 40em) {
+  .stat-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.15em;
+}
+
+.stat-item .stat-value {
+  font-size: var(--font-size-xx-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading-alt);
+}
+
+.stat-item .stat-value .stat-unit {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+  margin-inline-start: 0.2em;
+}
+
+.stat-item .stat-label {
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+/* Route section: map + elevation ------------------------------------------ */
+
+.route-section {
+  display: grid;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+}
+
+@media (min-width: 60em) {
+  .route-section {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .route-section--single {
+    grid-template-columns: 1fr;
+  }
+}
+
+.route-aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.map-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.map-card__map {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 60em) {
+  .route-section:not(.route-section--single) .map-card__map {
+    flex: 1 1 auto;
+    aspect-ratio: auto;
+  }
+}
+
+.map-card__caption {
+  padding: var(--spacing-small) var(--spacing-default);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.elevation-card,
+.climb-list {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  padding: var(--spacing-default);
+}
+
+.elevation-card h2,
+.map-card h2,
+.climb-list h2 {
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-small);
+}
+
+.elevation-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.elevation-card__summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-small) var(--spacing-medium);
+  margin-top: var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.elevation-card__summary strong {
+  color: var(--color-text-default);
+  font-weight: var(--font-weight-bold);
+}
+
+.elevation-card__note {
+  margin-top: var(--spacing-x-small);
+  font-size: var(--font-size-x-small);
+  color: var(--color-text-muted);
+}
+
+/* Notable climbs ------------------------------------------------------------ */
+
+.climb-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  padding: 0;
+  margin: 0;
+}
+
+.climb-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--spacing-small);
+  padding-block: var(--spacing-x-small);
+  border-bottom: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+.climb-card:last-child {
+  border-bottom: none;
+}
+
+.climb-card__range {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.climb-card__stats {
+  display: flex;
+  gap: var(--spacing-small);
+  font-size: var(--font-size-small);
+  white-space: nowrap;
+}
+
+.climb-card__stats strong {
+  color: var(--color-title);
+  font-weight: var(--font-weight-bold);
+}
+
+.climb-list__empty {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* Prev/next day footer nav ------------------------------------------------- */
+
+.day-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+  padding-top: var(--spacing-medium);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+.day-pager a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  text-decoration: none;
+  color: var(--color-text-default);
+  max-width: 45%;
+}
+
+.day-pager a.next {
+  text-align: right;
+  align-items: flex-end;
+  margin-inline-start: auto;
+}
+
+.day-pager .day-pager__label {
+  font-size: var(--font-size-x-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.day-pager .day-pager__title {
+  font-size: var(--font-size-medium);
+  color: var(--color-theme);
+  transition: color var(--duration-quickly) ease;
+}
+
+.day-pager a:hover .day-pager__title,
+.day-pager a:focus-visible .day-pager__title {
+  color: var(--color-title);
+}
+
+/* Overview page: whole-route map + day card grid --------------------------- */
+
+.overview-stats {
+  margin-block: var(--spacing-medium) var(--spacing-large);
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+}
+
+@media (min-width: 40em) {
+  .day-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  .day-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  text-decoration: none;
+  color: var(--color-text-default);
+  padding: var(--spacing-default);
+  transition: border-color var(--duration-quickly) ease;
+}
+
+.day-card:hover,
+.day-card:focus-visible {
+  border-color: var(--color-theme);
+}
+
+.day-card__number {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-x-small);
+  color: var(--color-theme);
+  margin-bottom: 0.4em;
+}
+
+.day-card__number span[lang="zh-Hant"] {
+  font-size: var(--font-size-x-large);
+}
+
+.day-card__route {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-text);
+  margin-bottom: var(--spacing-small);
+}
+
+.day-card__stats {
+  display: flex;
+  gap: var(--spacing-medium);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  margin-top: auto;
+}
+
+.day-card__stats strong {
+  color: var(--color-text-default);
+}
+
+/* Photo gallery (scaffold — no photos yet) ---------------------------------- */
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+  padding: 0;
+}
+
+.gallery__grid img {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Visually-hidden accessible text ------------------------------------------ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
