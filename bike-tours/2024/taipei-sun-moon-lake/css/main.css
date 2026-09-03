@@ -355,6 +355,12 @@ html.metric .unit-pair__metric {
   text-wrap: balance;
 }
 
+.day-title__ride-name {
+  margin-top: var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
 /* Bilingual town line ------------------------------------------------------ */
 
 .town-route {
@@ -613,6 +619,34 @@ html.metric .unit-pair__metric {
   margin-block: var(--spacing-medium) var(--spacing-large);
 }
 
+.overview-section {
+  margin-block: var(--spacing-large) 0;
+  padding-top: var(--spacing-large);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+.overview-section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.overview-section__title {
+  font-size: var(--font-size-xxx-large);
+  color: var(--color-title);
+  margin-bottom: var(--spacing-x-small);
+}
+
+.overview-section__title span[lang="zh-Hant"] {
+  color: var(--color-theme);
+  margin-inline-end: 0.35em;
+}
+
+.overview-section__description {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  max-width: 42rem;
+}
+
 .day-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -660,6 +694,19 @@ html.metric .unit-pair__metric {
 
 .day-card__number span[lang="zh-Hant"] {
   font-size: var(--font-size-x-large);
+}
+
+.day-card__number--unnumbered {
+  color: var(--color-title);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+}
+
+.day-card__date {
+  display: block;
+  margin-top: 0.2em;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-x-small);
 }
 
 .day-card__route {

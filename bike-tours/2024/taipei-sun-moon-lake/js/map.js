@@ -81,47 +81,54 @@
     return city.en + (city.zh ? " (" + city.zh + (city.pinyin ? ", " + city.pinyin : "") + ")" : "");
   }
 
-  function initOverviewMap() {
-    var el = document.getElementById("map");
-    if (!el || !window.__days) return;
+  // One overview map per section (main route vs. day trips), each its own
+  // color — a single shared map would tangle the day-trip loops (several
+  // revisit the same Taipei neighborhoods) with the point-to-point route.
+  function initOverviewMaps() {
+    var maps = window.__overviewMaps || {};
+    document.querySelectorAll("[data-overview-map]").forEach(function (el) {
+      var key = el.getAttribute("data-overview-map");
+      var section = maps[key];
+      if (!section || !section.days || !section.days.length) return;
 
-    var color = routeColor();
-    var map = L.map(el, { scrollWheelZoom: false });
-    BASE.addTiles(map);
-    BASE.enablePointHandoff(map);
+      var color = getComputedStyle(document.documentElement).getPropertyValue(section.colorVar).trim() || routeColor();
+      var map = L.map(el, { scrollWheelZoom: false });
+      BASE.addTiles(map);
+      BASE.enablePointHandoff(map);
 
-    var group = L.featureGroup().addTo(map);
+      var group = L.featureGroup().addTo(map);
 
-    window.__days.forEach(function (d) {
-      if (!d.route) return;
-      L.polyline(d.route, {
-        color: color,
-        weight: 3,
-        opacity: 0.85,
-        lineCap: "round",
-        lineJoin: "round",
-      }).addTo(group);
+      section.days.forEach(function (d) {
+        if (!d.route) return;
+        L.polyline(d.route, {
+          color: color,
+          weight: 3,
+          opacity: 0.85,
+          lineCap: "round",
+          lineJoin: "round",
+        }).addTo(group);
 
-      var start = d.route[0];
-      L.circleMarker(start, {
-        radius: 5,
-        color: "#fff",
-        weight: 1.5,
-        fillColor: "#7cffc4",
-        fillOpacity: 1,
-      })
-        .addTo(group)
-        .bindTooltip("Day " + d.day + (d.towns ? " — " + townLabel(d.towns.start) : ""), { direction: "top" });
-    });
+        var start = d.route[0];
+        L.circleMarker(start, {
+          radius: 5,
+          color: "#fff",
+          weight: 1.5,
+          fillColor: color,
+          fillOpacity: 1,
+        })
+          .addTo(group)
+          .bindTooltip((d.label || "") + (d.towns ? " — " + townLabel(d.towns.start) : ""), { direction: "top" });
+      });
 
-    map.fitBounds(group.getBounds(), { padding: [20, 20] });
-    BASE.observeResize(el, map, function () {
-      return group.getBounds();
+      map.fitBounds(group.getBounds(), { padding: [20, 20] });
+      BASE.observeResize(el, map, function () {
+        return group.getBounds();
+      });
     });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     initDayMap();
-    initOverviewMap();
+    initOverviewMaps();
   });
 })();
