@@ -4,7 +4,7 @@ config.codekit3
 print-to-web
 shengxiao
 assets
-!/bike-tours/taiwan-huandao/2023/assets/
-/bike-tours/taiwan-huandao/2023/assets/videos/
+!/bike-tours/2023/taiwan-huandao/assets/
+/bike-tours/2023/taiwan-huandao/assets/videos/
 
 
